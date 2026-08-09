@@ -14,7 +14,25 @@ const games = [
             "Selamat bermain!"
         ],
         download: "https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
-    }
+    },
+
+    {
+    title: "Miyu Windows Toolkit",
+    category: "pc",
+    platform: "Windows",
+    os: "Windows 10 / Windows 11",
+    image: "miyu-toolkit.jpg",
+    description: "Miyu Windows Toolkit untuk berbagai utilitas, troubleshooting, maintenance, dan tools Windows.",
+    tutorial: [
+        "Download Miyu Windows Toolkit.",
+        "Ekstrak file Miyu TollKit.rar.",
+        "Buka folder hasil ekstraksi.",
+        "Jalankan Miyu Windows Toolkit.",
+        "Gunakan menu sesuai kebutuhan."
+    ],
+    download: "https://www.mediafire.com/file/rfvxvsr1g6fw46d/Miyu+TollKit.rar/file"
+}
+    
 ];
 
 
