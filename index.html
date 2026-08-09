@@ -893,32 +893,6 @@ MASALAH BUG INSTALLER ATAU REQUEST GAME ATAU LAPOR BUG DM TIKTOK @tentang.gts
 
 <div id="game-container"></div>
 
-<script>
-const trigger = document.getElementById("maxpayne-trigger");
-const gameContainer = document.getElementById("game-container");
-
-let loaded = false;
-
-const observer = new IntersectionObserver(function(entries) {
-
-    if (entries[0].isIntersecting && !loaded) {
-
-        loaded = true;
-
-        gameContainer.innerHTML = `
-        
-    
-
-        observer.disconnect();
-    }
-
-}, {
-    root: null,
-    threshold: 0.1
-});
-
-observer.observe(trigger);
-</script>
 
 </body>
 </html>
