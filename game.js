@@ -5,9 +5,7 @@ const games = [
         platform: "PC",
         os: "Windows XP ke atas",
         image: "0000003274.1920x1080.jpg",
-
         description: "Max Payne 2 Miyu Repacks.",
-
         tutorial: [
             "Ekstrak Max Payne 2 Miyu Repacks.",
             "Jalankan setup.exe.",
@@ -15,8 +13,7 @@ const games = [
             "Jalankan game.",
             "Selamat bermain!"
         ],
-
-        download: "https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=drive_link"
+        download: "https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
     }
 ];
 
@@ -27,19 +24,17 @@ const games = [
 
 function renderGames(list = games) {
 
+    const container = document.querySelector(".container");
+
+    if (!container) {
+        console.error("Container tidak ditemukan!");
+        return;
+    }
+
     // Hapus game yang sebelumnya dibuat oleh game.js
     document.querySelectorAll(".js-game").forEach(game => {
         game.remove();
     });
-
-    const container = document.querySelector(".container");
-
-    if (!container) {
-        console.error("Container tidak ditemukan.");
-        return;
-    }
-
-    const script = document.querySelector('script[src="game.js"]');
 
     list.forEach(game => {
 
@@ -49,7 +44,9 @@ function renderGames(list = games) {
         gameBox.dataset.category = game.category;
 
         gameBox.innerHTML = `
-            <div class="cmd-title">${game.title}</div>
+            <div class="cmd-title">
+                ${game.title}
+            </div>
 
             <div class="line status">
                 PLATFORM : ${game.platform}
@@ -79,25 +76,18 @@ function renderGames(list = games) {
                 </div>
             `).join("")}
 
-            <button class="btn install-game">
+            <button
+                class="btn"
+                onclick="window.open('${game.download}', '_blank')"
+            >
                 INSTALL ${game.title}
             </button>
         `;
 
-        // Tombol download
-        const button = gameBox.querySelector(".install-game");
-
-        button.addEventListener("click", () => {
-            window.open(game.download, "_blank");
-        });
-
-        // Masukkan game sebelum script game.js
-        if (script) {
-            container.insertBefore(gameBox, script);
-        } else {
-            container.appendChild(gameBox);
-        }
+        container.appendChild(gameBox);
     });
+
+    console.log("Game berhasil dimuat:", list);
 }
 
 
@@ -107,19 +97,17 @@ function renderGames(list = games) {
 
 function searchGame() {
 
-    const searchInput = document.getElementById("search");
+    const input = document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
 
-    if (!searchInput) {
-        return;
-    }
-
-    const input = searchInput.value.toLowerCase().trim();
-
-    const games = document.querySelectorAll(".cmd");
+    const gamesElements = document.querySelectorAll(".cmd");
 
     let firstMatch = null;
 
-    games.forEach(game => {
+    gamesElements.forEach(game => {
 
         const title = game.querySelector(".cmd-title");
 
@@ -142,6 +130,7 @@ function searchGame() {
             game.style.display = "none";
 
         }
+
     });
 
     if (firstMatch && input !== "") {
@@ -163,13 +152,11 @@ function filterCategory(category) {
 
     document.querySelectorAll(".cmd").forEach(game => {
 
-        const gameCategory = game.dataset.category;
-
         if (category === "all") {
 
             game.style.display = "block";
 
-        } else if (gameCategory === category) {
+        } else if (game.dataset.category === category) {
 
             game.style.display = "block";
 
@@ -184,9 +171,9 @@ function filterCategory(category) {
 
 
 // ================================
-// LOAD GAME
+// LOAD
 // ================================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     renderGames();
 });
