@@ -21,7 +21,7 @@ const games = [
     category: "pc",
     platform: "Windows",
     os: "Windows 10 / Windows 11",
-    image: "miyu-toolkit.jpg",
+    image: "Screenshot 2026-08-09 212004.png",
     description: "Miyu Windows Toolkit untuk berbagai utilitas, troubleshooting, maintenance, dan tools Windows.",
     tutorial: [
         "Download Miyu Windows Toolkit.",
