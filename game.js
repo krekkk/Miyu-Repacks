@@ -12,6 +12,7 @@ const games = [
             "Tunggu proses instalasi sampai selesai.",
             "Jalankan game.",
             "Selamat bermain!"
+            "Minimum Spec I5 240
         ],
         download: "https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
     },
