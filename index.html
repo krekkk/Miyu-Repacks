@@ -1,993 +1,1690 @@
 <!DOCTYPE html>
+<html lang="id">
 
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miyu Repacks - Download Game PC, Android, Emulator & Software</title>
-    
-<meta name="description" content="Miyu Repacks menyediakan game PC, game mobile, emulator, dan software dengan installer mudah serta tutorial instalasi lengkap.">
+    <meta charset="UTF-8">
 
-    <meta name="keywords" content="Miyu Repacks, game PC, repack game, GTA SA, GTA 3, NFS Carbon, emulator PS2, download game PC, installer game, Miyu Repack">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="author" content="Miyu Repacks">
+    <title>Miyu Repacks - Game PC, Mobile, Emulator & Software</title>
 
-<meta name="robots" content="index, follow">
+    <meta
+        name="description"
+        content="Miyu Repacks menyediakan game PC, game mobile, emulator, software, installer dan tutorial instalasi."
+    >
 
-<link rel="canonical" href="https://krekkk.github.io/Miyu-Repacks/">
+    <meta
+        name="keywords"
+        content="Miyu Repacks, game PC, game mobile, emulator PS2, software, installer game"
+    >
 
-<link rel="icon" type="image/png" href="logo.jpg">
-    
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="author" content="Miyu Repacks">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WL1CSEV20E"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <meta name="robots" content="index, follow">
 
-gtag('config', 'G-WL1CSEV20E');
-</script>
+    <link
+        rel="canonical"
+        href="https://krekkk.github.io/Miyu-Repacks/"
+    >
 
-<style>
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.jpg"
+    >
 
-body{
-    margin:0;
-    min-height:100vh;
-    background:
-        radial-gradient(circle at 20% 20%, #111 0%, #000 40%, #000 100%),
-        radial-gradient(circle at 80% 80%, #0a0a0a 0%, #000 60%);
-    font-family:'Oswald',sans-serif;
-    color:white;
-    display:flex;
-    justify-content:center;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-.container{
-    width:100%;
-    max-width:900px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding:30px 0;
-}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL1CSEV20E"></script>
 
-.title{
-    color:#1e90ff;
-    font-size:55px;
-    font-weight:600;
-    text-align:center;
-    text-shadow:
-        0 0 5px #1e90ff,
-        0 0 10px #1e90ff,
-        0 0 20px #1e90ff,
-        0 0 40px #1e90ff;
-}
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-.cmd{
-    width:700px;
-    background:#000;
-    border:1px solid #1e90ff;
-    padding:20px;
-    text-align:left;
-    font-family:Consolas,monospace;
-    color:#00ffcc;
-    box-shadow:
-        0 0 10px #1e90ff,
-        0 0 20px #1e90ff;
-}
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-.cmd-title{
-    color:#1e90ff;
-    margin-bottom:10px;
-    text-shadow:0 0 10px #1e90ff;
-}
+        gtag('js', new Date());
+        gtag('config', 'G-WL1CSEV20E');
+    </script>
 
-.line{
-    margin:4px 0;
-}
 
-.status{
-    color:#ffcc00;
-    text-shadow:0 0 10px #ffcc00;
-}
+    <style>
 
-.soon{
-    color:#ff4444;
-    text-shadow:0 0 10px #ff4444;
-    font-weight:bold;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-.btn{
-    margin-top:10px;
-    padding:10px 25px;
-    font-size:14px;
-    font-family:'Oswald',sans-serif;
-    color:#1e90ff;
-    background:transparent;
-    border:2px solid #1e90ff;
-    border-radius:8px;
-    cursor:pointer;
-    box-shadow:0 0 8px #1e90ff;
-    transition:.2s;
-}
 
-.btn:hover{
-    background:#1e90ff;
-    color:#000;
-    box-shadow:0 0 20px #1e90ff;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.btn:disabled{
-    opacity:.5;
-    cursor:not-allowed;
-}
 
-.footer{
-    margin-top:10px;
-    font-size:12px;
-    color:#1e90ff;
-    text-align:center;
-    opacity:.7;
-    text-shadow:0 0 10px #1e90ff;
-    
-}
-.ads-banner{
-    width:700px;
-    background:#111;
-    border:2px solid #1e90ff;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 0 15px #1e90ff;
-    margin-bottom:15px;
-    transition:.3s;
-}
+        body {
+            margin: 0;
+            min-height: 100vh;
 
-.ads-banner:hover{
-    transform:scale(1.02);
-    box-shadow:0 0 25px #1e90ff;
-}
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(30, 144, 255, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 90%,
+                    rgba(0, 255, 204, 0.05),
+                    transparent 30%
+                ),
+                #000;
 
-.ads-banner img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    display:block;
-}
+            color: white;
 
-.ads-content{
-    padding:20px;
-    text-align:center;
-}
+            font-family: 'Oswald', sans-serif;
+        }
 
-.ads-title{
-    font-size:28px;
-    color:#1e90ff;
-    text-shadow:0 0 10px #1e90ff;
-}
 
-.ads-text{
-    color:#ddd;
-    margin:10px 0;
-}
+        /* =========================
+           CONTAINER
+        ========================= */
 
-.ads-btn{
-    display:inline-block;
-    padding:12px 25px;
-    border:2px solid #1e90ff;
-    color:#1e90ff;
-    text-decoration:none;
-    border-radius:10px;
-    transition:.3s;
-}
+        .container {
+            width: 100%;
+            max-width: 950px;
 
-.ads-btn:hover{
-    background:#1e90ff;
-    color:#000;
-}
-    .ads-meta{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    flex-wrap:wrap;
-    margin-bottom:15px;
-}
+            margin: auto;
 
-.ads-version{
-    background:#22c55e;
-    color:#fff;
-    padding:6px 12px;
-    border-radius:8px;
-    font-weight:bold;
-}
+            padding: 30px 15px 50px;
 
-.ads-platform{
-    background:#333;
-    color:#fff;
-    padding:6px 12px;
-    border-radius:8px;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-.ads-dev{
-    color:#ddd;
-}
+            gap: 20px;
+        }
 
-.ads-year{
-    color:#888;
-}
 
-    .game-link-box{
-    width:700px;
-    background:#000;
-    border:1px solid #1e90ff;
-    padding:20px;
-    box-sizing:border-box;
-    text-align:left;
-    font-family:Consolas,monospace;
-    color:#00ffcc;
-    box-shadow:
-        0 0 10px #1e90ff,
-        0 0 20px #1e90ff;
-    text-decoration:none;
-    display:block;
-    transition:.2s;
-}
+        /* =========================
+           TITLE
+        ========================= */
 
-.game-link-box:hover{
-    border-color:#00ffcc;
-    box-shadow:
-        0 0 10px #00ffcc,
-        0 0 25px #00ffcc;
-    transform:scale(1.01);
-}
+        .title {
+            width: 100%;
 
-.game-link-title{
-    color:#1e90ff;
-    font-size:24px;
-    text-shadow:0 0 10px #1e90ff;
-    margin-bottom:8px;
-}
+            text-align: center;
 
-.game-link-info{
-    color:#aaa;
-    font-size:15px;
-}
-    
-</style>
+            color: #1e90ff;
+
+            font-size: clamp(35px, 7vw, 58px);
+
+            font-weight: 700;
+
+            line-height: 1.1;
+
+            text-shadow:
+                0 0 5px #1e90ff,
+                0 0 10px #1e90ff,
+                0 0 20px #1e90ff,
+                0 0 40px #1e90ff;
+        }
+
+
+        .subtitle {
+            margin-top: -10px;
+
+            color: #888;
+
+            font-family: Consolas, monospace;
+
+            font-size: 13px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            width: 700px;
+            max-width: 100%;
+
+            padding: 14px 18px;
+
+            background: #050505;
+
+            border: 2px solid #1e90ff;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            color: #00ffcc;
+
+            font-family: Consolas, monospace;
+
+            font-size: 15px;
+
+            box-shadow:
+                0 0 8px #1e90ff;
+
+            transition: 0.2s;
+        }
+
+
+        .search-box:focus {
+            box-shadow:
+                0 0 10px #1e90ff,
+                0 0 25px #1e90ff;
+        }
+
+
+        .search-box::placeholder {
+            color: #555;
+        }
+
+
+        /* =========================
+           FILTER
+        ========================= */
+
+        .filter-buttons {
+            width: 700px;
+            max-width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        .btn {
+            padding: 10px 20px;
+
+            background: transparent;
+
+            border: 2px solid #1e90ff;
+
+            border-radius: 8px;
+
+            color: #1e90ff;
+
+            cursor: pointer;
+
+            font-family: 'Oswald', sans-serif;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+
+            box-shadow:
+                0 0 7px rgba(30, 144, 255, 0.5);
+        }
+
+
+        .btn:hover {
+            background: #1e90ff;
+
+            color: #000;
+
+            box-shadow:
+                0 0 10px #1e90ff,
+                0 0 25px #1e90ff;
+        }
+
+
+        /* =========================
+           NOTICE
+        ========================= */
+
+        .notice {
+            width: 700px;
+            max-width: 100%;
+
+            padding: 15px;
+
+            background: #050505;
+
+            border-left: 3px solid #1e90ff;
+
+            border-right: 3px solid #1e90ff;
+
+            color: #aaa;
+
+            text-align: center;
+
+            font-family: Consolas, monospace;
+
+            font-size: 13px;
+
+            box-shadow:
+                0 0 10px rgba(30, 144, 255, 0.25);
+        }
+
+
+        .notice strong {
+            color: #1e90ff;
+        }
+
+
+        /* =========================
+           ADS / FEATURE
+        ========================= */
+
+        .ads-banner {
+            width: 700px;
+            max-width: 100%;
+
+            overflow: hidden;
+
+            background: #080808;
+
+            border: 2px solid #1e90ff;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 0 10px #1e90ff,
+                0 0 25px rgba(30, 144, 255, 0.4);
+
+            transition: 0.25s;
+        }
+
+
+        .ads-banner:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 0 15px #1e90ff,
+                0 0 35px rgba(30, 144, 255, 0.5);
+        }
+
+
+        .ads-banner img {
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .ads-content {
+            padding: 20px;
+
+            text-align: center;
+        }
+
+
+        .ads-title {
+            color: #1e90ff;
+
+            font-size: 30px;
+
+            text-shadow:
+                0 0 10px #1e90ff;
+        }
+
+
+        .ads-text {
+            color: #aaa;
+
+            margin: 10px auto 18px;
+
+            max-width: 600px;
+        }
+
+
+        .ads-meta {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .tag {
+            padding: 6px 12px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+        }
+
+
+        .tag-version {
+            background: #22c55e;
+            color: white;
+        }
+
+
+        .tag-platform {
+            background: #222;
+            color: white;
+        }
+
+
+        .tag-dev {
+            color: #aaa;
+        }
+
+
+        .ads-actions {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        .ads-btn {
+            display: inline-block;
+
+            padding: 11px 22px;
+
+            color: #1e90ff;
+
+            text-decoration: none;
+
+            border: 2px solid #1e90ff;
+
+            border-radius: 8px;
+
+            transition: 0.2s;
+        }
+
+
+        .ads-btn:hover {
+            background: #1e90ff;
+
+            color: #000;
+
+            box-shadow:
+                0 0 15px #1e90ff;
+        }
+
+
+        /* =========================
+           GAME BOX
+        ========================= */
+
+        .cmd {
+            width: 700px;
+            max-width: 100%;
+
+            padding: 20px;
+
+            background: #030303;
+
+            border: 1px solid #1e90ff;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 0 8px rgba(30, 144, 255, 0.7),
+                0 0 20px rgba(30, 144, 255, 0.25);
+
+            font-family: Consolas, monospace;
+
+            color: #00ffcc;
+
+            transition: 0.2s;
+
+            scroll-margin-top: 20px;
+        }
+
+
+        .cmd:hover {
+            border-color: #00ffcc;
+
+            box-shadow:
+                0 0 10px #00ffcc,
+                0 0 25px rgba(0, 255, 204, 0.3);
+        }
+
+
+        .cmd-title {
+            margin-bottom: 12px;
+
+            color: #1e90ff;
+
+            font-family: 'Oswald', sans-serif;
+
+            font-size: 25px;
+
+            font-weight: 600;
+
+            line-height: 1.2;
+
+            text-shadow:
+                0 0 8px #1e90ff;
+        }
+
+
+        .line {
+            margin: 6px 0;
+
+            line-height: 1.5;
+        }
+
+
+        .status {
+            color: #ffcc00;
+
+            text-shadow:
+                0 0 8px #ffcc00;
+        }
+
+
+        .soon {
+            color: #ff4444;
+
+            font-weight: bold;
+
+            text-shadow:
+                0 0 8px #ff4444;
+        }
+
+
+        .bottom-text {
+            color: #888;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+            border-top: 1px solid #222;
+
+            padding-top: 12px;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           GAME IMAGE
+        ========================= */
+
+        .game-img {
+            width: 100%;
+
+            max-height: 400px;
+
+            object-fit: cover;
+
+            display: block;
+
+            margin: 15px 0;
+
+            border-radius: 8px;
+
+            border: 1px solid #1e90ff;
+
+            box-shadow:
+                0 0 10px rgba(30, 144, 255, 0.6);
+        }
+
+
+        /* =========================
+           GAME LINK BOX
+        ========================= */
+
+        .game-link-box {
+            width: 700px;
+            max-width: 100%;
+
+            background: #030303;
+
+            border: 1px solid #1e90ff;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 0 10px rgba(30, 144, 255, 0.5);
+
+            transition: 0.2s;
+        }
+
+
+        .game-link-box:hover {
+            border-color: #00ffcc;
+
+            box-shadow:
+                0 0 15px #00ffcc;
+        }
+
+
+        .game-link-box a {
+            display: block;
+
+            padding: 20px;
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        .game-link-title {
+            color: #1e90ff;
+
+            font-size: 25px;
+
+            text-shadow:
+                0 0 8px #1e90ff;
+        }
+
+
+        .game-link-info {
+            color: #888;
+
+            font-family: Consolas, monospace;
+
+            font-size: 13px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           LOAD GAME
+        ========================= */
+
+        .load-game {
+            display: block;
+
+            margin-top: 10px;
+
+            color: #1e90ff;
+
+            font-family: Consolas, monospace;
+
+            font-size: 26px;
+
+            font-weight: bold;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            text-shadow:
+                0 0 5px #1e90ff,
+                0 0 10px #1e90ff,
+                0 0 20px #1e90ff;
+
+            transition: 0.2s;
+        }
+
+
+        .load-game:hover {
+            color: #00ffcc;
+
+            text-shadow:
+                0 0 5px #00ffcc,
+                0 0 10px #00ffcc,
+                0 0 20px #00ffcc;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           EMPTY SEARCH
+        ========================= */
+
+        .no-result {
+            display: none;
+
+            width: 700px;
+            max-width: 100%;
+
+            padding: 20px;
+
+            text-align: center;
+
+            color: #ff4444;
+
+            font-family: Consolas, monospace;
+
+            border: 1px solid #ff4444;
+
+            box-shadow:
+                0 0 10px rgba(255, 68, 68, 0.4);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            margin-top: 15px;
+
+            color: #555;
+
+            font-size: 12px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 20px 10px 40px;
+
+                gap: 15px;
+            }
+
+
+            .title {
+                font-size: 36px;
+            }
+
+
+            .subtitle {
+                font-size: 11px;
+            }
+
+
+            .cmd {
+                padding: 15px;
+            }
+
+
+            .cmd-title {
+                font-size: 21px;
+            }
+
+
+            .ads-banner img {
+                height: 190px;
+            }
+
+
+            .ads-title {
+                font-size: 24px;
+            }
+
+
+            .filter-buttons {
+                gap: 7px;
+            }
+
+
+            .btn {
+                padding: 8px 14px;
+
+                font-size: 12px;
+            }
+
+
+            .load-game {
+                font-size: 21px;
+            }
+        }
+
+    </style>
 
 </head>
 
-<body>
-
-<div id="loading-game" style="
-    display:none;
-    color:#1e90ff;
-    text-align:center;
-    font-family:Consolas,monospace;
-    padding:20px;
-    text-shadow:0 0 10px #1e90ff;
-">
-    LOADING GAME...
-</div>
-
-<style>
-body{
-    margin:0;
-    min-height:100vh;
-    background:
-        radial-gradient(circle at 20% 20%, #111 0%, #000 40%, #000 100%),
-        radial-gradient(circle at 80% 80%, #0a0a0a 0%, #000 60%);
-    font-family:'Oswald',sans-serif;
-    color:white;
-    display:flex;
-    justify-content:center;
-}
-    
-html{
-    scroll-behavior: smooth;
-}
-    
-.container{
-    width:100%;
-    max-width:900px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding:30px 0;
-}
-
-.title{
-    color:#1e90ff;
-    font-size:55px;
-    font-weight:600;
-    text-align:center;
-    text-shadow:0 0 5px #1e90ff,0 0 10px #1e90ff,0 0 20px #1e90ff;
-}
-
-/* SEARCH */
-.search-box{
-    width:700px;
-    padding:12px;
-    border:2px solid #1e90ff;
-    background:black;
-    color:#00ffcc;
-    outline:none;
-    border-radius:10px;
-    box-shadow:0 0 10px #1e90ff;
-}
-
-/* GAME BOX */
-.cmd{
-    width:700px;
-    background:#000;
-    border:1px solid #1e90ff;
-    padding:20px;
-    text-align:left;
-    font-family:Consolas,monospace;
-    color:#00ffcc;
-    box-shadow:0 0 10px #1e90ff;
-    scroll-margin-top:20px;
-}
-
-.cmd-title{
-    color:#1e90ff;
-    margin-bottom:10px;
-}
-
-.line{margin:4px 0;}
-.status{color:#ffcc00;}
-.soon{color:#ff4444;font-weight:bold;}
-
-.btn{
-    margin-top:10px;
-    padding:10px 25px;
-    color:#1e90ff;
-    background:transparent;
-    border:2px solid #1e90ff;
-    border-radius:8px;
-    cursor:pointer;
-}
-.btn:hover{
-    background:#1e90ff;
-    color:#000;
-}
-
-.hidden{
-    display:none;
-}
-.game-img{
-    width:700px;
-    height:auto;
-    display:block;
-    margin:10px auto;
-    border-radius:8px;
-    border:1px solid #1e90ff;
-    box-shadow:0 0 10px #1e90ff;
-}
-.filter-buttons{
-    width:700px;
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:10px;
-}
-}
-
-    .ads-banner{
-    width:700px;
-    background:#111;
-    border:2px solid #1e90ff;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 0 15px #1e90ff;
-    margin-bottom:15px;
-    transition:.3s;
-}
-
-.ads-banner:hover{
-    transform:scale(1.02);
-    box-shadow:0 0 25px #1e90ff;
-}
-
-.ads-banner img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    display:block;
-}
-
-.ads-content{
-    padding:20px;
-    text-align:center;
-}
-
-.ads-title{
-    font-size:28px;
-    color:#1e90ff;
-    text-shadow:0 0 10px #1e90ff;
-}
-
-.ads-text{
-    color:#ddd;
-    margin:10px 0;
-}
-
-.ads-btn{
-    display:inline-block;
-    padding:12px 25px;
-    border:2px solid #1e90ff;
-    color:#1e90ff;
-    text-decoration:none;
-    border-radius:10px;
-    transition:.3s;
-}
-
-.ads-btn:hover{
-    background:#1e90ff;
-    color:#000;
-}
-
-.load-game{
-    display:block;
-    margin-top:25px;
-    color:#1e90ff;
-    font-family:Consolas,monospace;
-    font-size:26px;
-    font-weight:bold;
-    text-align:center;
-    text-decoration:none;
-    text-shadow:
-        0 0 5px #1e90ff,
-        0 0 10px #1e90ff,
-        0 0 20px #1e90ff,
-        0 0 40px #1e90ff;
-    transition:.3s;
-}
-
-.load-game:hover{
-    color:#00ffcc;
-    text-shadow:
-        0 0 5px #00ffcc,
-        0 0 10px #00ffcc,
-        0 0 20px #00ffcc,
-        0 0 40px #00ffcc;
-    transform:scale(1.05);
-}
-    
-</style>
-</head>
 
 <body>
+
 
 <div class="container">
 
-<div class="title">Miyu Repacks GAME INSTALLER</div>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <div class="title">
+        MIYU REPACKS
+    </div>
+
+
+    <div class="subtitle">
+        GAME INSTALLER • PC • MOBILE • EMULATOR • SOFTWARE
+    </div>
+
+
+    <!-- =========================
+         SEARCH
+    ========================= -->
+
+    <input
+        type="text"
+        id="search"
+        class="search-box"
+        placeholder="Cari game atau software..."
+        autocomplete="off"
+    >
+
+
+    <!-- =========================
+         FILTER
+    ========================= -->
+
+    <div class="filter-buttons">
+
+        <button class="btn" data-filter="all">
+            SEMUA
+        </button>
+
+        <button class="btn" data-filter="pc">
+            GAME PC
+        </button>
+
+        <button class="btn" data-filter="mobile">
+            MOBILE
+        </button>
+
+        <button class="btn" data-filter="ps2">
+            PS2
+        </button>
+
+        <button class="btn" data-filter="software">
+            SOFTWARE
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         NOTICE
+    ========================= -->
+
+    <div class="notice">
+        MASALAH INSTALLER / REQUEST GAME / LAPOR BUG
+        <br>
+        DM TikTok:
+        <strong>@tentang.gts</strong>
+    </div>
+
+
+    <!-- =========================
+         FEATURE
+    ========================= -->
 
     <div class="ads-banner">
 
-    <img src="header.jpg" alt="Lossless Scaling">
+        <img
+            src="header.jpg"
+            alt="Lossless Scaling"
+        >
 
-    <div class="ads-content">
 
-        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:15px;">
+        <div class="ads-content">
 
-            <span style="background:#25d366;color:#fff;padding:6px 12px;border-radius:8px;font-weight:bold;">
-                V3.2.0
-            </span>
+            <div class="ads-meta">
 
-            <span style="background:#222;color:#fff;padding:6px 12px;border-radius:8px;">
-                PC
-            </span>
+                <span class="tag tag-version">
+                    V3.2.0
+                </span>
 
-            <span style="color:#ccc;">
-                THS
-            </span>
+                <span class="tag tag-platform">
+                    PC
+                </span>
 
-            <span style="color:#999;">
-                2024
-            </span>
+                <span class="tag tag-dev">
+                    THS
+                </span>
+
+                <span class="tag tag-dev">
+                    2024
+                </span>
+
+            </div>
+
+
+            <div class="ads-title">
+                LOSSLESS SCALING
+            </div>
+
+
+            <div class="ads-text">
+                Software untuk frame generation dan upscaling
+                pada game PC.
+            </div>
+
+
+            <div class="ads-actions">
+
+                <a
+                    href="#lossless"
+                    class="ads-btn"
+                >
+                    LIHAT GAME
+                </a>
+
+
+                <a
+                    href="https://store.steampowered.com/app/993090/Lossless_Scaling/"
+                    class="ads-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    DETAIL
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="ads-title">
+    </div>
+
+
+    <!-- =========================
+         NO RESULT
+    ========================= -->
+
+    <div id="no-result" class="no-result">
+        GAME TIDAK DITEMUKAN.
+    </div>
+
+
+    <!-- =========================
+         ULTIMATE PERFORMANCE
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="software"
+        data-title="ultimate performance power performa pc"
+    >
+
+        <div class="cmd-title">
+            ULTIMATE PERFORMANCE
+        </div>
+
+
+        <div class="line status">
+            PLATFORM : WINDOWS
+        </div>
+
+
+        <img
+            src="Screenshot 2026-08-02 171926.png"
+            class="game-img"
+            alt="Ultimate Performance Windows"
+        >
+
+
+        <div class="line">
+            TUTORIAL:
+        </div>
+
+
+        <div class="line">
+            1. Tekan Windows + R
+        </div>
+
+
+        <div class="line">
+            2. Ketik Control Panel
+        </div>
+
+
+        <div class="line">
+            3. Pilih Hardware and Sound
+        </div>
+
+
+        <div class="line">
+            4. Pilih Power Options
+        </div>
+
+
+        <div class="line">
+            5. Pilih Ultimate Performance
+        </div>
+
+
+        <div class="line">
+            Jika tidak muncul, buka Show Additional Plans.
+        </div>
+
+
+        <div class="line status">
+            CATATAN: Laptop dapat menggunakan baterai lebih cepat.
+        </div>
+
+
+        <p class="bottom-text">
+            Gunakan hanya jika memang diperlukan. Power plan bukan tombol
+            ajaib yang mengubah PC kentang menjadi RTX 5090.
+        </p>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL COMMAND
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         LOSSLESS SCALING
+    ========================= -->
+
+    <div
+        class="cmd"
+        id="lossless"
+        data-category="software"
+        data-title="lossless scaling"
+    >
+
+        <div class="cmd-title">
             LOSSLESS SCALING
         </div>
 
-        <div class="ads-text">
-            Tingkatkan FPS dengan Frame Generation, LSFG 3.0, dan berbagai mode upscaling. Cobain Sekarang Juga
+
+        <div class="line soon">
+            PLATFORM : PC
         </div>
 
-     <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
 
-    <a class="ads-btn" href="#lossless">
-        DOWNLOAD NOW
-    </a>
+        <div class="line status">
+            MINIMUM OS : WINDOWS 10+
+        </div>
 
-    <a class="ads-btn"
-       href="https://store.steampowered.com/app/993090/Lossless_Scaling/"
-       target="_blank">
-        DETAIL
-    </a>
 
-        
-     </div>
+        <img
+            src="Screenshot 2026-08-02 201334.png"
+            class="game-img"
+            alt="Lossless Scaling"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Jalankan installer.
+        </div>
+
+
+        <div class="line">
+            2. Pilih drive instalasi.
+        </div>
+
+
+        <div class="line">
+            3. Install Visual C++ dan DirectX jika diperlukan.
+        </div>
+
+
+        <div class="line">
+            4. Jalankan LosslessScaling.exe.
+        </div>
+
+
+        <div class="line">
+            Need Space: sekitar 300 MB.
+        </div>
+
+
+        <p class="bottom-text">
+            Pastikan software dan game yang digunakan memang kompatibel
+            dengan fitur frame generation atau scaling yang dipakai.
+        </p>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL LOSSLESS SCALING
+        </button>
 
     </div>
 
+
+    <!-- =========================
+         GTA 3
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="pc"
+        data-title="gta 3 grand theft auto iii"
+    >
+
+        <div class="cmd-title">
+            GTA 3
+        </div>
+
+
+        <div class="line soon">
+            PLATFORM : PC
+        </div>
+
+
+        <div class="line status">
+            MINIMUM OS : WINDOWS 7+
+        </div>
+
+
+        <img
+            src="gta-iii-is-my-favorite-game-of-all-time-v0-gjc2reszl9tf1.webp"
+            class="game-img"
+            alt="GTA 3"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Jalankan installer.
+        </div>
+
+
+        <div class="line">
+            2. Pilih drive instalasi.
+        </div>
+
+
+        <div class="line">
+            3. Buka folder GTA 3.
+        </div>
+
+
+        <div class="line">
+            4. Jalankan game.
+        </div>
+
+
+        <div class="line">
+            Minimum Space: sekitar 500 MB.
+        </div>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL GTA 3
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         GTA SAN ANDREAS
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="pc"
+        data-title="gta san andreas"
+    >
+
+        <div class="cmd-title">
+            GTA SAN ANDREAS
+        </div>
+
+
+        <div class="line status">
+            PLATFORM : PC
+        </div>
+
+
+        <div class="line soon">
+            OS : WINDOWS 8+
+        </div>
+
+
+        <img
+            src="Teks paragraf Anda.png"
+            class="game-img"
+            alt="GTA San Andreas"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Download installer.
+        </div>
+
+
+        <div class="line">
+            2. Extract menggunakan WinRAR atau 7-Zip.
+        </div>
+
+
+        <div class="line">
+            3. Buka folder GTA San Andreas.
+        </div>
+
+
+        <div class="line">
+            4. Jalankan gta-sa.exe.
+        </div>
+
+
+        <div class="line">
+            Need Space: sekitar 5 GB.
+        </div>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL GTA SAN ANDREAS
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         BULLY
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="mobile"
+        data-title="bully scholarship edition mobile"
+    >
+
+        <div class="cmd-title">
+            BULLY SCHOLARSHIP EDITION
+        </div>
+
+
+        <div class="line soon">
+            PLATFORM : MOBILE
+        </div>
+
+
+        <div class="line status">
+            CEK KOMPATIBILITAS ANDROID
+        </div>
+
+
+        <img
+            src="maxresdefault.jpg"
+            class="game-img"
+            alt="Bully Scholarship Edition"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Install aplikasi dari sumber resmi.
+        </div>
+
+
+        <div class="line">
+            2. Jalankan aplikasi.
+        </div>
+
+
+        <div class="line">
+            3. Ikuti proses setup.
+        </div>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL BULLY
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         NFS CARBON
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="pc"
+        data-title="need for speed carbon nfs carbon"
+    >
+
+        <div class="cmd-title">
+            NEED FOR SPEED CARBON
+        </div>
+
+
+        <div class="line status">
+            PLATFORM : PC
+        </div>
+
+
+        <div class="line soon">
+            MINIMUM OS : WINDOWS XP
+        </div>
+
+
+        <img
+            src="nfs-carbon-this-game-came-out-in-2006-yes-2006-and-its-v0-ulasxvm3qcv91.webp"
+            class="game-img"
+            alt="Need For Speed Carbon"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Extract file game.
+        </div>
+
+
+        <div class="line">
+            2. Buka folder Need For Speed Carbon.
+        </div>
+
+
+        <div class="line">
+            3. Jalankan carbon.exe.
+        </div>
+
+
+        <div class="line">
+            Need Space: sekitar 4 GB.
+        </div>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL NFS CARBON
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         GTA SA MOBILE
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="mobile"
+        data-title="gta san andreas mobile"
+    >
+
+        <div class="cmd-title">
+            GTA SAN ANDREAS MOBILE
+        </div>
+
+
+        <div class="line status">
+            PLATFORM : MOBILE
+        </div>
+
+
+        <div class="line soon">
+            CEK KOMPATIBILITAS ANDROID
+        </div>
+
+
+        <img
+            src="0986691e851162979a8674382e265c99.jpg"
+            class="game-img"
+            alt="GTA San Andreas Mobile"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Install aplikasi.
+        </div>
+
+
+        <div class="line">
+            2. Ikuti setup data game.
+        </div>
+
+
+        <div class="line">
+            3. Jalankan game.
+        </div>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL GTA SA MOBILE
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         MINECRAFT
+    ========================= -->
+
+    <div
+        class="cmd"
+        data-category="mobile"
+        data-title="minecraft mobile"
+    >
+
+        <div class="cmd-title">
+            MINECRAFT MOBILE
+        </div>
+
+
+        <div class="line status">
+            PLATFORM : MOBILE
+        </div>
+
+
+        <img
+            src="unnamed.webp"
+            class="game-img"
+            alt="Minecraft Mobile"
+        >
+
+
+        <div class="line">
+            TUTORIAL INSTALL:
+        </div>
+
+
+        <div class="line">
+            1. Install game dari sumber resmi.
+        </div>
+
+
+        <div class="line">
+            2. Jalankan game.
+        </div>
+
+
+        <div class="line">
+            3. Pasang resource atau music pack jika diperlukan.
+        </div>
+
+
+        <button
+            class="btn"
+            data-link="PASTE_LINK_DOWNLOAD_DI_SINI"
+        >
+            INSTALL MINECRAFT
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         MAX PAYNE 2
+    ========================= -->
+
+    <div
+        class="game-link-box"
+        data-category="pc"
+        data-title="max payne 2"
+    >
+
+        <a href="maxpayne2.html">
+
+            <div class="game-link-title">
+                MAX PAYNE 2 PC
+            </div>
+
+
+            <div class="game-link-info">
+                2003
+            </div>
+
+
+            <div class="game-link-info">
+                Developer: Remedy Entertainment
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         LOAD GAME
+    ========================= -->
+
+    <a
+        href="game.html"
+        class="load-game"
+    >
+        LOAD GAME...
+    </a>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <div class="footer">
+        © 2026 Miyu Repacks
+    </div>
+
+
 </div>
-    
-<input class="search-box" id="search" placeholder="Cari game..." onkeyup="searchGame()">
-<div class="filter-buttons">
 
-    <button class="btn" onclick="filterCategory('all')">
-        SEMUA
-    </button>
-
-    <button class="btn" onclick="filterCategory('pc')">
-        GAME PC
-    </button>
-
-    <button class="btn" onclick="filterCategory('mobile')">
-        GAME MOBILE
-    </button>
-
-    <button class="btn" onclick="filterCategory('ps2')">
-        GAME PS2
-    </button>
-</div>
 
 <script>
-function searchGame() {
-    let input = document.getElementById("search").value.toLowerCase();
-    let items = document.querySelectorAll(".cmd");
 
-    let firstMatch = null;
+    /* =========================
+       SEARCH
+    ========================= */
 
-    items.forEach(function(item){
+    const searchInput = document.getElementById("search");
 
-        let title = item.querySelector(".cmd-title")
-        .innerText
-        .toLowerCase();
+    const gameItems = document.querySelectorAll(
+        ".cmd, .game-link-box"
+    );
 
-        if(title.includes(input)){
-            item.style.display = "block";
+    const noResult = document.getElementById("no-result");
 
-            if(firstMatch === null){
-                firstMatch = item;
+
+    searchInput.addEventListener("input", function () {
+
+        const keyword =
+            this.value
+                .toLowerCase()
+                .trim();
+
+
+        let found = 0;
+
+
+        gameItems.forEach(function (item) {
+
+            const title =
+                (
+                    item.dataset.title ||
+                    item.innerText
+                ).toLowerCase();
+
+
+            if (title.includes(keyword)) {
+
+                item.style.display = "";
+
+                found++;
+
+            } else {
+
+                item.style.display = "none";
+
             }
 
-        }else{
-            item.style.display = "none";
-        }
-
-    });
-
-    if(firstMatch && input !== ""){
-        firstMatch.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
         });
-    }
-}
-function filterCategory(category){
 
-    let games = document.querySelectorAll(".cmd");
 
-    games.forEach(function(game){
+        if (keyword !== "" && found === 0) {
 
-        if(category === "all"){
-            game.style.display = "block";
-        }
-        else if(game.dataset.category === category){
-            game.style.display = "block";
-        }
-        else{
-            game.style.display = "none";
+            noResult.style.display = "block";
+
+        } else {
+
+            noResult.style.display = "none";
+
         }
 
     });
 
-}
+
+    /* =========================
+       FILTER
+    ========================= */
+
+    const filterButtons =
+        document.querySelectorAll("[data-filter]");
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const category =
+                this.dataset.filter;
+
+
+            searchInput.value = "";
+
+
+            let found = 0;
+
+
+            gameItems.forEach(function (item) {
+
+                const itemCategory =
+                    item.dataset.category;
+
+
+                if (
+                    category === "all" ||
+                    itemCategory === category
+                ) {
+
+                    item.style.display = "";
+
+                    found++;
+
+                } else {
+
+                    item.style.display = "none";
+
+                }
+
+            });
+
+
+            noResult.style.display =
+                found === 0
+                    ? "block"
+                    : "none";
+
+        });
+
+    });
+
+
+    /* =========================
+       DOWNLOAD BUTTON
+    ========================= */
+
+    document
+        .querySelectorAll("[data-link]")
+        .forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const link =
+                    this.dataset.link;
+
+
+                if (
+                    !link ||
+                    link === "PASTE_LINK_DOWNLOAD_DI_SINI"
+                ) {
+
+                    alert(
+                        "Link download belum dipasang."
+                    );
+
+                    return;
+
+                }
+
+
+                window.location.href = link;
+
+            });
+
+        });
+
+
+    /* =========================
+       CONSOLE
+    ========================= */
+
+    console.log(
+        "Miyu Repacks berhasil dimuat."
+    );
+
 </script>
 
-MASALAH BUG INSTALLER ATAU REQUEST GAME ATAU LAPOR BUG DM TIKTOK @tentang.gts
 
-    <div class="cmd" data-category="pc">
-      <div class="cmd-title">Memunculkan ultimate power untuk memaksimalkan performa pc</div>
+<!-- GAME.JS -->
+<script src="./game.js"></script>
 
-    <img src="Screenshot 2026-08-02 171926.png" class="game-img" alt="ultimate power">
-
-    <div class="line">TUTORIAL MEMUNCULKAN:</div>
-    <div class="line">1. RUN CMD</div>
-    <div class="line">2. Ketik Windows+r"</div>
-    <div class="line">3. Ketik "Control Panel"</div>
-    <div class="line">4. Pencet Hardware and sound terus ke power option</div>
-    <div class="line">5. Ganti Ke Ultimate Performance Kalo Gada pencet Show Additional Plans Dan Restart </div>
-
-
-    <div class="line">Note Kalo Pake Laptop Bakal Tambah Boros Baterai</div>
-
-     <p class="bottom-text">
-        Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc
-    </p>
-
-    <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/z3wxiwyj7oz6sod/Ultimate+Performance+Unlocked.bat/file'">
-        INSTALL Command
-    </button>
- </div>
-    
-    <div class="cmd" id="lossless" data-category="pc">
-    <div class="cmd-title">Lossless Scalling Miyu Rpcks</div>
-    
-    <div class="line soon">PLATFROM : PC</div>
-    <div class="line status">MINIMUM OS WINDOWS 10 KEATAS</div>
-
-    <img src="Screenshot 2026-08-02 201334.png" alt="GTA 3">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. RUN INSTALLER Pilih Drive C / D / E</div>
-    <div class="line">2. Instal Vcredist Dan Directx Yang Sesuai Di Folder Redist"</div>
-    <div class="line">3. Buka "MIYURPCK" Di Drive Yng Dipilih</div>
-    <div class="line">4. Run LosslessScaling.exe</div>
-
-    <div class="line">Ini Software Penglancar Game Dengan Meng Genrate FPS Need space 300mb</div>
-
-    <p class="bottom-text">
-        Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc
-    </p>
-    
-<button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/dtjhkbsgmr3n1l9/Lossless+Scaling+Miyu+Repack.rar/file'">
-        INSTALL LOSSLESS SCALLING
-    </button>
-</div>
-    
-<div class="cmd" data-category="pc">
-    <div class="cmd-title">GTA 3 RPCK FLZZUE INSTALL</div>
-    
-    <div class="line soon">PLATFROM : PC</div>
-    <div class="line status">MINIMUM OS WINDOWS 7 KEATAS</div>
-
-    <img src="gta-iii-is-my-favorite-game-of-all-time-v0-gjc2reszl9tf1.webp" class="game-img" alt="GTA 3">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. RUN INSTALLER Pilih Drive C / D / E</div>
-    <div class="line">2. Masuk folder "GAME FLZZUE"</div>
-    <div class="line">3. Buka "Grand Theft Auto 3"</div>
-    <div class="line">4. Run gta3.exe</div>
-
-    <div class="line">Minimum spec intel pentinum n4500 Need space 500mb</div>
-
-    <p class="bottom-text">
-        Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc
-    </p>
-    
-<button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/anfxi0biaqzroxy/GTA+3+Rpck+Flzzue.rar/file'">
-        INSTALL GTA 3
-    </button>
-</div>
-  
-<div class="cmd" data-category="pc">
-    <div class="cmd-title">GTA SAN ANDREAS RPCK INSTALL</div>
-
-    <div class="line soon">PLATFROM : PC</div>
-    <div class="line status">OS MINIMUM WINDOWS 8 KEATAS</div>
-
-    <img src="Teks paragraf Anda.png" class="game-img">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Download file GTA San Andreas (.zip / .rar)</div>
-    <div class="line">2. Extract menggunakan WinRAR / 7-Zip</div>
-    <div class="line">3. Pindahkan folder "GTA San Andreas"</div>
-    <div class="line">4. Simpan di directory bebas (C:\GAME FLZZUE / D:\Games)</div>
-    <div class="line">5. Buka folder game</div>
-    <div class="line">6. Run gta-sa.exe</div>
-    <div class="line">minimum spec intel pentinum n4500 Need Space 5gb</div>
-<p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
-    <button class="btn"
-    onclick="window.location.href='https://drive.google.com/drive/folders/10RY-6F5Nm87wNYnbrJ48jfIuaBcQuGqJ'">
-        INSTAL GTA SA
-    </button>
-</div>
-
-<div class="cmd">
-    <div class="cmd-title">BULLY SCHOLARSHIP EDITION RPCK INSTALL VERSI TERBARU</div>
-
-    <div class="line soon">PLATFROM : MOBILE</div>
-    <div class="line status">UPDATE TERBARU WAJIB ANDRO 15 </div>
-
-    <img src="maxresdefault.jpg" class="game-img" alt="Gambar">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1.  Instal Apk Bully</div>
-    <div class="line">2. Masuk aplikasi bully nya"</div>
-    <div class="line">3. Dan kalian skip sign in aja"</div>
-    <div class="line">minimum spec andro 15 Need Space 5Gb</div>
-
-    <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/7vuleo9k11w8xii/BULLY_V1.4.299_MOD.zip/file'">
-        INSTAL BULLY MOBILE
-    </button>
-</div>
-
-<div class="cmd">
-    <div class="cmd-title">PICSART MOD [BUKAN REPACK FLZZUE]</div>
-
-    <div class="line soon">PLATFROM : MOBILE</div>
-    <div class="line status">SOFTWARE EDIT</div>
-
-    <img src="Screenshots-for-Picsart-app-for-Google-Drive-Web_1280x800_2-800x500.webp" class="game-img" alt="PicsArt">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Instal apk</div>
-    <div class="line">2. MASUK PICSART MOD</div>
-    <div class="line">3. Tes Edit"</div>
-    <div class="line">4. Premium</div>
-    <div class="line">Minimum Specs Andro 11+ Need Space 2gb</div>
-    
-   <button class="btn"
-    onclick="window.location.href='https://picsarthd.com/download/'">
-        INSTALL PICSART MOD
-    </button>
-</div>
-
-<div class="cmd" data-category="pc">
-    <div class="cmd-title">NEED FOR SPEED CARBON REUPLOADER</div>
-
-    <div class="line status">PLATFORM : PC</div>
-    <div class="line soon">Minimum Os Windows xp</div>
-
-    <img src="nfs-carbon-this-game-came-out-in-2006-yes-2006-and-its-v0-ulasxvm3qcv91.webp" class="game-img" alt="NFS Carbon">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="li    ne">1. Download file nfs carbon  </div>
-    <div class="line">2. Extract menggunakan WinRar atau sejenisnya</div>
-    <div class="line">3. Mainkan di folder need for speed carbon </div>
-    <div class="line">4. Run carbon</div>
-    <div class="line">5. jika ngecrash ubah resolusi di widescreen ada di folder scripts</div>
-    <div class="line">Minimum Specs Intel Pentinum 4 Gpu VRAM 64gb Need Space 4 Gb</div>
-    <p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
-<button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/bazem7njaj3ydn4/Need_for_Speed_Carbon.rar/file'">
-        INSTAL NFS Carbon
-    </button>
-</div>
-<div class="cmd" data-category="mobile">
-    <div class="cmd-title">GTA SAN ANDREAS MOBILE</div>
-
-    <div class="line status">PLATFORM : MOBILE</div>
-    <div class="line soon">MIMIMUM ANDRO 12+</div>
-
-    <img src="0986691e851162979a8674382e265c99.jpg" class="game-img" alt="Gambar">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Ekstrak Apk v2.00  </div>
-    <div class="line">2. Instal Apk </div>
-    <div class="line">3. Ekstrak Obb v2.00 ZIP ke Android>obb</div>
-    <div class="line">4. Mainkan</div>
-
-    <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/ad67u05t2eirc56/APK_V2.00_12%2B.zip/file'">
-        INSTAL APK GTA SA V2.00
-    </button>
-
-    <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/8mei240hsx7njjc/OBB_V2.00_12%2B.zip/file'">
-        INSTAL OBB GTA SA V2.00
-    </button>
-</div>
-
-<div class="cmd" data-category="mobile">
-    <div class="cmd-title">Minecraft Patch Music Mobile</div>
-
-    <div class="line soon">PLATFROM : MOBILE</div>
-    <div class="line status">Minimum os android 12+</div>
-
-    <img src="unnamed.webp" class="game-img" alt="Gambar">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Instal apk Mc_Patch.....</div>
-    <div class="line">2. MASUK Aplikasi</div>
-    <div class="line">3. Dan mainkan"</div>
-    <div class="line">Minimum Specs Andro 12+ Need Space 2gb</div>
-    
-   <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/ip7wcelkdmv5mxh/MC_Patch_1-26-23-1_Music_64%2632bit.apk/file'">
-        INSTALL MC PATCH MOBILE
-    </button>
-</div>
-
-<div class="cmd" data-category="mobile">
-    <div class="cmd-title">Max Payne Mobile </div>
-
-    <div class="line soon">PLATFROM : MOBILE</div>
-    <div class="line status">Minimum os android 6+</div>
-
-    <img src="cb3c66ebe6baf706fd12ade4d8ecb0e5.jpg" class="game-img" alt="Game Image">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Ekstrak Max Payne All gpu by..... </div>
-    <div class="line">2. Salin/Cut Com.Rockstar.Max.payne ke android>obb </div>
-    <div class="line">3. Instal Apk By SSG...."</div>
-    <div class="line">Minimum Specs Andro 6+ Need Space 2gb</div>
-    
-   <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/xqepxzmbaldf5vj/Max_Payne_ALL_GPU_BY_SSGSS4_VEGETA_I_LIFE.7z/file'">
-        INSTALL Max Payne Mobile
-    </button>
-</div>
-
-<div class="cmd" data-category="pc">
-    <div class="cmd-title">Gta Vice City Pc Download </div>
-
-    <div class="line soon">PLATFROM : PC</div>
-    <div class="line status">Minimum Windows xp</div>
-
-    <img src="GTA_ Vice City 14_06_2026 00_35_36.png" class="game-img" alt="Game Image">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Ekstrak Gta Vice City Burn </div>
-    <div class="line">2. Open Folder Gta Vice City Burn </div>
-    <div class="line">3. Run GTA-VC"</div>
-    <div class="line">Minimum Specs pentinum III Need Space 2gb</div>
-<div class="line">Perlu Digaris bawahi gw udh coba ni gta ternyta ver burn atau lite</div>
-
-   <p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
-
-   <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/hmwewlx2pnsl4r9/GTA+Vice+City+-+Burn.rar/file'">
-        INSTALL Gta Vc 
-    </button>
-</div>
-
-<div class="cmd" data-category="mobile">
-    <div class="cmd-title">Need For Speed Most Wanted </div>
-
-    <div class="line soon">PLATFROM : Gamehub Emulator</div>
-    <div class="line status">Minimum Gamehub Emulator versi yng ada di file</div>
-
-    <img src="oldman777-7dcc6beea78f4c44358a945a5b61b48b.jpg" class="game-img" alt="Game Image">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Ekstrak Need For Speed..... Pw Ridwanfast. </div>
-    <div class="line">2. Instal Apk Gamehubnya.. </div>
-    <div class="line">3. Import Game yaitu Speed.exe di folder need for speed.. </div>
-    <div class="line">4. Ambil cover "</div>
-    <div class="line">5. Tungguin download otomatis "</div>
-    <div class="line">6. Lainch aja jika mengalami bug cek youtube Ridwanfast. dan cri video yng mp v2 nfs mw "</div>
-    <div class="line">Minimum Specs pentinum III Need Space 3gb</div>
-<div class="line">Subscribe Akun yt @ridwanfast. rajanya mod</div>
-
-   
-
-   <button class="btn"
-    onclick="window.location.href='https://www.mediafire.com/file/3zeyxtnypzu6coe/NFS_MOSTWANTED_ULTIMATE_V2_BY_RIDWANFAST.7z/file'">
-        INSTALL NFS MW BY BG RIDWAN
-    </button>
-</div>
-
-<div class="cmd" data-category="ps2">
-    <div class="cmd-title">Pcsx2 emulator ps2 di pc Download Buat Main Game Ps2 </div>
-
-    <div class="line soon">PLATFROM : PC</div>
-    <div class="line status">Minimum Windows 10</div>
-
-    <img src="Screenshot 2026-06-22 154220.png" class="game-img" alt="Game Image">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. instal dan next next next aja </div>
-    <div class="line">2. Isi Game Di rar Dibawah Gw Bgi Game Gamenya </div>
-    
-    <div class="line">Minimum Specs Intel Core I5 Gen 3 Buat Game need space 60mb</div>
-<div class="line">Emu Bisa Map Keyboard</div>
-
-   <p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
-
-   <button class="btn"
-    onclick="window.location.href='https://pcsx2.net/'">
-        INSTALL Pcsx2
-    </button>
-</div>
-
-<div class="cmd" data-category="ps2">
-    <div class="cmd-title">God Of War II emulator ps2 di pc Download Wajib Download Pcsx2 Nya </div>
-
-    <div class="line soon">PLATFROM : Pcsx2</div>
-    <div class="line status">Minimum Windows 10</div>
-
-    <img src="MV5BNDMyNGJiMzgtMzY0Ny00MDc1LWEzMDYtNzM4ZTIxZWNkNTgwXkEyXkFqcGc@._V1_.jpg" class="game-img" alt="Game Image">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Ekstrak File God Of War 2 USA nya  </div>
-    <div class="line">2. Di Pcsx 2 Klik Kanan Dan Add Kasih Folderny Jika Berbentuk ISO atau cdh langsung gausah ekstrak jdi folder </div>
-    
-    <div class="line">Minimum Specs Intel Core I5 Gen 6 Buat Game need space 7gb</div>
-<div class="line">Emu Bisa Map Keyboard</div>
-
-   <p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
-
-   <button class="btn"
-    onclick="window.location.href='https://sto1.romsforever.co/0:/PS2-CHD/God%20of%20War%20II%20(USA).chd?token=cHRaalBnW09FEnhqW3VZLFlWTBN1dFpzVWM%3D'">
-        INSTALL God Of War II 
-    </button>
-</div>
-
-<div class="cmd" data-category="pc">
-    <div class="cmd-title">Lego Batman 2 By AnkerGames Reupload bukan repack flzzue Download </div>
-
-    <div class="line soon">PLATFROM : PC</div>
-    <div class="line status">Minimum Windows xp</div>
-
-    <img src="Lego bat2.jpg" class="game-img" alt="Game Image">
-
-    <div class="line">TUTORIAL INSTALL:</div>
-    <div class="line">1. Instal Setup dan Gamenya </div>
-    <div class="line">2. ekstrak Lego Batman2 Setup Flzzue.rar</div>
-    <div class="line">3. Run Setup Lego Batman2.cmd Dan Pilih Drive Instalnya"</div>
-    <div class="line">4. Ke Drive Yang Kalian Pilih Tadi Dan Buka Folder GAMEFLZZUE Dan Buka Folder Gamenya"</div>
-    <div class="line">5. Run LEGOBatman2.exe  </div>
-    <div class="line">Minimum Specs I5 2300 Need Space 4gb</div>
-<div class="line"> Catatan Dari Anker Games Kalian Gausah Matiin Antivirus Juga Gapapa Tapi Disarankan Buat Matikan Karena Antivirus Yang Sensitif Bisa Menghapus file atau Folder Penting game</div>
-
-   <p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
-
-              <button class="btn"
-            onclick="window.location.href='https://ankergames.net/game/lego-batman-2-dc-super-heroes#'">
-            INSTALL LEGO BATMAN 2 BY ANKER GAMES
-        </button>
-
-        <button class="btn"
-            onclick="window.location.href='https://www.mediafire.com/file/r3atjum6qdvp0v5/Setup.lego+batman+2.rar/file'">
-            INSTALL SETUP LEGO BATMAN 2
-        </button>
-    </div>
-
-    <div class="game-link-box">
-
-    <a href="maxpayne2.html" style="text-decoration:none; color:inherit; display:block;">
-
-        <div class="game-link-title">
-            MAX PAYNE 2 PC
-        </div>
-
-        <div class="game-link-info">
-            2003
-        </div>
-
-        <div class="game-link-info">
-            Developer: Remedy Entertainment
-        </div>
-
-    </a>
-
-</div>
-
-<a href="game.html" class="load-game">
-    LOAD GAME...
-</a>
-    
-
-<script>
-console.log("INDEX HTML BERHASIL");
-
-const script = document.createElement("script");
-script.src = "./game.js";
-
-script.onload = function(){
-    console.log("GAME.JS BERHASIL DIMUAT");
-};
-
-script.onerror = function(){
-    console.error("GAME.JS GAGAL DIMUAT");
-};
-
-document.body.appendChild(script);
-</script>
 
 </body>
+
 </html>
