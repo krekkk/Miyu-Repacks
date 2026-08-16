@@ -1,178 +1,219 @@
 const games = [
-    {
-        title: "Max Payne 2 Miyu Repacks",
-        category: "pc",
-        platform: "PC",
-        os: "Windows XP ke atas",
-        image: "0000003274.1920x1080.jpg",
-        description: "Max Payne 2 Miyu Repacks.",
-        tutorial: [
-            "Ekstrak Max Payne 2 Miyu Repacks.",
-            "Jalankan setup.exe.",
-            "Tunggu proses instalasi sampai selesai.",
-            "Jalankan game.",
-            "Selamat bermain!",
-            "Minimum Spec: Intel Core i5"
-        ],
-        download: "https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
-    },
 
     {
         title: "Miyu Windows Toolkit",
-        category: "pc",
-        platform: "Windows",
-        os: "Windows 10 / Windows 11",
-        image: "Screenshot 2026-08-09 212004.png",
-        description: "Miyu Windows Toolkit untuk berbagai utilitas, troubleshooting, maintenance, dan tools Windows.",
-        tutorial: [
-            "Download Miyu Windows Toolkit.",
-            "Ekstrak file Miyu TollKit.rar.",
-            "Buka folder hasil ekstraksi.",
-            "Jalankan Miyu Windows Toolkit.",
-            "Gunakan menu sesuai kebutuhan."
-        ],
-        download: "https://www.mediafire.com/file/rfvxvsr1g6fw46d/Miyu+TollKit.rar/file"
+        developer: "Miyu",
+        year: "2026",
+        page: "miyutoolkit.html"
     }
+
 ];
 
 
-// =====================================
+// =====================================================
 // RENDER GAME
-// =====================================
+// =====================================================
 
-function renderGames(list = games) {
+function renderGames(){
 
-    const container = document.querySelector(".container");
+    const container =
+        document.querySelector(".container");
 
-    if (!container) {
+    if(!container){
         console.error("Container tidak ditemukan!");
         return;
     }
 
-    // Hapus game yang sebelumnya dibuat oleh game.js
-    document.querySelectorAll(".js-game").forEach(function(game) {
-        game.remove();
-    });
 
-    list.forEach(function(game) {
-
-        const gameBox = document.createElement("div");
-
-        gameBox.className = "cmd js-game";
-        gameBox.dataset.category = game.category;
-
-        let tutorialHTML = "";
-
-        game.tutorial.forEach(function(step, index) {
-
-            tutorialHTML += `
-                <div class="line">
-                    ${index + 1}. ${step}
-                </div>
-            `;
-
+    document
+        .querySelectorAll(".js-game")
+        .forEach(function(item){
+            item.remove();
         });
 
-        gameBox.innerHTML = `
-            <div class="cmd-title">
+
+    games.forEach(function(game){
+
+        const link =
+            document.createElement("a");
+
+        link.className = "js-game";
+
+        link.href = game.page;
+
+        link.innerHTML = `
+
+            <span class="js-game-title">
                 ${game.title}
-            </div>
+            </span>
 
-            <div class="line status">
-                PLATFORM : ${game.platform}
-            </div>
+            <span class="js-game-info">
+                ${game.developer}
+            </span>
 
-            <div class="line soon">
-                MINIMUM OS : ${game.os}
-            </div>
+            <span class="js-game-info">
+                ${game.year}
+            </span>
 
-            <img
-                src="${game.image}"
-                class="game-img"
-                alt="${game.title}"
-                onerror="this.style.display='none';"
-            >
-
-            <div class="line">
-                ${game.description}
-            </div>
-
-            <div class="line">
-                TUTORIAL INSTALL:
-            </div>
-
-            ${tutorialHTML}
-
-            <button
-                class="btn"
-                onclick="window.open('${game.download}', '_blank')"
-            >
-                INSTALL ${game.title}
-            </button>
         `;
 
-        container.appendChild(gameBox);
+        container.appendChild(link);
 
     });
 
-    console.log("Game berhasil dimuat:", list.length);
 }
 
 
-// =====================================
-// SEARCH
-// =====================================
+// =====================================================
+// STYLE
+// =====================================================
 
-function searchGame() {
+const style =
+    document.createElement("style");
 
-    const inputElement = document.getElementById("search");
+style.textContent = `
 
-    if (!inputElement) {
-        return;
+    .js-game{
+
+        width:700px;
+        max-width:100%;
+
+        display:block;
+
+        padding:14px 5px;
+
+        text-decoration:none;
+
+        color:white;
+
+        font-family:Consolas,monospace;
+
+        border-bottom:1px solid #222;
+
+        transition:.2s;
+
     }
 
-    const input = inputElement.value
-        .toLowerCase()
-        .trim();
 
-    const gamesElements =
-        document.querySelectorAll(".cmd");
+    .js-game:hover{
+
+        padding-left:12px;
+
+        border-bottom-color:#1e90ff;
+
+    }
+
+
+    .js-game-title{
+
+        display:block;
+
+        color:#1e90ff;
+
+        font-family:'Oswald',sans-serif;
+
+        font-size:24px;
+
+        text-shadow:0 0 8px #1e90ff;
+
+    }
+
+
+    .js-game-info{
+
+        display:inline-block;
+
+        margin-top:5px;
+
+        margin-right:18px;
+
+        color:#777;
+
+        font-size:13px;
+
+    }
+
+
+    .js-game:hover .js-game-title{
+
+        color:#00ffcc;
+
+        text-shadow:0 0 8px #00ffcc;
+
+    }
+
+`;
+
+document.head.appendChild(style);
+
+
+// =====================================================
+// SEARCH
+// =====================================================
+
+function searchGame(){
+
+    const input =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    const items =
+        document.querySelectorAll(
+            ".cmd, .js-game"
+        );
+
 
     let firstMatch = null;
 
-    gamesElements.forEach(function(game) {
 
-        const title =
-            game.querySelector(".cmd-title");
+    items.forEach(function(item){
 
-        if (!title) {
+        const titleElement =
+            item.querySelector(".cmd-title") ||
+            item.querySelector(".js-game-title");
+
+
+        if(!titleElement){
             return;
         }
 
-        const gameTitle =
-            title.innerText.toLowerCase();
 
-        if (gameTitle.includes(input)) {
+        const title =
+            titleElement
+                .innerText
+                .toLowerCase();
 
-            game.style.display = "block";
 
-            if (!firstMatch && input !== "") {
-                firstMatch = game;
+        if(title.includes(input)){
+
+            item.style.display = "";
+
+            if(
+                firstMatch === null &&
+                input !== ""
+            ){
+                firstMatch = item;
             }
 
-        } else {
+        }
+        else{
 
-            game.style.display = "none";
+            item.style.display = "none";
 
         }
 
     });
 
-    if (firstMatch && input !== "") {
+
+    if(firstMatch){
 
         firstMatch.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+            behavior:"smooth",
+            block:"start"
         });
 
     }
@@ -180,31 +221,31 @@ function searchGame() {
 }
 
 
-// =====================================
-// FILTER CATEGORY
-// =====================================
+// =====================================================
+// FILTER
+// =====================================================
 
-function filterCategory(category) {
+function filterCategory(category){
 
     const games =
         document.querySelectorAll(".cmd");
 
-    games.forEach(function(game) {
 
-        const gameCategory =
-            game.dataset.category;
+    games.forEach(function(game){
 
-        if (category === "all") {
+        if(category === "all"){
 
-            game.style.display = "block";
+            game.style.display = "";
 
         }
-        else if (gameCategory === category) {
+        else if(
+            game.dataset.category === category
+        ){
 
-            game.style.display = "block";
+            game.style.display = "";
 
         }
-        else {
+        else{
 
             game.style.display = "none";
 
@@ -215,13 +256,13 @@ function filterCategory(category) {
 }
 
 
-// =====================================
-// LOAD GAME
-// =====================================
+// =====================================================
+// LOAD
+// =====================================================
 
 document.addEventListener(
     "DOMContentLoaded",
-    function() {
+    function(){
 
         renderGames();
 
