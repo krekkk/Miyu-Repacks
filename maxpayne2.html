@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Max Payne 2 Miyu Repacks</title>
+<title>Max Payne 2 - Miyu Repacks</title>
 
-<meta name="description" content="Max Payne 2 Miyu Repacks - Informasi game, developer, tahun rilis, spesifikasi minimum, tutorial instalasi dan download.">
+<meta name="description"
+content="Max Payne 2: The Fall of Max Payne - informasi game, cerita, developer, publisher, spesifikasi dan download dari Miyu Repacks.">
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+rel="stylesheet">
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
@@ -21,355 +33,603 @@ html{
 }
 
 body{
-    margin:0;
-    min-height:100vh;
-    background:
-        radial-gradient(circle at 20% 10%, #151515 0%, #050505 35%, #000 70%),
-        #000;
+    background:#050505;
     color:#ddd;
     font-family:'Oswald',sans-serif;
 }
 
-/* HEADER */
 
-.header{
-    width:100%;
-    padding:25px 40px;
+/* =========================
+   HEADER
+========================= */
+
+header{
+    height:80px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 6%;
+
     border-bottom:1px solid #1e90ff;
-    box-shadow:0 0 15px rgba(30,144,255,.5);
+
+    background:#050505;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.25);
 }
 
-.header-title{
+.logo{
+    font-size:28px;
+    font-weight:600;
+
     color:#1e90ff;
-    font-size:34px;
+
     text-shadow:
         0 0 5px #1e90ff,
         0 0 15px #1e90ff;
 }
 
-/* MAIN */
 
-.page{
-    width:90%;
-    max-width:1100px;
-    margin:40px auto 80px;
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back{
+    display:inline-block;
+
+    margin-top:35px;
+
+    color:#888;
+
+    text-decoration:none;
+
+    font-family:Arial,sans-serif;
+
+    transition:.2s;
 }
 
-/* TITLE */
+.back:hover{
+    color:#1e90ff;
+}
 
-.game-title{
-    font-size:55px;
-    color:#fff;
-    margin-bottom:30px;
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    width:88%;
+
+    margin:auto;
+
+    padding-bottom:100px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title-area{
+    margin-top:35px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid #222;
+}
+
+.title-area h1{
+    font-size:65px;
+
+    color:white;
+
+    letter-spacing:2px;
+
     text-shadow:
         0 0 5px #1e90ff,
         0 0 15px #1e90ff,
-        0 0 30px #1e90ff;
+        0 0 35px rgba(30,144,255,.8);
 }
 
-/* HERO */
+.subtitle{
+    margin-top:8px;
+
+    font-family:Arial,sans-serif;
+
+    color:#777;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    display:flex;
-    gap:35px;
-    align-items:flex-start;
-    margin-bottom:45px;
+    display:grid;
+
+    grid-template-columns:55% 45%;
+
+    min-height:430px;
+
+    margin-top:40px;
+
+    align-items:center;
 }
+
+
+/* IMAGE */
 
 .hero-image{
-    width:480px;
-    max-width:48%;
-    height:280px;
+    width:100%;
+
+    height:420px;
+
     object-fit:cover;
-    border-radius:12px;
-    border:1px solid #1e90ff;
+
+    display:block;
+
+    border-radius:4px;
+
     box-shadow:
-        0 0 10px #1e90ff,
-        0 0 25px rgba(30,144,255,.4);
+        0 0 20px rgba(30,144,255,.35);
 }
 
-.hero-info{
-    flex:1;
+
+/* TEXT */
+
+.hero-text{
+    padding:35px 0 35px 55px;
 }
 
-.hero-info h2{
-    margin-top:0;
-    font-size:32px;
+.hero-text h2{
     color:#1e90ff;
-    text-shadow:0 0 10px #1e90ff;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+        0 0 10px #1e90ff;
 }
 
-.hero-info p{
+.hero-text p{
     font-family:Arial,sans-serif;
+
     font-size:16px;
-    line-height:1.8;
-    color:#ccc;
+
+    line-height:1.9;
+
+    color:#bbb;
+
+    margin-bottom:18px;
 }
 
-/* INFO */
+
+/* =========================
+   GAME INFO
+========================= */
+
+.game-info{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:55px;
+
+    border-top:1px solid #222;
+
+    border-bottom:1px solid #222;
+}
 
 .info{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin:30px 0 45px;
+    padding:25px;
+
+    border-right:1px solid #222;
 }
 
-.info-item{
-    padding:18px;
-    border-left:2px solid #1e90ff;
-    background:rgba(10,10,10,.5);
+.info:last-child{
+    border-right:none;
 }
 
 .info-label{
-    color:#777;
-    font-size:13px;
-    margin-bottom:5px;
+    font-family:Arial,sans-serif;
+
+    font-size:12px;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
 }
 
 .info-value{
+    font-size:19px;
+
     color:#1e90ff;
-    font-size:18px;
 }
 
-/* SECTION */
 
-.section{
-    margin-top:45px;
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    width:80%;
+
+    margin-top:80px;
 }
 
-.section h2{
-    font-size:32px;
-    color:#1e90ff;
+.content h2{
+    font-size:35px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    padding-bottom:12px;
+
     border-bottom:1px solid #1e90ff;
-    padding-bottom:10px;
-    text-shadow:0 0 10px #1e90ff;
+
+    text-shadow:
+        0 0 10px #1e90ff;
 }
 
-.section p{
+.content p{
     font-family:Arial,sans-serif;
-    line-height:1.8;
+
     font-size:16px;
+
+    line-height:2;
+
+    color:#bbb;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.feature{
+    padding:18px;
+
+    border-left:2px solid #1e90ff;
+
+    background:#0a0a0a;
+
+    font-family:Arial,sans-serif;
+
+    color:#bbb;
+}
+
+
+/* =========================
+   REQUIREMENTS
+========================= */
+
+.requirements{
+    margin-top:25px;
+}
+
+.requirement{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #222;
+
+    font-family:Arial,sans-serif;
+}
+
+.requirement span:first-child{
+    color:#666;
+}
+
+.requirement span:last-child{
     color:#ccc;
 }
 
-/* TUTORIAL */
 
-.tutorial{
-    margin-top:20px;
+/* =========================
+   TUTORIAL
+========================= */
+
+.steps{
+    margin-top:25px;
 }
 
 .step{
     display:flex;
+
+    align-items:center;
+
     gap:20px;
-    margin:18px 0;
-    align-items:flex-start;
+
+    margin-bottom:18px;
 }
 
-.number{
-    min-width:38px;
-    height:38px;
-    border:1px solid #1e90ff;
+.step-number{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
-    color:#1e90ff;
+    justify-content:center;
+
+    border:1px solid #1e90ff;
+
     border-radius:50%;
-    box-shadow:0 0 10px rgba(30,144,255,.5);
+
+    color:#1e90ff;
+
+    box-shadow:
+        0 0 10px rgba(30,144,255,.3);
 }
 
 .step-text{
-    padding-top:7px;
     font-family:Arial,sans-serif;
-    color:#ccc;
+
+    color:#bbb;
 }
 
-/* SPECS */
 
-.specs{
-    margin-top:20px;
-    padding:25px 0;
-}
-
-.spec{
-    margin:12px 0;
-    font-family:Arial,sans-serif;
-    color:#ccc;
-}
-
-.spec span{
-    color:#1e90ff;
-}
-
-/* DOWNLOAD */
+/* =========================
+   DOWNLOAD
+========================= */
 
 .download{
-    margin-top:50px;
-    text-align:center;
-    padding:40px 0;
+    margin-top:90px;
+
+    padding:45px 0;
+
     border-top:1px solid #222;
+
+    border-bottom:1px solid #222;
 }
 
 .download h2{
+    font-size:38px;
+
     color:#1e90ff;
-    font-size:32px;
+
+    margin-bottom:10px;
 }
 
 .download p{
     font-family:Arial,sans-serif;
-    color:#aaa;
+
+    color:#777;
+
+    margin-bottom:25px;
 }
 
-.download-btn{
+.download-button{
     display:inline-block;
-    margin-top:20px;
+
     padding:14px 35px;
+
+    color:#1e90ff;
+
     border:2px solid #1e90ff;
-    border-radius:8px;
-    color:#1e90ff;
+
     text-decoration:none;
-    font-size:18px;
+
+    font-size:17px;
+
     transition:.25s;
-    box-shadow:0 0 10px rgba(30,144,255,.5);
 }
 
-.download-btn:hover{
+.download-button:hover{
     background:#1e90ff;
+
     color:#000;
+
     box-shadow:
-        0 0 10px #1e90ff,
-        0 0 30px #1e90ff;
+        0 0 15px #1e90ff,
+        0 0 30px rgba(30,144,255,.6);
 }
 
-/* BACK */
 
-.back{
-    display:inline-block;
-    margin-bottom:30px;
-    color:#1e90ff;
-    text-decoration:none;
-    font-family:Arial,sans-serif;
-}
+/* =========================
+   FOOTER
+========================= */
 
-.back:hover{
-    text-shadow:0 0 10px #1e90ff;
-}
+footer{
+    padding:35px;
 
-/* FOOTER */
-
-.footer{
     text-align:center;
-    padding:30px;
-    border-top:1px solid #111;
-    color:#555;
+
+    color:#444;
+
     font-family:Arial,sans-serif;
+
+    border-top:1px solid #111;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
-    .page{
+    main{
         width:92%;
     }
 
-    .game-title{
-        font-size:40px;
+    .title-area h1{
+        font-size:42px;
     }
 
     .hero{
-        flex-direction:column;
+        grid-template-columns:1fr;
+
+        margin-top:30px;
     }
 
     .hero-image{
+        height:280px;
+    }
+
+    .hero-text{
+        padding:30px 0 0 0;
+    }
+
+    .game-info{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .info{
+        border-bottom:1px solid #222;
+    }
+
+    .content{
         width:100%;
-        max-width:100%;
-        height:auto;
+
+        margin-top:60px;
     }
 
-    .info{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:500px){
-
-    .header{
-        padding:20px;
-    }
-
-    .header-title{
-        font-size:25px;
-    }
-
-    .game-title{
-        font-size:32px;
-    }
-
-    .info{
+    .features{
         grid-template-columns:1fr;
     }
 
 }
 
+
+@media(max-width:500px){
+
+    header{
+        height:65px;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .title-area h1{
+        font-size:34px;
+    }
+
+    .hero-image{
+        height:220px;
+    }
+
+    .hero-text h2{
+        font-size:30px;
+    }
+
+    .game-info{
+        grid-template-columns:1fr;
+    }
+
+    .info{
+        border-right:none;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<header class="header">
-    <div class="header-title">
+
+<header>
+
+    <div class="logo">
         MIYU REPACKS
     </div>
+
 </header>
 
 
-<main class="page">
+<main>
+
 
 <a href="index.html" class="back">
     ← KEMBALI KE GAME
 </a>
 
 
-<h1 class="game-title">
-    MAX PAYNE 2
-</h1>
+<!-- TITLE -->
+
+<div class="title-area">
+
+    <h1>
+        MAX PAYNE 2
+    </h1>
+
+    <div class="subtitle">
+        THE FALL OF MAX PAYNE
+    </div>
+
+</div>
 
 
 <!-- HERO -->
 
 <section class="hero">
 
+
     <img
         src="0000003274.1920x1080.jpg"
         class="hero-image"
-        alt="Max Payne 2">
+        alt="Max Payne 2 The Fall of Max Payne"
+    >
 
-    <div class="hero-info">
+
+    <div class="hero-text">
 
         <h2>
             Max Payne 2: The Fall of Max Payne
         </h2>
 
-        <p>
-            Max Payne 2: The Fall of Max Payne adalah game third-person
-            shooter yang melanjutkan kisah Max Payne setelah kejadian
-            pada game pertamanya.
-        </p>
 
         <p>
-            Dalam game ini, Max kembali menghadapi dunia kriminal,
-            konspirasi, dan berbagai masalah yang semakin memperumit
-            hidupnya. Gameplay berfokus pada aksi tembak-menembak
-            dengan fitur bullet time yang menjadi ciri khas seri Max Payne.
+            Max Payne 2: The Fall of Max Payne adalah game
+            third-person shooter yang dikembangkan oleh
+            Remedy Entertainment dan diterbitkan oleh
+            Rockstar Games.
         </p>
 
+
         <p>
-            Game ini dikembangkan oleh
-            <strong>Remedy Entertainment</strong>
-            dan diterbitkan oleh
-            <strong>Rockstar Games</strong>.
+            Game ini melanjutkan perjalanan Max Payne setelah
+            kejadian pada game pertamanya. Max kembali terlibat
+            dalam dunia kriminal yang penuh dengan konspirasi,
+            pengkhianatan, dan berbagai konflik.
+        </p>
+
+
+        <p>
+            Salah satu fitur paling terkenal dari game ini adalah
+            Bullet Time, sebuah mekanik yang memungkinkan pemain
+            memperlambat waktu ketika sedang bertarung.
         </p>
 
     </div>
@@ -377,228 +637,320 @@ body{
 </section>
 
 
-<!-- INFORMATION -->
+<!-- INFO -->
 
-<section class="info">
+<section class="game-info">
 
-    <div class="info-item">
+
+    <div class="info">
+
         <div class="info-label">
-            PLATFORM
+            Platform
         </div>
 
         <div class="info-value">
             PC
         </div>
+
     </div>
 
 
-    <div class="info-item">
+    <div class="info">
+
         <div class="info-label">
-            DEVELOPER
+            Developer
         </div>
 
         <div class="info-value">
             Remedy Entertainment
         </div>
+
     </div>
 
 
-    <div class="info-item">
+    <div class="info">
+
         <div class="info-label">
-            PUBLISHER
+            Publisher
         </div>
 
         <div class="info-value">
             Rockstar Games
         </div>
+
     </div>
 
 
-    <div class="info-item">
+    <div class="info">
+
         <div class="info-label">
-            RELEASE
+            Release
         </div>
 
         <div class="info-value">
             2003
         </div>
+
     </div>
+
 
 </section>
 
 
 <!-- ABOUT -->
 
-<section class="section">
+<section class="content">
 
     <h2>
-        TENTANG GAME
+        TENTANG MAX PAYNE 2
     </h2>
 
-    <p>
-        Max Payne 2 melanjutkan perjalanan Max sebagai seorang
-        detektif yang kembali terlibat dalam kasus berbahaya.
-        Ceritanya memiliki nuansa noir yang kuat dengan suasana
-        gelap, narasi sinematik, dan konflik antara berbagai
-        kelompok kriminal.
-    </p>
 
     <p>
-        Salah satu fitur utama game ini adalah Bullet Time,
-        yang memungkinkan pemain memperlambat waktu ketika
-        sedang bertarung. Mekanik tersebut membuat aksi
-        tembak-menembak menjadi lebih dramatis dan menjadi
-        salah satu identitas utama seri Max Payne.
+        Max Payne 2: The Fall of Max Payne merupakan sekuel
+        dari Max Payne. Game ini mempertahankan gameplay
+        third-person shooter dari game sebelumnya, tetapi
+        menghadirkan cerita yang lebih berfokus pada hubungan
+        karakter dan konflik pribadi Max.
     </p>
+
+
+    <p>
+        Nuansa film noir sangat kuat dalam game ini. Lingkungan
+        yang gelap, dialog, narasi, dan gaya visual membuat
+        perjalanan Max terasa seperti sebuah film kriminal
+        interaktif.
+    </p>
+
 
 </section>
 
 
 <!-- STORY -->
 
-<section class="section">
+<section class="content">
 
     <h2>
         CERITA
     </h2>
 
-    <p>
-        Setelah peristiwa game pertama, Max Payne kembali
-        menjalani kehidupannya sebagai seorang detektif.
-        Namun sebuah kasus baru membawanya kembali ke dunia
-        kriminal yang penuh dengan pengkhianatan dan konspirasi.
-    </p>
 
     <p>
-        Pertemuannya dengan Mona Sax membuat situasi menjadi
-        semakin rumit. Hubungan antara berbagai karakter dan
-        konflik yang terjadi kemudian menjadi bagian penting
-        dari perjalanan Max dalam game ini.
+        Setelah berbagai kejadian yang dialaminya pada game
+        pertama, Max Payne kembali menjalani kehidupannya
+        sebagai seorang detektif.
     </p>
+
+
+    <p>
+        Sebuah kasus baru mempertemukan Max dengan Mona Sax.
+        Pertemuan tersebut kemudian membawa Max masuk ke
+        konflik yang jauh lebih besar.
+    </p>
+
+
+    <p>
+        Berbagai kelompok kriminal, pengkhianatan, dan
+        hubungan antar karakter membuat cerita Max Payne 2
+        berkembang menjadi perjalanan yang penuh konflik.
+    </p>
+
 
 </section>
 
 
 <!-- FEATURES -->
 
-<section class="section">
+<section class="content">
 
     <h2>
         FITUR UTAMA
     </h2>
 
-    <p>
-        • Third-person shooter dengan gameplay berbasis aksi.
-    </p>
 
-    <p>
-        • Sistem Bullet Time untuk memperlambat waktu ketika bertarung.
-    </p>
+    <div class="features">
 
-    <p>
-        • Cerita bergaya film noir dengan suasana gelap.
-    </p>
 
-    <p>
-        • Berbagai senjata dan lingkungan untuk dijelajahi.
-    </p>
+        <div class="feature">
+            Third-person shooter dengan gameplay cepat.
+        </div>
 
-    <p>
-        • Cutscene dan storytelling yang menjadi bagian penting
-        dari pengalaman game.
-    </p>
+
+        <div class="feature">
+            Sistem Bullet Time.
+        </div>
+
+
+        <div class="feature">
+            Cerita bergaya film noir.
+        </div>
+
+
+        <div class="feature">
+            Berbagai senjata dan lingkungan.
+        </div>
+
+
+        <div class="feature">
+            Cutscene dan storytelling sinematik.
+        </div>
+
+
+        <div class="feature">
+            Melanjutkan kisah Max Payne dari game pertama.
+        </div>
+
+
+    </div>
 
 </section>
 
 
 <!-- REQUIREMENTS -->
 
-<section class="section">
+<section class="content">
 
     <h2>
         MINIMUM SPECIFICATION
     </h2>
 
-    <div class="spec">
-        <span>CPU:</span>
-        Intel Core i5
-    </div>
 
-    <div class="spec">
-        <span>OS:</span>
-        Windows XP ke atas
-    </div>
+    <div class="requirements">
 
-    <div class="spec">
-        <span>Platform:</span>
-        PC
+
+        <div class="requirement">
+
+            <span>
+                Operating System
+            </span>
+
+            <span>
+                Windows XP ke atas
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                Processor
+            </span>
+
+            <span>
+                Intel Core i5
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                Platform
+            </span>
+
+            <span>
+                PC
+            </span>
+
+        </div>
+
+
     </div>
 
 </section>
 
 
-<!-- INSTALLATION -->
+<!-- TUTORIAL -->
 
-<section class="section">
+<section class="content">
 
     <h2>
         TUTORIAL INSTALL
     </h2>
 
-    <div class="tutorial">
+
+    <div class="steps">
+
 
         <div class="step">
-            <div class="number">1</div>
+
+            <div class="step-number">
+                1
+            </div>
 
             <div class="step-text">
-                Ekstrak file Max Payne 2 Miyu Repacks.
+                Ekstrak Max Payne 2 Miyu Repacks.
             </div>
+
         </div>
 
 
         <div class="step">
-            <div class="number">2</div>
+
+            <div class="step-number">
+                2
+            </div>
 
             <div class="step-text">
                 Buka folder hasil ekstraksi.
             </div>
+
         </div>
 
 
         <div class="step">
-            <div class="number">3</div>
+
+            <div class="step-number">
+                3
+            </div>
 
             <div class="step-text">
                 Jalankan setup.exe.
             </div>
+
         </div>
 
 
         <div class="step">
-            <div class="number">4</div>
+
+            <div class="step-number">
+                4
+            </div>
 
             <div class="step-text">
                 Tunggu proses instalasi sampai selesai.
             </div>
+
         </div>
 
 
         <div class="step">
-            <div class="number">5</div>
+
+            <div class="step-number">
+                5
+            </div>
 
             <div class="step-text">
-                Setelah selesai, buka folder game.
+                Buka folder game setelah instalasi selesai.
             </div>
+
         </div>
 
 
         <div class="step">
-            <div class="number">6</div>
+
+            <div class="step-number">
+                6
+            </div>
 
             <div class="step-text">
                 Jalankan game dan selamat bermain.
             </div>
+
         </div>
+
 
     </div>
 
@@ -610,31 +962,38 @@ body{
 <section class="download">
 
     <h2>
-        MAX PAYNE 2
+        DOWNLOAD MAX PAYNE 2
     </h2>
 
+
     <p>
-        Download Max Payne 2 Miyu Repacks
+        Max Payne 2 Miyu Repacks
     </p>
 
+
     <a
-        class="download-btn"
         href="https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        class="download-button">
+
         DOWNLOAD GAME
+
     </a>
 
 </section>
 
+
 </main>
 
 
-<footer class="footer">
+<footer>
 
     Miyu Repacks © 2026
 
 </footer>
 
+
 </body>
+
 </html>
