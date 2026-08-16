@@ -1,45 +1,54 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Miyu Repacks - Game PC, Mobile, Emulator & Software</title>
+<title>Miyu Repacks - Download Game PC, Android, Emulator & Software</title>
 
 <meta
-    name="description"
-    content="Miyu Repacks menyediakan game PC, game mobile, emulator, software, minimum specs, dan tutorial instalasi."
+name="description"
+content="Miyu Repacks menyediakan game PC, game mobile, emulator, dan software dengan installer mudah serta tutorial instalasi lengkap."
 >
 
 <meta
-    name="keywords"
-    content="Miyu Repacks, game PC, game mobile, emulator PS2, software, game ringan"
+name="keywords"
+content="Miyu Repacks, game PC, repack game, GTA SA, GTA 3, NFS Carbon, emulator PS2, download game PC, installer game, Miyu Repack"
 >
 
 <meta name="author" content="Miyu Repacks">
+
 <meta name="robots" content="index, follow">
 
 <link
-    rel="canonical"
-    href="https://krekkk.github.io/Miyu-Repacks/"
+rel="canonical"
+href="https://krekkk.github.io/Miyu-Repacks/"
 >
 
 <link
-    rel="icon"
-    type="image/png"
-    href="logo.jpg"
+rel="icon"
+type="image/png"
+href="logo.jpg"
 >
 
 <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap"
+rel="stylesheet"
 >
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WL1CSEV20E"></script>
+
+<!-- GOOGLE ANALYTICS -->
+
+<script
+async
+src="https://www.googletagmanager.com/gtag/js?id=G-WL1CSEV20E">
+</script>
 
 <script>
+
 window.dataLayer = window.dataLayer || [];
 
 function gtag(){
@@ -47,11 +56,17 @@ function gtag(){
 }
 
 gtag('js', new Date());
+
 gtag('config', 'G-WL1CSEV20E');
+
 </script>
 
 
 <style>
+
+/* =====================================================
+   BODY
+===================================================== */
 
 *{
     box-sizing:border-box;
@@ -62,25 +77,33 @@ html{
 }
 
 body{
+
     margin:0;
+
     min-height:100vh;
 
     background:
         radial-gradient(
-            circle at 20% 10%,
-            rgba(30,144,255,.10),
-            transparent 30%
+            circle at 20% 20%,
+            #111 0%,
+            #000 40%,
+            #000 100%
         ),
+
         radial-gradient(
-            circle at 80% 90%,
-            rgba(0,255,204,.06),
-            transparent 30%
-        ),
-        #000;
+            circle at 80% 80%,
+            #0a0a0a 0%,
+            #000 60%
+        );
+
+    font-family:'Oswald',sans-serif;
 
     color:white;
 
-    font-family:'Oswald',sans-serif;
+    display:flex;
+
+    justify-content:center;
+
 }
 
 
@@ -89,18 +112,21 @@ body{
 ===================================================== */
 
 .container{
+
     width:100%;
-    max-width:950px;
 
-    margin:auto;
-
-    padding:30px 15px 60px;
+    max-width:900px;
 
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
 
     gap:20px;
+
+    padding:30px 15px;
+
 }
 
 
@@ -109,35 +135,25 @@ body{
 ===================================================== */
 
 .title{
-    width:100%;
-
-    text-align:center;
 
     color:#1e90ff;
 
-    font-size:clamp(36px,7vw,58px);
+    font-size:55px;
 
-    font-weight:700;
-
-    line-height:1.1;
-
-    text-shadow:
-        0 0 5px #1e90ff,
-        0 0 10px #1e90ff,
-        0 0 20px #1e90ff,
-        0 0 40px #1e90ff;
-}
-
-.subtitle{
-    margin-top:-10px;
-
-    color:#777;
-
-    font-family:Consolas,monospace;
-
-    font-size:13px;
+    font-weight:600;
 
     text-align:center;
+
+    text-shadow:
+
+        0 0 5px #1e90ff,
+
+        0 0 10px #1e90ff,
+
+        0 0 20px #1e90ff,
+
+        0 0 40px #1e90ff;
+
 }
 
 
@@ -146,36 +162,25 @@ body{
 ===================================================== */
 
 .search-box{
+
     width:700px;
+
     max-width:100%;
 
-    padding:14px 18px;
-
-    background:#050505;
+    padding:12px;
 
     border:2px solid #1e90ff;
 
-    border-radius:10px;
-
-    outline:none;
+    background:#000;
 
     color:#00ffcc;
 
-    font-family:Consolas,monospace;
+    outline:none;
 
-    font-size:15px;
+    border-radius:10px;
 
-    box-shadow:0 0 8px #1e90ff;
-}
+    box-shadow:0 0 10px #1e90ff;
 
-.search-box::placeholder{
-    color:#555;
-}
-
-.search-box:focus{
-    box-shadow:
-        0 0 10px #1e90ff,
-        0 0 25px rgba(30,144,255,.6);
 }
 
 
@@ -184,224 +189,37 @@ body{
 ===================================================== */
 
 .filter-buttons{
+
     width:700px;
+
     max-width:100%;
 
     display:flex;
 
     justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-}
-
-.filter-btn{
-    padding:10px 20px;
-
-    background:transparent;
-
-    border:2px solid #1e90ff;
-
-    border-radius:8px;
-
-    color:#1e90ff;
-
-    cursor:pointer;
-
-    font-family:'Oswald',sans-serif;
-
-    transition:.2s;
-}
-
-.filter-btn:hover,
-.filter-btn.active{
-    background:#1e90ff;
-
-    color:#000;
-
-    box-shadow:
-        0 0 10px #1e90ff,
-        0 0 20px rgba(30,144,255,.5);
-}
-
-
-/* =====================================================
-   NOTICE
-===================================================== */
-
-.notice{
-    width:700px;
-    max-width:100%;
-
-    padding:15px;
-
-    background:#050505;
-
-    border-left:3px solid #1e90ff;
-    border-right:3px solid #1e90ff;
-
-    text-align:center;
-
-    color:#888;
-
-    font-family:Consolas,monospace;
-
-    font-size:13px;
-}
-
-.notice strong{
-    color:#1e90ff;
-}
-
-
-/* =====================================================
-   BANNER
-===================================================== */
-
-.ads-banner{
-    width:700px;
-    max-width:100%;
-
-    overflow:hidden;
-
-    background:#080808;
-
-    border:2px solid #1e90ff;
-
-    border-radius:15px;
-
-    box-shadow:
-        0 0 10px #1e90ff,
-        0 0 25px rgba(30,144,255,.35);
-
-    transition:.25s;
-}
-
-.ads-banner:hover{
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 0 15px #1e90ff,
-        0 0 35px rgba(30,144,255,.45);
-}
-
-.ads-banner img{
-    width:100%;
-    height:300px;
-
-    object-fit:cover;
-    display:block;
-}
-
-.ads-content{
-    padding:20px;
-
-    text-align:center;
-}
-
-.ads-title{
-    font-size:28px;
-
-    color:#1e90ff;
-
-    text-shadow:0 0 10px #1e90ff;
-}
-
-.ads-text{
-    color:#ddd;
-
-    margin:10px auto 18px;
-
-    line-height:1.5;
-
-    max-width:600px;
-}
-
-.ads-meta{
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
 
     gap:10px;
 
     flex-wrap:wrap;
 
-    margin-bottom:15px;
-}
+    margin-top:10px;
 
-.ads-meta span{
-    padding:6px 12px;
-
-    border-radius:8px;
-
-    font-size:13px;
-}
-
-.version{
-    background:#25d366;
-}
-
-.platform-tag{
-    background:#222;
-}
-
-.dev-tag{
-    color:#ccc;
-}
-
-.year-tag{
-    color:#999;
-}
-
-.ads-actions{
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:12px;
-}
-
-.ads-btn{
-    display:inline-block;
-
-    padding:11px 23px;
-
-    border:2px solid #1e90ff;
-
-    border-radius:9px;
-
-    color:#1e90ff;
-
-    text-decoration:none;
-
-    transition:.2s;
-}
-
-.ads-btn:hover{
-    background:#1e90ff;
-
-    color:#000;
 }
 
 
 /* =====================================================
-   GAME BOX
+   CMD GAME BOX
 ===================================================== */
 
-.game-box{
+.cmd{
+
     width:700px;
+
     max-width:100%;
 
     background:#000;
 
     border:1px solid #1e90ff;
-
-    border-radius:8px;
 
     padding:20px;
 
@@ -412,70 +230,110 @@ body{
     color:#00ffcc;
 
     box-shadow:
+
         0 0 10px #1e90ff,
-        0 0 20px rgba(30,144,255,.35);
+
+        0 0 20px #1e90ff;
 
     scroll-margin-top:20px;
 
-    transition:.2s;
-}
-
-.game-box:hover{
-    border-color:#00ffcc;
-
-    box-shadow:
-        0 0 12px #00ffcc,
-        0 0 25px rgba(0,255,204,.25);
 }
 
 
-/* =====================================================
-   GAME TITLE
-===================================================== */
+.cmd-title{
 
-.game-title{
     color:#1e90ff;
-
-    font-size:26px;
-
-    font-family:'Oswald',sans-serif;
 
     margin-bottom:10px;
 
     text-shadow:0 0 10px #1e90ff;
+
+    font-size:22px;
+
 }
 
 
 /* =====================================================
-   GAME TEXT
+   TEXT
 ===================================================== */
 
 .line{
-    margin:6px 0;
+
+    margin:4px 0;
 
     line-height:1.5;
+
 }
 
-.platform{
+
+.status{
+
     color:#ffcc00;
 
     text-shadow:0 0 10px #ffcc00;
+
 }
 
-.os{
+
+.soon{
+
     color:#ff4444;
+
+    text-shadow:0 0 10px #ff4444;
 
     font-weight:bold;
 
-    text-shadow:0 0 10px #ff4444;
 }
 
-.description{
-    margin:12px 0;
 
-    color:#00ffcc;
+/* =====================================================
+   BUTTON
+===================================================== */
 
-    line-height:1.6;
+.btn{
+
+    margin-top:10px;
+
+    padding:10px 25px;
+
+    font-size:14px;
+
+    font-family:'Oswald',sans-serif;
+
+    color:#1e90ff;
+
+    background:transparent;
+
+    border:2px solid #1e90ff;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 8px #1e90ff;
+
+    transition:.2s;
+
+}
+
+
+.btn:hover{
+
+    background:#1e90ff;
+
+    color:#000;
+
+    box-shadow:0 0 20px #1e90ff;
+
+}
+
+
+.btn:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
 }
 
 
@@ -484,153 +342,207 @@ body{
 ===================================================== */
 
 .game-img{
+
     width:100%;
 
-    max-height:380px;
+    max-height:400px;
 
-    display:block;
+    height:auto;
 
     object-fit:cover;
 
-    margin:12px 0;
+    display:block;
+
+    margin:10px auto;
 
     border-radius:8px;
 
     border:1px solid #1e90ff;
 
     box-shadow:0 0 10px #1e90ff;
+
 }
 
 
 /* =====================================================
-   SPECS
-===================================================== */
-
-.spec-box{
-    margin-top:18px;
-
-    padding:15px;
-
-    background:#050505;
-
-    border-top:1px solid #222;
-
-    border-bottom:1px solid #222;
-}
-
-.spec-title{
-    color:#1e90ff;
-
-    font-size:19px;
-
-    font-family:'Oswald',sans-serif;
-
-    margin-bottom:10px;
-
-    text-shadow:0 0 8px #1e90ff;
-}
-
-.spec-row{
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:20px;
-
-    padding:5px 0;
-
-    font-size:13px;
-}
-
-.spec-label{
-    color:#777;
-}
-
-.spec-value{
-    color:#ccc;
-
-    text-align:right;
-}
-
-
-/* =====================================================
-   TUTORIAL
-===================================================== */
-
-.tutorial-title{
-    margin-top:18px;
-
-    color:#1e90ff;
-
-    font-size:19px;
-
-    font-family:'Oswald',sans-serif;
-
-    text-shadow:0 0 8px #1e90ff;
-}
-
-.tutorial{
-    margin-top:8px;
-
-    line-height:1.7;
-
-    color:#aaa;
-}
-
-
-/* =====================================================
-   BOTTOM NOTE
+   BOTTOM TEXT
 ===================================================== */
 
 .bottom-text{
-    margin-top:15px;
-
-    padding-top:12px;
-
-    border-top:1px solid #222;
 
     color:#777;
 
     font-size:12px;
 
-    line-height:1.6;
+    line-height:1.5;
+
 }
 
 
 /* =====================================================
-   LINK / DETAIL BUTTON
+   ADS
 ===================================================== */
 
-.btn{
-    display:inline-block;
+.ads-banner{
 
-    margin-top:12px;
+    width:700px;
 
-    padding:10px 22px;
+    max-width:100%;
+
+    background:#111;
 
     border:2px solid #1e90ff;
 
-    border-radius:8px;
+    border-radius:15px;
 
-    background:transparent;
+    overflow:hidden;
+
+    box-shadow:0 0 15px #1e90ff;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+
+.ads-banner:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 25px #1e90ff;
+
+}
+
+
+.ads-banner img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+.ads-content{
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+.ads-title{
+
+    font-size:28px;
 
     color:#1e90ff;
 
-    font-family:'Oswald',sans-serif;
+    text-shadow:0 0 10px #1e90ff;
+
+}
+
+
+.ads-text{
+
+    color:#ddd;
+
+    margin:10px 0;
+
+}
+
+
+.ads-btn{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    border:2px solid #1e90ff;
+
+    color:#1e90ff;
 
     text-decoration:none;
 
-    cursor:pointer;
+    border-radius:10px;
 
-    transition:.2s;
+    transition:.3s;
+
 }
 
-.btn:hover{
+
+.ads-btn:hover{
+
     background:#1e90ff;
 
     color:#000;
 
-    box-shadow:0 0 20px #1e90ff;
+}
+
+
+/* =====================================================
+   ADS META
+===================================================== */
+
+.ads-meta{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    margin-bottom:15px;
+
+}
+
+
+.ads-version{
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+
+.ads-platform{
+
+    background:#333;
+
+    color:#fff;
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+}
+
+
+.ads-dev{
+
+    color:#ddd;
+
+}
+
+
+.ads-year{
+
+    color:#888;
+
 }
 
 
@@ -639,78 +551,81 @@ body{
 ===================================================== */
 
 .game-link-box{
+
     width:700px;
+
     max-width:100%;
 
     background:#000;
 
     border:1px solid #1e90ff;
 
-    border-radius:8px;
+    padding:20px;
+
+    box-sizing:border-box;
+
+    text-align:left;
+
+    font-family:Consolas,monospace;
+
+    color:#00ffcc;
 
     box-shadow:
+
         0 0 10px #1e90ff,
-        0 0 20px rgba(30,144,255,.35);
+
+        0 0 20px #1e90ff;
 
     transition:.2s;
+
 }
 
+
 .game-link-box:hover{
+
     border-color:#00ffcc;
 
     box-shadow:
-        0 0 12px #00ffcc,
-        0 0 25px rgba(0,255,204,.25);
+
+        0 0 10px #00ffcc,
+
+        0 0 25px #00ffcc;
+
+    transform:scale(1.01);
+
 }
 
-.game-link-box a{
-    display:block;
 
-    padding:20px;
+.game-link-box a{
+
+    text-decoration:none;
 
     color:inherit;
 
-    text-decoration:none;
+    display:block;
+
 }
+
 
 .game-link-title{
+
     color:#1e90ff;
 
-    font-size:25px;
+    font-size:24px;
 
     text-shadow:0 0 10px #1e90ff;
+
+    margin-bottom:8px;
+
 }
+
 
 .game-link-info{
-    margin-top:6px;
 
-    color:#888;
+    color:#aaa;
 
-    font-size:13px;
+    font-size:15px;
 
-    font-family:Consolas,monospace;
-}
-
-
-/* =====================================================
-   NO RESULT
-===================================================== */
-
-.no-result{
-    display:none;
-
-    width:700px;
-    max-width:100%;
-
-    padding:20px;
-
-    border:1px solid #ff4444;
-
-    color:#ff4444;
-
-    text-align:center;
-
-    font-family:Consolas,monospace;
 }
 
 
@@ -719,13 +634,19 @@ body{
 ===================================================== */
 
 .footer{
+
     margin-top:10px;
 
     font-size:12px;
 
-    color:#555;
+    color:#1e90ff;
 
     text-align:center;
+
+    opacity:.7;
+
+    text-shadow:0 0 10px #1e90ff;
+
 }
 
 
@@ -735,36 +656,47 @@ body{
 
 @media(max-width:600px){
 
-    .container{
-        padding:20px 10px 40px;
+    .title{
+
+        font-size:36px;
+
     }
+
+
+    .container{
+
+        padding:20px 10px;
+
+    }
+
 
     .ads-banner img{
+
         height:190px;
+
     }
 
-    .game-box{
+
+    .cmd{
+
         padding:15px;
+
     }
 
-    .game-title{
-        font-size:22px;
+
+    .cmd-title{
+
+        font-size:20px;
+
     }
 
-    .spec-row{
-        flex-direction:column;
 
-        gap:2px;
-    }
+    .btn{
 
-    .spec-value{
-        text-align:left;
-    }
-
-    .filter-btn{
-        padding:8px 13px;
+        padding:9px 15px;
 
         font-size:12px;
+
     }
 
 }
@@ -777,98 +709,21 @@ body{
 <body>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <div class="container">
 
 
-    <!-- =================================================
-         TITLE
-    ================================================= -->
-
     <div class="title">
-        MIYU REPACKS GAME INSTALLER
-    </div>
-
-    <div class="subtitle">
-        PC • MOBILE • PS2 • SOFTWARE
-    </div>
-
-
-    <!-- =================================================
-         SEARCH
-    ================================================= -->
-
-    <input
-        type="text"
-        id="search"
-        class="search-box"
-        placeholder="Cari game..."
-        autocomplete="off"
-    >
-
-
-    <!-- =================================================
-         FILTER
-    ================================================= -->
-
-    <div class="filter-buttons">
-
-        <button
-            class="filter-btn active"
-            onclick="filterCategory('all')"
-        >
-            SEMUA
-        </button>
-
-        <button
-            class="filter-btn"
-            onclick="filterCategory('pc')"
-        >
-            GAME PC
-        </button>
-
-        <button
-            class="filter-btn"
-            onclick="filterCategory('mobile')"
-        >
-            GAME MOBILE
-        </button>
-
-        <button
-            class="filter-btn"
-            onclick="filterCategory('ps2')"
-        >
-            GAME PS2
-        </button>
-
-        <button
-            class="filter-btn"
-            onclick="filterCategory('software')"
-        >
-            SOFTWARE
-        </button>
-
-    </div>
-
-
-    <!-- =================================================
-         NOTICE
-    ================================================= -->
-
-    <div class="notice">
-
-        MASALAH INSTALLER / REQUEST GAME / LAPOR BUG
-
-        <br>
-
-        DM TikTok:
-        <strong>@tentang.gts</strong>
-
+        Miyu Repacks GAME INSTALLER
     </div>
 
 
     <!-- =================================================
          BANNER
-    ================================================= -->
+    ================================================== -->
 
     <div class="ads-banner">
 
@@ -877,51 +732,73 @@ body{
             alt="Lossless Scaling"
         >
 
+
         <div class="ads-content">
 
-            <div class="ads-meta">
 
-                <span class="version">
+            <div
+                class="ads-meta"
+                style="justify-content:center;"
+            >
+
+                <span class="ads-version">
                     V3.2.0
                 </span>
 
-                <span class="platform-tag">
+
+                <span class="ads-platform">
                     PC
                 </span>
 
-                <span class="dev-tag">
+
+                <span class="ads-dev">
                     THS
                 </span>
 
-                <span class="year-tag">
+
+                <span class="ads-year">
                     2024
                 </span>
 
             </div>
 
+
             <div class="ads-title">
                 LOSSLESS SCALING
             </div>
 
+
             <div class="ads-text">
-                Tingkatkan FPS dengan frame generation,
-                scaling, dan berbagai mode rendering.
+
+                Tingkatkan FPS dengan Frame Generation,
+                LSFG 3.0, dan berbagai mode upscaling.
+                Cobain Sekarang Juga
+
             </div>
 
-            <div class="ads-actions">
+
+            <div
+                style="
+                    display:flex;
+                    justify-content:center;
+                    gap:15px;
+                    flex-wrap:wrap;
+                "
+            >
 
                 <a
-                    href="#lossless"
                     class="ads-btn"
+                    href="#lossless"
                 >
-                    LIHAT
+                    DOWNLOAD NOW
                 </a>
 
+
                 <a
+                    class="ads-btn"
                     href="https://store.steampowered.com/app/993090/Lossless_Scaling/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="ads-btn"
                 >
                     DETAIL
                 </a>
@@ -933,28 +810,107 @@ body{
     </div>
 
 
-    <div id="no-result" class="no-result">
-        GAME TIDAK DITEMUKAN.
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
+
+    <input
+        class="search-box"
+        id="search"
+        placeholder="Cari game..."
+        autocomplete="off"
+    >
+
+
+    <!-- =================================================
+         FILTER
+    ================================================== -->
+
+    <div class="filter-buttons">
+
+
+        <button
+            class="btn"
+            onclick="filterCategory('all')"
+        >
+            SEMUA
+        </button>
+
+
+        <button
+            class="btn"
+            onclick="filterCategory('pc')"
+        >
+            GAME PC
+        </button>
+
+
+        <button
+            class="btn"
+            onclick="filterCategory('mobile')"
+        >
+            GAME MOBILE
+        </button>
+
+
+        <button
+            class="btn"
+            onclick="filterCategory('ps2')"
+        >
+            GAME PS2
+        </button>
+
+
+        <button
+            class="btn"
+            onclick="filterCategory('software')"
+        >
+            SOFTWARE
+        </button>
+
+
+    </div>
+
+
+    <!-- =================================================
+         NOTICE
+    ================================================== -->
+
+    <div
+        style="
+            width:700px;
+            max-width:100%;
+            text-align:center;
+            color:#888;
+            font-family:Consolas,monospace;
+            font-size:13px;
+        "
+    >
+
+        MASALAH BUG INSTALLER ATAU REQUEST GAME
+        ATAU LAPOR BUG
+
+        <br>
+
+        DM TIKTOK @tentang.gts
+
     </div>
 
 
     <!-- =================================================
          ULTIMATE PERFORMANCE
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="pc"
-        data-title="ultimate performance memunculkan ultimate power"
     >
 
-        <div class="game-title">
-            MEMUNCULKAN ULTIMATE PERFORMANCE
+        <div class="cmd-title">
+            Memunculkan ultimate power
+            untuk memaksimalkan performa PC
         </div>
 
-        <div class="line platform">
-            PLATFORM : WINDOWS
-        </div>
 
         <img
             src="Screenshot 2026-08-02 171926.png"
@@ -962,104 +918,94 @@ body{
             alt="Ultimate Performance"
         >
 
-        <div class="description">
-            Power plan Windows untuk memilih mode Ultimate Performance
-            pada sistem yang mendukung.
+
+        <div class="line">
+            TUTORIAL MEMUNCULKAN:
         </div>
 
 
-        <div class="tutorial-title">
-            TUTORIAL MEMUNCULKAN
-        </div>
-
-        <div class="tutorial">
-
-            1. Tekan Windows + R.<br>
-
-            2. Ketik "Control Panel".<br>
-
-            3. Buka Hardware and Sound.<br>
-
-            4. Buka Power Options.<br>
-
-            5. Pilih Ultimate Performance.<br>
-
-            6. Jika tidak ada, buka Show Additional Plans.<br>
-
-            7. Restart jika diperlukan.
-
+        <div class="line">
+            1. RUN CMD
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            2. Ketik Windows + R
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
+        <div class="line">
+            3. Ketik "Control Panel"
+        </div>
 
-                <span class="spec-value">
-                    Windows 10 / Windows 11
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
+        <div class="line">
+            4. Pencet Hardware and Sound
+            terus ke Power Options
+        </div>
 
-                <span class="spec-value">
-                    Tidak spesifik
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
+        <div class="line">
+            5. Ganti ke Ultimate Performance.
+            Kalo nggak ada, pencet Show Additional Plans
+            lalu restart.
+        </div>
 
-                <span class="spec-value">
-                    Tidak spesifik
-                </span>
-            </div>
 
+        <div class="line">
+            Note: kalau pake laptop bakal tambah boros baterai.
+        </div>
+
+
+        <div class="line">
+            MINIMUM SPECS:
+            Windows 10 / Windows 11
         </div>
 
 
         <p class="bottom-text">
-            Catatan: pada laptop, mode performa tinggi dapat
-            meningkatkan penggunaan baterai dan temperatur.
+
+            Jika mengalami download lama di PC,
+            coba download melalui perangkat lain
+            lalu pindahkan file ke PC.
+
         </p>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/z3wxiwyj7oz6sod/Ultimate+Performance+Unlocked.bat/file'"
+        >
+            INSTALL COMMAND
+        </button>
 
     </div>
 
 
     <!-- =================================================
          LOSSLESS
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         id="lossless"
         data-category="pc"
-        data-title="lossless scaling miyu repacks"
     >
 
-        <div class="game-title">
-            LOSSLESS SCALING MIYU REPACKS
+        <div class="cmd-title">
+            Lossless Scaling Miyu Repacks
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
+
+        <div class="line status">
             MINIMUM OS : WINDOWS 10 KEATAS
         </div>
+
 
         <img
             src="Screenshot 2026-08-02 201334.png"
@@ -1067,98 +1013,86 @@ body{
             alt="Lossless Scaling"
         >
 
-        <div class="description">
-            Software untuk scaling dan frame generation
-            yang dapat digunakan pada game PC.
+
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
-
-        <div class="tutorial">
-
-            1. RUN INSTALLER dan pilih Drive C / D / E.<br>
-
-            2. Install VCRedist dan DirectX yang sesuai
-            di folder Redist jika tersedia.<br>
-
-            3. Buka folder "MIYURPCK" di drive yang dipilih.<br>
-
-            4. Jalankan LosslessScaling.exe.
-
+        <div class="line">
+            1. RUN INSTALLER
+            Pilih Drive C / D / E
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            2. Instal VCRedist dan DirectX
+            yang sesuai di folder Redist
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
+        <div class="line">
+            3. Buka "MIYURPCK"
+            di drive yang dipilih
+        </div>
 
-                <span class="spec-value">
-                    Windows 10+
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
+        <div class="line">
+            4. Run LosslessScaling.exe
+        </div>
 
-                <span class="spec-value">
-                    8 GB disarankan
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±300 MB
-                </span>
-            </div>
-
+        <div class="line">
+            Minimum Specs:
+            Windows 10+ / RAM 8 GB disarankan /
+            Storage sekitar 300 MB
         </div>
 
 
         <p class="bottom-text">
-            Performa frame generation tetap bergantung pada GPU,
-            game, driver, dan setting yang digunakan.
+
+            Jika mengalami download lama di PC,
+            coba download lewat HP lalu pindahkan
+            file ke PC.
+
         </p>
+
+
+        <a
+            class="btn"
+            href="https://store.steampowered.com/app/993090/Lossless_Scaling/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            OFFICIAL PAGE
+        </a>
 
     </div>
 
 
     <!-- =================================================
          GTA 3
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="pc"
-        data-title="gta 3 rpck flzzue install"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             GTA 3 RPCK FLZZUE INSTALL
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
+
+        <div class="line status">
             MINIMUM OS : WINDOWS 7 KEATAS
         </div>
+
 
         <img
             src="gta-iii-is-my-favorite-game-of-all-time-v0-gjc2reszl9tf1.webp"
@@ -1166,91 +1100,82 @@ body{
             alt="GTA 3"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. RUN INSTALLER, pilih Drive C / D / E.<br>
-
-            2. Masuk folder "GAME FLZZUE".<br>
-
-            3. Buka "Grand Theft Auto 3".<br>
-
-            4. Jalankan gta3.exe.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            1. RUN INSTALLER
+            Pilih Drive C / D / E
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
+        <div class="line">
+            2. Masuk folder "GAME FLZZUE"
+        </div>
 
-                <span class="spec-value">
-                    Intel Pentium III class
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
+        <div class="line">
+            3. Buka "Grand Theft Auto 3"
+        </div>
 
-                <span class="spec-value">
-                    256 MB class
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
+        <div class="line">
+            4. Run gta3.exe
+        </div>
 
-                <span class="spec-value">
-                    ±500 MB
-                </span>
-            </div>
 
+        <div class="line">
+            Minimum Specs:
+            Intel Pentium III class /
+            RAM 256 MB class /
+            Space sekitar 500 MB
         </div>
 
 
         <p class="bottom-text">
-            Jika mengalami masalah instalasi, cek kembali
-            folder game dan file dependensi yang dibutuhkan.
+
+            Jika mengalami download lama di PC,
+            coba download lewat HP lalu pindahkan file.
+
         </p>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/anfxi0biaqzroxy/GTA+3+Rpck+Flzzue.rar/file'"
+        >
+            INSTALL GTA 3
+        </button>
 
     </div>
 
 
     <!-- =================================================
          GTA SAN ANDREAS PC
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="pc"
-        data-title="gta san andreas rpck install"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             GTA SAN ANDREAS RPCK INSTALL
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
-            OS MINIMUM : WINDOWS 8 KEATAS
+
+        <div class="line status">
+            OS MINIMUM WINDOWS 8 KEATAS
         </div>
+
 
         <img
             src="Teks paragraf Anda.png"
@@ -1258,182 +1183,162 @@ body{
             alt="GTA San Andreas"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
+
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
-        <div class="tutorial">
 
-            1. Download file GTA San Andreas (.zip / .rar).<br>
+        <div class="line">
+            1. Download file GTA San Andreas
+            (.zip / .rar)
+        </div>
 
-            2. Extract menggunakan WinRAR / 7-Zip.<br>
 
-            3. Pindahkan folder "GTA San Andreas".<br>
+        <div class="line">
+            2. Extract menggunakan WinRAR / 7-Zip
+        </div>
 
+
+        <div class="line">
+            3. Pindahkan folder "GTA San Andreas"
+        </div>
+
+
+        <div class="line">
             4. Simpan di directory bebas
-            seperti C:\GAME FLZZUE atau D:\Games.<br>
-
-            5. Buka folder game.<br>
-
-            6. Jalankan gta-sa.exe.
-
+            (C:\GAME FLZZUE / D:\Games)
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            5. Buka folder game
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
+        <div class="line">
+            6. Run gta-sa.exe
+        </div>
 
-                <span class="spec-value">
-                    Intel Pentium III class
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
-
-                <span class="spec-value">
-                    512 MB class
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±5 GB
-                </span>
-            </div>
-
+        <div class="line">
+            Minimum Specs:
+            Intel Pentium III class /
+            RAM 512 MB class /
+            Space sekitar 5 GB
         </div>
 
 
         <p class="bottom-text">
-            Jika download dari PC lambat, gunakan sumber download
-            yang mendukung kecepatan lebih baik lalu pindahkan file.
+
+            Jika mengalami download lama di PC,
+            coba download lewat HP dan pindahkan file.
+
         </p>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://drive.google.com/drive/folders/10RY-6F5Nm87wNYnbrJ48jfIuaBcQuGqJ'"
+        >
+            INSTAL GTA SA
+        </button>
 
     </div>
 
 
     <!-- =================================================
-         BULLY MOBILE
-    ================================================= -->
+         BULLY
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="mobile"
-        data-title="bully scholarship edition rpck install"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             BULLY SCHOLARSHIP EDITION
+            RPCK INSTALL VERSI TERBARU
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : MOBILE
         </div>
 
-        <div class="line os">
-            CEK KOMPATIBILITAS ANDROID
+
+        <div class="line status">
+            UPDATE TERBARU WAJIB ANDRO 15
         </div>
+
 
         <img
             src="maxresdefault.jpg"
             class="game-img"
-            alt="Bully Scholarship Edition"
+            alt="Bully"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Install aplikasi Bully yang kompatibel.<br>
-
-            2. Buka aplikasi Bully.<br>
-
-            3. Ikuti proses setup yang tersedia.<br>
-
-            4. Jalankan game.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Platform
-                </span>
-
-                <span class="spec-value">
-                    Android
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Android
-                </span>
-
-                <span class="spec-value">
-                    Tergantung versi game
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±5 GB ruang kosong
-                </span>
-            </div>
-
+        <div class="line">
+            1. Instal Apk Bully
         </div>
+
+
+        <div class="line">
+            2. Masuk aplikasi Bully
+        </div>
+
+
+        <div class="line">
+            3. Ikuti proses setup
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Android 15 /
+            Space sekitar 5 GB
+        </div>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/7vuleo9k11w8xii/BULLY_V1.4.299_MOD.zip/file'"
+        >
+            INSTAL BULLY MOBILE
+        </button>
 
     </div>
 
 
     <!-- =================================================
          PICSART
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="mobile"
-        data-title="picsart software edit mobile"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             PICSART
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : MOBILE
         </div>
 
-        <div class="line os">
+
+        <div class="line status">
             SOFTWARE EDIT
         </div>
+
 
         <img
             src="Screenshots-for-Picsart-app-for-Google-Drive-Web_1280x800_2-800x500.webp"
@@ -1441,85 +1346,74 @@ body{
             alt="PicsArt"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Install aplikasi dari sumber resmi.<br>
-
-            2. Buka PicsArt.<br>
-
-            3. Login atau gunakan fitur yang tersedia.<br>
-
-            4. Tes fitur editing.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Platform
-                </span>
-
-                <span class="spec-value">
-                    Android
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
-
-                <span class="spec-value">
-                    Android 11+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±2 GB
-                </span>
-            </div>
-
+        <div class="line">
+            1. Instal aplikasi
         </div>
+
+
+        <div class="line">
+            2. Masuk PicsArt
+        </div>
+
+
+        <div class="line">
+            3. Tes fitur editing
+        </div>
+
+
+        <div class="line">
+            4. Gunakan fitur yang tersedia
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Android 11+ /
+            Space sekitar 2 GB
+        </div>
+
+
+        <a
+            class="btn"
+            href="https://picsart.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            OFFICIAL PICSART
+        </a>
 
     </div>
 
 
     <!-- =================================================
          NFS CARBON
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="pc"
-        data-title="need for speed carbon reuploader"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             NEED FOR SPEED CARBON
         </div>
 
-        <div class="line platform">
+
+        <div class="line status">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
-            MINIMUM OS : WINDOWS XP
+
+        <div class="line soon">
+            MINIMUM OS WINDOWS XP
         </div>
+
 
         <img
             src="nfs-carbon-this-game-came-out-in-2006-yes-2006-and-its-v0-ulasxvm3qcv91.webp"
@@ -1527,98 +1421,88 @@ body{
             alt="NFS Carbon"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Download file Need for Speed Carbon.<br>
-
-            2. Extract menggunakan WinRAR atau sejenisnya.<br>
-
-            3. Buka folder Need for Speed Carbon.<br>
-
-            4. Jalankan carbon.exe.<br>
-
-            5. Jika mengalami crash, cek pengaturan resolusi
-            atau kompatibilitas.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
-
-                <span class="spec-value">
-                    Intel Pentium 4 class
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    GPU
-                </span>
-
-                <span class="spec-value">
-                    DirectX 9 class
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
-
-                <span class="spec-value">
-                    512 MB+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±4 GB
-                </span>
-            </div>
-
+        <div class="line">
+            1. Download file NFS Carbon
         </div>
+
+
+        <div class="line">
+            2. Extract menggunakan WinRAR
+        </div>
+
+
+        <div class="line">
+            3. Mainkan dari folder Need For Speed Carbon
+        </div>
+
+
+        <div class="line">
+            4. Run carbon.exe
+        </div>
+
+
+        <div class="line">
+            5. Jika crash, cek resolusi
+            dan kompatibilitas
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Pentium 4 class /
+            DirectX 9 class /
+            RAM 512 MB+ /
+            Space sekitar 4 GB
+        </div>
+
+
+        <p class="bottom-text">
+
+            Jika mengalami download lama di PC,
+            coba download lewat HP lalu pindahkan file.
+
+        </p>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/bazem7njaj3ydn4/Need_for_Speed_Carbon.rar/file'"
+        >
+            INSTAL NFS CARBON
+        </button>
 
     </div>
 
 
     <!-- =================================================
          GTA SAN ANDREAS MOBILE
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="mobile"
-        data-title="gta san andreas mobile"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             GTA SAN ANDREAS MOBILE
         </div>
 
-        <div class="line platform">
+
+        <div class="line status">
             PLATFORM : MOBILE
         </div>
 
-        <div class="line os">
-            MINIMUM : ANDROID 12+
+
+        <div class="line soon">
+            MINIMUM ANDRO 12+
         </div>
+
 
         <img
             src="0986691e851162979a8674382e265c99.jpg"
@@ -1626,172 +1510,151 @@ body{
             alt="GTA San Andreas Mobile"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Extract APK jika dikemas dalam ZIP.<br>
-
-            2. Install APK.<br>
-
-            3. Pastikan data game berada di lokasi yang sesuai
-            dengan versi aplikasi.<br>
-
-            4. Jalankan game.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Platform
-                </span>
-
-                <span class="spec-value">
-                    Android
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Android
-                </span>
-
-                <span class="spec-value">
-                    Android 12+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±5 GB+
-                </span>
-            </div>
-
+        <div class="line">
+            1. Ekstrak APK v2.00
         </div>
+
+
+        <div class="line">
+            2. Instal APK
+        </div>
+
+
+        <div class="line">
+            3. Ekstrak OBB v2.00 ZIP
+            ke Android/obb
+        </div>
+
+
+        <div class="line">
+            4. Mainkan
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Android 12+ /
+            Space sekitar 5 GB+
+        </div>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/ad67u05t2eirc56/APK_V2.00_12%2B.zip/file'"
+        >
+            INSTAL APK GTA SA V2.00
+        </button>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/8mei240hsx7njjc/OBB_V2.00_12%2B.zip/file'"
+        >
+            INSTAL OBB GTA SA V2.00
+        </button>
 
     </div>
 
 
     <!-- =================================================
-         MINECRAFT PATCH
-    ================================================= -->
+         MINECRAFT
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="mobile"
-        data-title="minecraft patch music mobile"
     >
 
-        <div class="game-title">
-            MINECRAFT PATCH MUSIC MOBILE
+        <div class="cmd-title">
+            Minecraft Patch Music Mobile
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : MOBILE
         </div>
 
-        <div class="line os">
-            MINIMUM OS : ANDROID 12+
+
+        <div class="line status">
+            MINIMUM OS ANDROID 12+
         </div>
+
 
         <img
             src="unnamed.webp"
             class="game-img"
-            alt="Minecraft Mobile"
+            alt="Minecraft"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Install APK patch.<br>
-
-            2. Buka aplikasi.<br>
-
-            3. Ikuti instruksi patch.<br>
-
-            4. Jalankan game.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Platform
-                </span>
-
-                <span class="spec-value">
-                    Android
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
-
-                <span class="spec-value">
-                    Android 12+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±2 GB
-                </span>
-            </div>
-
+        <div class="line">
+            1. Instal APK
         </div>
+
+
+        <div class="line">
+            2. Masuk aplikasi
+        </div>
+
+
+        <div class="line">
+            3. Ikuti proses patch
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Android 12+ /
+            Space sekitar 2 GB
+        </div>
+
+
+        <a
+            class="btn"
+            href="https://www.minecraft.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            OFFICIAL MINECRAFT
+        </a>
 
     </div>
 
 
     <!-- =================================================
          MAX PAYNE MOBILE
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="mobile"
-        data-title="max payne mobile"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             MAX PAYNE MOBILE
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : MOBILE
         </div>
 
-        <div class="line os">
-            MINIMUM OS : ANDROID 6+
+
+        <div class="line status">
+            MINIMUM OS ANDROID 6+
         </div>
+
 
         <img
             src="cb3c66ebe6baf706fd12ade4d8ecb0e5.jpg"
@@ -1799,60 +1662,38 @@ body{
             alt="Max Payne Mobile"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Extract file game jika dikemas dalam arsip.<br>
-
-            2. Tempatkan data game sesuai struktur folder
-            yang dibutuhkan versi aplikasi.<br>
-
-            3. Install APK yang kompatibel.<br>
-
-            4. Jalankan game.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            1. Ekstrak file game
+            jika berbentuk arsip
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    Platform
-                </span>
+        <div class="line">
+            2. Tempatkan data game
+            sesuai struktur folder
+        </div>
 
-                <span class="spec-value">
-                    Android
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
+        <div class="line">
+            3. Instal APK kompatibel
+        </div>
 
-                <span class="spec-value">
-                    Android 6+
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
+        <div class="line">
+            4. Jalankan game
+        </div>
 
-                <span class="spec-value">
-                    ±2 GB
-                </span>
-            </div>
 
+        <div class="line">
+            Minimum Specs:
+            Android 6+ /
+            Space sekitar 2 GB
         </div>
 
     </div>
@@ -1860,25 +1701,27 @@ body{
 
     <!-- =================================================
          GTA VICE CITY
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="pc"
-        data-title="gta vice city pc download"
     >
 
-        <div class="game-title">
-            GTA VICE CITY PC
+        <div class="cmd-title">
+            GTA VICE CITY PC DOWNLOAD
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
-            MINIMUM OS : WINDOWS XP
+
+        <div class="line status">
+            MINIMUM WINDOWS XP
         </div>
+
 
         <img
             src="GTA_ Vice City 14_06_2026 00_35_36.png"
@@ -1886,188 +1729,153 @@ body{
             alt="GTA Vice City"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Extract file GTA Vice City.<br>
-
-            2. Buka folder GTA Vice City.<br>
-
-            3. Jalankan GTA-VC.exe.<br>
-
-            4. Atur resolusi jika diperlukan.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            1. Ekstrak GTA Vice City
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
+        <div class="line">
+            2. Open folder GTA Vice City
+        </div>
 
-                <span class="spec-value">
-                    Pentium III class
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
+        <div class="line">
+            3. Run GTA-VC.exe
+        </div>
 
-                <span class="spec-value">
-                    128 MB class
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
+        <div class="line">
+            Minimum Specs:
+            Pentium III class /
+            RAM 128 MB class /
+            Space sekitar 2 GB
+        </div>
 
-                <span class="spec-value">
-                    ±2 GB
-                </span>
-            </div>
 
+        <div class="line">
+            Catatan: versi game bisa berbeda.
         </div>
 
 
         <p class="bottom-text">
-            Catatan: versi game bisa memiliki kebutuhan sistem
-            yang berbeda.
+
+            Jika mengalami download lama di PC,
+            coba download lewat HP lalu pindahkan file.
+
         </p>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/hmwewlx2pnsl4r9/GTA+Vice+City+-+Burn.rar/file'"
+        >
+            INSTALL GTA VC
+        </button>
 
     </div>
 
 
     <!-- =================================================
          NFS MOST WANTED
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="mobile"
-        data-title="need for speed most wanted gamehub emulator"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             NEED FOR SPEED MOST WANTED
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : GAMEHUB EMULATOR
         </div>
+
+
+        <div class="line status">
+            MINIMUM : SESUAIKAN DENGAN EMULATOR
+        </div>
+
 
         <img
             src="oldman777-7dcc6beea78f4c44358a945a5b61b48b.jpg"
             class="game-img"
-            alt="Need for Speed Most Wanted"
+            alt="Need For Speed Most Wanted"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Extract game jika berbentuk arsip.<br>
-
-            2. Install emulator yang kompatibel.<br>
-
-            3. Import game ke emulator.<br>
-
-            4. Tunggu proses konfigurasi.<br>
-
-            5. Jalankan game.<br>
-
-            6. Jika mengalami bug, cek dokumentasi emulator
-            dan konfigurasi yang digunakan.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Platform
-                </span>
-
-                <span class="spec-value">
-                    GameHub Emulator
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
-
-                <span class="spec-value">
-                    Tergantung game & emulator
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
-
-                <span class="spec-value">
-                    8 GB disarankan
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±3 GB
-                </span>
-            </div>
-
+        <div class="line">
+            1. Ekstrak game
         </div>
+
+
+        <div class="line">
+            2. Instal emulator
+        </div>
+
+
+        <div class="line">
+            3. Import game ke emulator
+        </div>
+
+
+        <div class="line">
+            4. Tunggu konfigurasi
+        </div>
+
+
+        <div class="line">
+            5. Launch game
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            RAM 8 GB disarankan /
+            Storage sekitar 3 GB /
+            CPU tergantung emulator
+        </div>
+
 
     </div>
 
 
     <!-- =================================================
          PCSX2
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="ps2"
-        data-title="pcsx2 emulator ps2 pc"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             PCSX2 EMULATOR PS2
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
-            MINIMUM OS : WINDOWS 10
+
+        <div class="line status">
+            MINIMUM WINDOWS 10
         </div>
+
 
         <img
             src="Screenshot 2026-06-22 154220.png"
@@ -2075,79 +1883,55 @@ body{
             alt="PCSX2"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Install PCSX2.<br>
-
-            2. Ikuti proses setup awal.<br>
-
-            3. Tambahkan lokasi game PS2 ke emulator.<br>
-
-            4. Jalankan game dari PCSX2.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
-
-                <span class="spec-value">
-                    Windows 10+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
-
-                <span class="spec-value">
-                    Intel Core i5 Gen 3 class
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
-
-                <span class="spec-value">
-                    8 GB disarankan
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±60 MB untuk emulator
-                </span>
-            </div>
-
+        <div class="line">
+            1. Instal PCSX2
         </div>
+
+
+        <div class="line">
+            2. Setup emulator
+        </div>
+
+
+        <div class="line">
+            3. Tambahkan folder game
+        </div>
+
+
+        <div class="line">
+            4. Jalankan game
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Intel Core i5 Gen 3 class /
+            RAM 8 GB disarankan /
+            Windows 10+
+        </div>
+
+
+        <p class="bottom-text">
+
+            PCSX2 memungkinkan game PS2 dimainkan
+            melalui emulator pada PC.
+
+        </p>
 
 
         <a
+            class="btn"
             href="https://pcsx2.net/"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn"
         >
-            OFFICIAL PCSX2
+            INSTALL PCSX2
         </a>
 
     </div>
@@ -2155,122 +1939,101 @@ body{
 
     <!-- =================================================
          GOD OF WAR II
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="ps2"
-        data-title="god of war ii ps2 pcsx2"
     >
 
-        <div class="game-title">
+        <div class="cmd-title">
             GOD OF WAR II - PCSX2
         </div>
 
-        <div class="line platform">
-            PLATFORM : PS2 / PCSX2
+
+        <div class="line soon">
+            PLATFORM : PCSX2
         </div>
 
-        <div class="line os">
-            MINIMUM OS : WINDOWS 10
+
+        <div class="line status">
+            MINIMUM WINDOWS 10
         </div>
+
 
         <img
             src="MV5BNDMyNGJiMzgtMzY0Ny00MDc1LWEzMDYtNzM4ZTIxZWNkNTgwXkEyXkFqcGc@._V1_.jpg"
             class="game-img"
-            alt="God of War II"
+            alt="God Of War II"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Siapkan file game PS2 yang sah.<br>
-
-            2. Jika file berupa arsip, extract sesuai formatnya.<br>
-
-            3. Di PCSX2, pilih Add Game Directory
-            atau buka image game secara langsung.<br>
-
-            4. Jalankan game dari emulator.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
-
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
-
-                <span class="spec-value">
-                    Windows 10+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
-
-                <span class="spec-value">
-                    Intel Core i5 Gen 6 class
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
-
-                <span class="spec-value">
-                    8 GB+
-                </span>
-            </div>
-
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
-
-                <span class="spec-value">
-                    ±7 GB
-                </span>
-            </div>
-
+        <div class="line">
+            1. Siapkan file game yang sah
         </div>
+
+
+        <div class="line">
+            2. Extract jika berbentuk arsip
+        </div>
+
+
+        <div class="line">
+            3. Di PCSX2 pilih folder game
+        </div>
+
+
+        <div class="line">
+            4. Jalankan game
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Intel Core i5 Gen 6 class /
+            RAM 8 GB+ /
+            Storage sekitar 7 GB
+        </div>
+
+
+        <p class="bottom-text">
+
+            Performa emulator tergantung CPU,
+            GPU, konfigurasi emulator dan game.
+
+        </p>
 
     </div>
 
 
     <!-- =================================================
          LEGO BATMAN 2
-    ================================================= -->
+    ================================================== -->
 
     <div
-        class="game-box"
+        class="cmd"
         data-category="pc"
-        data-title="lego batman 2 dc super heroes"
     >
 
-        <div class="game-title">
-            LEGO BATMAN 2: DC SUPER HEROES
+        <div class="cmd-title">
+            LEGO BATMAN 2 DC SUPER HEROES
         </div>
 
-        <div class="line platform">
+
+        <div class="line soon">
             PLATFORM : PC
         </div>
 
-        <div class="line os">
-            MINIMUM OS : WINDOWS XP
+
+        <div class="line status">
+            MINIMUM WINDOWS XP
         </div>
+
 
         <img
             src="Lego bat2.jpg"
@@ -2278,93 +2041,89 @@ body{
             alt="LEGO Batman 2"
         >
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL
-        </div>
 
-        <div class="tutorial">
-
-            1. Jalankan setup game.<br>
-
-            2. Extract installer jika berbentuk arsip.<br>
-
-            3. Pilih lokasi instalasi.<br>
-
-            4. Tunggu proses instalasi sampai selesai.<br>
-
-            5. Buka folder game.<br>
-
-            6. Jalankan LEGOBatman2.exe.
-
+        <div class="line">
+            TUTORIAL INSTALL:
         </div>
 
 
-        <div class="spec-box">
+        <div class="line">
+            1. Instal Setup dan game
+        </div>
 
-            <div class="spec-title">
-                MINIMUM SPECS
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    OS
-                </span>
+        <div class="line">
+            2. Extract installer
+            jika berbentuk arsip
+        </div>
 
-                <span class="spec-value">
-                    Windows XP+
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    CPU
-                </span>
+        <div class="line">
+            3. Jalankan Setup Lego Batman 2
+        </div>
 
-                <span class="spec-value">
-                    Intel Core i5-2300 class
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    RAM
-                </span>
+        <div class="line">
+            4. Pilih drive instalasi
+        </div>
 
-                <span class="spec-value">
-                    4 GB+
-                </span>
-            </div>
 
-            <div class="spec-row">
-                <span class="spec-label">
-                    Storage
-                </span>
+        <div class="line">
+            5. Buka folder GAMEFLZZUE
+        </div>
 
-                <span class="spec-value">
-                    ±4 GB
-                </span>
-            </div>
 
+        <div class="line">
+            6. Jalankan LEGOBatman2.exe
+        </div>
+
+
+        <div class="line">
+            Minimum Specs:
+            Intel Core i5-2300 class /
+            RAM 4 GB+ /
+            Space sekitar 4 GB
+        </div>
+
+
+        <div class="line">
+            Catatan:
+            antivirus dapat mendeteksi file game tertentu.
+            Pastikan file berasal dari sumber yang dipercaya.
         </div>
 
 
         <p class="bottom-text">
-            Pastikan instalasi menggunakan sumber resmi atau
-            salinan game yang memang lu punya hak untuk gunakan.
+
+            Jika mengalami download lama di PC,
+            coba download lewat HP lalu pindahkan file.
+
         </p>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://ankergames.net/game/lego-batman-2-dc-super-heroes#'"
+        >
+            DETAIL LEGO BATMAN 2
+        </button>
+
+
+        <button
+            class="btn"
+            onclick="window.location.href='https://www.mediafire.com/file/r3atjum6qdvp0v5/Setup.lego+batman+2.rar/file'"
+        >
+            SETUP LEGO BATMAN 2
+        </button>
 
     </div>
 
 
     <!-- =================================================
          MAX PAYNE 2
-    ================================================= -->
+    ================================================== -->
 
-    <div
-        class="game-link-box"
-        data-category="pc"
-        data-title="max payne 2 pc"
-    >
+    <div class="game-link-box">
 
         <a href="maxpayne2.html">
 
@@ -2372,20 +2131,27 @@ body{
                 MAX PAYNE 2 PC
             </div>
 
-            <div class="game-link-info">
-                Release: 2003
-            </div>
 
             <div class="game-link-info">
-                Developer: Remedy Entertainment
+                2003
             </div>
 
-            <div class="game-link-info">
-                Publisher: Rockstar Games
-            </div>
 
             <div class="game-link-info">
-                Minimum Specs: Intel Core i5 • Windows XP+
+                Developer:
+                Remedy Entertainment
+            </div>
+
+
+            <div class="game-link-info">
+                Publisher:
+                Rockstar Games
+            </div>
+
+
+            <div class="game-link-info">
+                Minimum Specs:
+                Intel Core i5 • Windows XP+
             </div>
 
         </a>
@@ -2393,160 +2159,25 @@ body{
     </div>
 
 
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
     <div class="footer">
         Miyu Repacks © 2026
     </div>
+
 
 </div>
 
 
 <!-- =====================================================
-     SEARCH + FILTER
+     GAME.JS
 ===================================================== -->
-
-<script>
-
-const searchInput =
-    document.getElementById("search");
-
-const items =
-    document.querySelectorAll(
-        ".game-box, .game-link-box"
-    );
-
-const noResult =
-    document.getElementById("no-result");
-
-
-/* SEARCH */
-
-searchInput.addEventListener(
-    "input",
-    function(){
-
-        const keyword =
-            this.value
-                .toLowerCase()
-                .trim();
-
-        let found = 0;
-
-
-        items.forEach(
-            function(item){
-
-                const title =
-                    (
-                        item.dataset.title ||
-                        item.innerText
-                    ).toLowerCase();
-
-
-                if(
-                    title.includes(keyword)
-                ){
-
-                    item.style.display = "";
-
-                    found++;
-
-                }else{
-
-                    item.style.display = "none";
-
-                }
-
-            }
-        );
-
-
-        noResult.style.display =
-            keyword !== "" && found === 0
-            ? "block"
-            : "none";
-
-    }
-);
-
-
-/* FILTER */
-
-function filterCategory(category){
-
-    searchInput.value = "";
-
-    let found = 0;
-
-
-    document
-        .querySelectorAll(".filter-btn")
-        .forEach(function(button){
-
-            button.classList.remove("active");
-
-            if(
-                button.getAttribute("onclick")
-                === "filterCategory('" + category + "')"
-            ){
-
-                button.classList.add("active");
-
-            }
-
-        });
-
-
-    items.forEach(
-        function(item){
-
-            const itemCategory =
-                item.dataset.category;
-
-
-            if(
-                category === "all" ||
-                itemCategory === category
-            ){
-
-                item.style.display = "";
-
-                found++;
-
-            }else{
-
-                item.style.display = "none";
-
-            }
-
-        }
-    );
-
-
-    noResult.style.display =
-        found === 0
-        ? "block"
-        : "none";
-
-}
-
-
-/* =====================================================
-   GAME.JS
-===================================================== */
-
-/*
-   game.js TETAP AKTIF.
-
-   Jangan hapus game.js dari folder project.
-   Game tambahan dari game.js akan tetap dimuat
-   setelah HTML selesai diproses.
-*/
-
-</script>
-
 
 <script src="./game.js"></script>
 
 
 </body>
+
 </html>
