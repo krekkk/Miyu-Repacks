@@ -872,7 +872,7 @@ MASALAH BUG INSTALLER ATAU REQUEST GAME ATAU LAPOR BUG DM TIKTOK @tentang.gts
 
    <p class="bottom-text">Jika Mengalami Download Lama Di Pc Coba Download lewat hp dan pindahkan file ke pc</p>
 
-          <button class="btn"
+              <button class="btn"
             onclick="window.location.href='https://ankergames.net/game/lego-batman-2-dc-super-heroes#'">
             INSTALL LEGO BATMAN 2 BY ANKER GAMES
         </button>
@@ -886,8 +886,22 @@ MASALAH BUG INSTALLER ATAU REQUEST GAME ATAU LAPOR BUG DM TIKTOK @tentang.gts
 
 </div>
 
-<!-- GAME.JS -->
-<script src="./game.js"></script>
+<script>
+console.log("INDEX HTML BERHASIL");
+
+const script = document.createElement("script");
+script.src = "./game.js";
+
+script.onload = function(){
+    console.log("GAME.JS BERHASIL DIMUAT");
+};
+
+script.onerror = function(){
+    console.error("GAME.JS GAGAL DIMUAT");
+};
+
+document.body.appendChild(script);
+</script>
 
 </body>
 </html>
