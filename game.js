@@ -36,9 +36,9 @@ const games = [
 ];
 
 
-// ========================================
+// =====================================
 // RENDER GAME
-// ========================================
+// =====================================
 
 function renderGames(list = games) {
 
@@ -50,16 +50,28 @@ function renderGames(list = games) {
     }
 
     // Hapus game yang sebelumnya dibuat oleh game.js
-    document.querySelectorAll(".js-game").forEach(game => {
+    document.querySelectorAll(".js-game").forEach(function(game) {
         game.remove();
     });
 
-    list.forEach(game => {
+    list.forEach(function(game) {
 
         const gameBox = document.createElement("div");
 
         gameBox.className = "cmd js-game";
         gameBox.dataset.category = game.category;
+
+        let tutorialHTML = "";
+
+        game.tutorial.forEach(function(step, index) {
+
+            tutorialHTML += `
+                <div class="line">
+                    ${index + 1}. ${step}
+                </div>
+            `;
+
+        });
 
         gameBox.innerHTML = `
             <div class="cmd-title">
@@ -78,6 +90,7 @@ function renderGames(list = games) {
                 src="${game.image}"
                 class="game-img"
                 alt="${game.title}"
+                onerror="this.style.display='none';"
             >
 
             <div class="line">
@@ -88,11 +101,7 @@ function renderGames(list = games) {
                 TUTORIAL INSTALL:
             </div>
 
-            ${game.tutorial.map((step, index) => `
-                <div class="line">
-                    ${index + 1}. ${step}
-                </div>
-            `).join("")}
+            ${tutorialHTML}
 
             <button
                 class="btn"
@@ -103,37 +112,45 @@ function renderGames(list = games) {
         `;
 
         container.appendChild(gameBox);
+
     });
 
-    console.log("Game berhasil dimuat:", list);
+    console.log("Game berhasil dimuat:", list.length);
 }
 
 
-// ========================================
+// =====================================
 // SEARCH
-// ========================================
+// =====================================
 
 function searchGame() {
 
-    const input = document
-        .getElementById("search")
-        .value
+    const inputElement = document.getElementById("search");
+
+    if (!inputElement) {
+        return;
+    }
+
+    const input = inputElement.value
         .toLowerCase()
         .trim();
 
-    const gamesElements = document.querySelectorAll(".cmd");
+    const gamesElements =
+        document.querySelectorAll(".cmd");
 
     let firstMatch = null;
 
-    gamesElements.forEach(game => {
+    gamesElements.forEach(function(game) {
 
-        const title = game.querySelector(".cmd-title");
+        const title =
+            game.querySelector(".cmd-title");
 
         if (!title) {
             return;
         }
 
-        const gameTitle = title.innerText.toLowerCase();
+        const gameTitle =
+            title.innerText.toLowerCase();
 
         if (gameTitle.includes(input)) {
 
@@ -159,41 +176,54 @@ function searchGame() {
         });
 
     }
+
 }
 
 
-// ========================================
+// =====================================
 // FILTER CATEGORY
-// ========================================
+// =====================================
 
 function filterCategory(category) {
 
-    document.querySelectorAll(".cmd").forEach(game => {
+    const games =
+        document.querySelectorAll(".cmd");
+
+    games.forEach(function(game) {
+
+        const gameCategory =
+            game.dataset.category;
 
         if (category === "all") {
 
             game.style.display = "block";
 
-        } else if (game.dataset.category === category) {
+        }
+        else if (gameCategory === category) {
 
             game.style.display = "block";
 
-        } else {
+        }
+        else {
 
             game.style.display = "none";
 
         }
 
     });
+
 }
 
 
-// ========================================
-// LOAD
-// ========================================
+// =====================================
+// LOAD GAME
+// =====================================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
 
-    renderGames();
+        renderGames();
 
-});
+    }
+);
