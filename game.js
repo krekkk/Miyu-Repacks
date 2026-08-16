@@ -11,35 +11,34 @@ const games = [
             "Jalankan setup.exe.",
             "Tunggu proses instalasi sampai selesai.",
             "Jalankan game.",
-            "Selamat bermain!"
-            "Minimum Spec I5 240
+            "Selamat bermain!",
+            "Minimum Spec: Intel Core i5"
         ],
         download: "https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
     },
 
     {
-    title: "Miyu Windows Toolkit",
-    category: "pc",
-    platform: "Windows",
-    os: "Windows 10 / Windows 11",
-    image: "Screenshot 2026-08-09 212004.png",
-    description: "Miyu Windows Toolkit untuk berbagai utilitas, troubleshooting, maintenance, dan tools Windows.",
-    tutorial: [
-        "Download Miyu Windows Toolkit.",
-        "Ekstrak file Miyu TollKit.rar.",
-        "Buka folder hasil ekstraksi.",
-        "Jalankan Miyu Windows Toolkit.",
-        "Gunakan menu sesuai kebutuhan."
-    ],
-    download: "https://www.mediafire.com/file/rfvxvsr1g6fw46d/Miyu+TollKit.rar/file"
-}
-    
+        title: "Miyu Windows Toolkit",
+        category: "pc",
+        platform: "Windows",
+        os: "Windows 10 / Windows 11",
+        image: "Screenshot 2026-08-09 212004.png",
+        description: "Miyu Windows Toolkit untuk berbagai utilitas, troubleshooting, maintenance, dan tools Windows.",
+        tutorial: [
+            "Download Miyu Windows Toolkit.",
+            "Ekstrak file Miyu TollKit.rar.",
+            "Buka folder hasil ekstraksi.",
+            "Jalankan Miyu Windows Toolkit.",
+            "Gunakan menu sesuai kebutuhan."
+        ],
+        download: "https://www.mediafire.com/file/rfvxvsr1g6fw46d/Miyu+TollKit.rar/file"
+    }
 ];
 
 
-// ================================
+// ========================================
 // RENDER GAME
-// ================================
+// ========================================
 
 function renderGames(list = games) {
 
@@ -110,9 +109,9 @@ function renderGames(list = games) {
 }
 
 
-// ================================
+// ========================================
 // SEARCH
-// ================================
+// ========================================
 
 function searchGame() {
 
@@ -163,9 +162,9 @@ function searchGame() {
 }
 
 
-// ================================
+// ========================================
 // FILTER CATEGORY
-// ================================
+// ========================================
 
 function filterCategory(category) {
 
@@ -189,10 +188,12 @@ function filterCategory(category) {
 }
 
 
-// ================================
+// ========================================
 // LOAD
-// ================================
+// ========================================
 
 document.addEventListener("DOMContentLoaded", function () {
+
     renderGames();
+
 });
