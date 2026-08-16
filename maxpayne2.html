@@ -2,209 +2,345 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Max Payne 2 Miyu Repacks</title>
+<title>Max Payne 2 Miyu Repacks - Download Game PC</title>
 
-<meta name="description" content="Max Payne 2 Miyu Repacks - Download dan informasi instalasi Max Payne 2 untuk PC.">
+<meta name="description"
+content="Max Payne 2: The Fall of Max Payne adalah game action third-person shooter yang dikembangkan Remedy Entertainment dan diterbitkan Rockstar Games.">
 
-<meta name="keywords" content="Max Payne 2, Max Payne 2 PC, Miyu Repacks, Max Payne 2 download">
+<meta name="keywords"
+content="Max Payne 2, Max Payne 2 PC, Max Payne 2 Miyu Repacks, Rockstar Games, Remedy Entertainment">
 
 <meta name="author" content="Miyu Repacks">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://krekkk.github.io/Miyu-Repacks/maxpayne2.html">
-
 <link rel="icon" type="image/png" href="logo.jpg">
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
 
 <style>
+
+*{
+    box-sizing:border-box;
+}
 
 html{
     scroll-behavior:smooth;
 }
 
 body{
+
     margin:0;
+
     min-height:100vh;
 
     background:
-        radial-gradient(circle at 20% 20%, #111 0%, #000 40%, #000 100%),
-        radial-gradient(circle at 80% 80%, #0a0a0a 0%, #000 60%);
+        radial-gradient(circle at 10% 10%, #111 0%, #000 35%),
+        radial-gradient(circle at 90% 90%, #111 0%, #000 45%);
+
+    color:#ddd;
 
     font-family:'Oswald',sans-serif;
-    color:white;
-
-    display:flex;
-    justify-content:center;
 }
 
-.container{
+
+/* HEADER */
+
+.header{
+
     width:100%;
-    max-width:900px;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    padding:25px 20px;
 
-    gap:20px;
+    border-bottom:1px solid #1e90ff;
 
-    padding:30px 0;
-}
+    background:#050505;
 
-.title{
-    color:#1e90ff;
-
-    font-size:55px;
-    font-weight:600;
+    box-shadow:0 0 20px rgba(30,144,255,.25);
 
     text-align:center;
+}
+
+.header-title{
+
+    font-size:42px;
+
+    color:#1e90ff;
 
     text-shadow:
         0 0 5px #1e90ff,
         0 0 10px #1e90ff,
-        0 0 20px #1e90ff,
-        0 0 40px #1e90ff;
-}
-
-.game-box{
-    width:700px;
-
-    background:#000;
-
-    border:1px solid #1e90ff;
-
-    padding:20px;
-
-    box-sizing:border-box;
-
-    font-family:Consolas,monospace;
-
-    color:#00ffcc;
-
-    box-shadow:
-        0 0 10px #1e90ff,
         0 0 20px #1e90ff;
 
-    border-radius:5px;
 }
 
-.game-title{
-    color:#1e90ff;
 
-    font-size:28px;
+/* MAIN */
 
-    margin-bottom:15px;
+.container{
 
-    text-shadow:
-        0 0 10px #1e90ff;
-}
-
-.line{
-    margin:7px 0;
-}
-
-.platform{
-    color:#ffcc00;
-
-    text-shadow:
-        0 0 10px #ffcc00;
-}
-
-.os{
-    color:#ff4444;
-
-    font-weight:bold;
-
-    text-shadow:
-        0 0 10px #ff4444;
-}
-
-.game-img{
     width:100%;
 
-    height:auto;
+    max-width:1050px;
 
-    display:block;
+    margin:auto;
 
-    margin:15px auto;
+    padding:35px 20px 60px;
+}
+
+
+/* GAME TITLE */
+
+.game-title{
+
+    font-size:42px;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    text-shadow:0 0 10px #1e90ff;
+}
+
+.subtitle{
+
+    color:#888;
+
+    font-size:16px;
+
+    margin-bottom:30px;
+}
+
+
+/* HERO */
+
+.hero{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:flex-start;
+
+    margin-bottom:45px;
+}
+
+.hero-image{
+
+    width:430px;
+
+    max-width:45%;
+
+    border:1px solid #1e90ff;
 
     border-radius:8px;
 
-    border:1px solid #1e90ff;
-
     box-shadow:
         0 0 10px #1e90ff,
-        0 0 20px #1e90ff;
+        0 0 25px rgba(30,144,255,.25);
 }
 
-.description{
+.hero-text{
+
+    flex:1;
+
+    font-family:Arial,sans-serif;
+
+    line-height:1.8;
+
+    color:#ccc;
+
+    font-size:16px;
+}
+
+
+/* INFO */
+
+.info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:20px;
+}
+
+.info-item{
+
+    background:#090909;
+
+    border:1px solid #1e90ff;
+
+    padding:10px 15px;
+
+    border-radius:6px;
+
     color:#ddd;
 
-    margin:15px 0;
+}
+
+.info-item span{
+
+    color:#1e90ff;
+
+}
+
+
+/* SECTION */
+
+.section{
+
+    margin-top:45px;
+
+    padding-top:25px;
+
+    border-top:1px solid #222;
+}
+
+.section h2{
+
+    color:#1e90ff;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 10px #1e90ff;
+}
+
+.section p{
+
+    font-family:Arial,sans-serif;
+
+    color:#ccc;
+
+    line-height:1.9;
+
+    font-size:16px;
+}
+
+
+/* STORY */
+
+.story{
+
+    font-family:Arial,sans-serif;
+
+    line-height:1.9;
+
+    color:#ccc;
+
+    font-size:16px;
+}
+
+
+/* FEATURES */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.feature{
+
+    background:#080808;
+
+    border-left:3px solid #1e90ff;
+
+    padding:18px;
+
+    font-family:Arial,sans-serif;
+
+    color:#ccc;
 
     line-height:1.6;
 }
 
-.tutorial-title{
+.feature strong{
+
     color:#1e90ff;
+}
+
+
+/* INSTALL */
+
+.install{
 
     margin-top:20px;
 
-    margin-bottom:10px;
+    font-family:Consolas,monospace;
 
-    text-shadow:
-        0 0 10px #1e90ff;
-}
+    line-height:2;
 
-.tutorial{
     color:#00ffcc;
-
-    margin:7px 0;
 }
 
-.download-box{
-    margin-top:25px;
+
+/* DOWNLOAD */
+
+.download-section{
+
+    margin-top:50px;
 
     text-align:center;
 
-    padding-top:20px;
+    padding:35px 20px;
 
     border-top:1px solid #1e90ff;
+
+    border-bottom:1px solid #1e90ff;
+
+    background:#050505;
 }
 
-.download-btn{
-    display:inline-block;
+.download-title{
 
-    padding:12px 30px;
-
-    font-family:'Oswald',sans-serif;
-
-    font-size:16px;
+    font-size:28px;
 
     color:#1e90ff;
 
-    background:transparent;
+    margin-bottom:20px;
+
+    text-shadow:0 0 10px #1e90ff;
+}
+
+.download-btn{
+
+    display:inline-block;
+
+    padding:13px 30px;
 
     border:2px solid #1e90ff;
 
     border-radius:8px;
 
+    color:#1e90ff;
+
     text-decoration:none;
 
-    cursor:pointer;
-
-    box-shadow:
-        0 0 8px #1e90ff;
+    font-size:17px;
 
     transition:.2s;
+
+    box-shadow:0 0 8px #1e90ff;
 }
 
 .download-btn:hover{
+
     background:#1e90ff;
 
     color:#000;
@@ -214,67 +350,73 @@ body{
         0 0 25px #1e90ff;
 }
 
-.back-btn{
-    display:inline-block;
 
-    margin-top:5px;
+/* BACK */
 
-    padding:10px 25px;
-
-    color:#aaa;
-
-    background:transparent;
-
-    border:1px solid #555;
-
-    border-radius:8px;
-
-    text-decoration:none;
-
-    font-family:'Oswald',sans-serif;
-
-    transition:.2s;
-}
-
-.back-btn:hover{
-    color:white;
-
-    border-color:#1e90ff;
-
-    box-shadow:
-        0 0 10px #1e90ff;
-}
-
-.footer{
-    margin-top:10px;
-
-    font-size:12px;
-
-    color:#1e90ff;
+.back{
 
     text-align:center;
 
-    opacity:.7;
+    margin-top:30px;
+}
 
-    text-shadow:
-        0 0 10px #1e90ff;
+.back a{
+
+    color:#888;
+
+    text-decoration:none;
+
+    font-size:15px;
+}
+
+.back a:hover{
+
+    color:#1e90ff;
 }
 
 
-/* RESPONSIVE */
+/* FOOTER */
 
-@media(max-width:760px){
+.footer{
 
-    .container{
-        width:95%;
+    margin-top:50px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-top:1px solid #222;
+
+    color:#555;
+
+    font-size:13px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .hero{
+
+        flex-direction:column;
     }
 
-    .title{
-        font-size:38px;
-    }
+    .hero-image{
 
-    .game-box{
         width:100%;
+
+        max-width:100%;
+    }
+
+    .game-title{
+
+        font-size:32px;
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
     }
 
 }
@@ -286,101 +428,346 @@ body{
 
 <body>
 
-<div class="container">
 
-    <div class="title">
+<header class="header">
+
+    <div class="header-title">
         MIYU REPACKS
     </div>
 
-
-    <div class="game-box">
-
-        <div class="game-title">
-            MAX PAYNE 2 MIYU REPACKS
-        </div>
+</header>
 
 
-        <div class="line platform">
-            PLATFORM : PC
-        </div>
+<main class="container">
 
 
-        <div class="line os">
-            MINIMUM OS : WINDOWS XP KE ATAS
-        </div>
+    <h1 class="game-title">
+        MAX PAYNE 2: THE FALL OF MAX PAYNE
+    </h1>
 
+    <div class="subtitle">
+        PC • 2003 • Third-Person Shooter • Action
+    </div>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
 
         <img
             src="0000003274.1920x1080.jpg"
-            class="game-img"
-            alt="Max Payne 2 Miyu Repacks"
+            class="hero-image"
+            alt="Max Payne 2 The Fall of Max Payne"
         >
 
 
-        <div class="description">
-            Max Payne 2 Miyu Repacks.
-        </div>
+        <div class="hero-text">
+
+            <p>
+                <strong>Max Payne 2: The Fall of Max Payne</strong>
+                adalah game third-person shooter yang dikembangkan oleh
+                Remedy Entertainment dan diterbitkan oleh Rockstar Games.
+            </p>
+
+            <p>
+                Game ini merupakan sekuel dari Max Payne dan kembali
+                mengikuti perjalanan Max Payne sebagai seorang detektif
+                yang menghadapi kasus kriminal, konflik pribadi, dan
+                berbagai musuh dalam suasana kota New York yang gelap.
+            </p>
+
+            <p>
+                Salah satu ciri khas utama game ini adalah penggunaan
+                <strong>Bullet Time</strong>, sebuah mekanik yang membuat
+                Max dapat memperlambat waktu ketika bertarung sehingga
+                pemain bisa menghindari serangan dan membalas musuh
+                dengan lebih efektif.
+            </p>
 
 
-        <div class="tutorial-title">
-            TUTORIAL INSTALL:
-        </div>
+            <div class="info">
 
+                <div class="info-item">
+                    <span>Rilis:</span> 2003
+                </div>
 
-        <div class="tutorial">
-            1. Ekstrak Max Payne 2 Miyu Repacks.
-        </div>
+                <div class="info-item">
+                    <span>Developer:</span> Remedy Entertainment
+                </div>
 
-        <div class="tutorial">
-            2. Jalankan setup.exe.
-        </div>
+                <div class="info-item">
+                    <span>Publisher:</span> Rockstar Games
+                </div>
 
-        <div class="tutorial">
-            3. Tunggu proses instalasi sampai selesai.
-        </div>
+                <div class="info-item">
+                    <span>Platform:</span> PC
+                </div>
 
-        <div class="tutorial">
-            4. Jalankan game.
-        </div>
-
-        <div class="tutorial">
-            5. Selamat bermain!
-        </div>
-
-        <div class="tutorial">
-            6. Minimum Spec: Intel Core i5
-        </div>
-
-
-        <div class="download-box">
-
-            <a
-                class="download-btn"
-                href="https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                DOWNLOAD MAX PAYNE 2
-            </a>
+            </div>
 
         </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <h2>Tentang Max Payne 2</h2>
+
+        <p>
+            Max Payne 2 melanjutkan cerita Max setelah kejadian pada
+            game pertama. Kali ini Max kembali bekerja sebagai polisi
+            dan terlibat dalam sebuah kasus yang semakin rumit ketika
+            berbagai karakter dan kelompok kriminal mulai muncul.
+        </p>
+
+        <p>
+            Cerita game menggunakan gaya narasi yang sangat sinematik.
+            Cutscene, dialog, komik bergaya graphic novel, dan suasana
+            kota yang gelap menjadi bagian penting dari pengalaman game.
+        </p>
+
+        <p>
+            Dibandingkan game pertamanya, Max Payne 2 juga membawa
+            peningkatan pada animasi, fisika, grafis, serta gameplay
+            sehingga aksi tembak-menembaknya terasa lebih dinamis.
+        </p>
+
+    </section>
+
+
+    <!-- GAMEPLAY -->
+
+    <section class="section">
+
+        <h2>Gameplay</h2>
+
+        <p>
+            Gameplay Max Payne 2 berfokus pada pertarungan menggunakan
+            berbagai jenis senjata api. Pemain dapat menggunakan pistol,
+            shotgun, submachine gun, rifle, dan berbagai senjata lainnya.
+        </p>
+
+        <p>
+            Bullet Time menjadi mekanik utama dalam pertempuran.
+            Pemain dapat memperlambat waktu untuk melakukan manuver
+            dan menembak musuh dengan lebih cepat.
+        </p>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <strong>Bullet Time</strong>
+
+                <br>
+
+                Sistem slow-motion khas seri Max Payne yang membuat
+                pertarungan terasa lebih sinematik.
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>Third-Person Shooter</strong>
+
+                <br>
+
+                Game dimainkan dari perspektif orang ketiga dengan
+                fokus pada aksi tembak-menembak.
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>Graphic Novel</strong>
+
+                <br>
+
+                Cerita disampaikan melalui gaya visual seperti
+                novel grafis.
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>Physics</strong>
+
+                <br>
+
+                Game menggunakan sistem fisika yang membuat objek
+                dan pertempuran terasa lebih hidup.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="section">
+
+        <h2>Cerita</h2>
+
+        <div class="story">
+
+            <p>
+                Setelah kejadian pada game pertama, Max Payne kembali
+                menjalani kehidupannya sebagai polisi di New York.
+                Namun kehidupannya kembali berubah ketika sebuah kasus
+                membawa dirinya berhadapan dengan kelompok kriminal
+                dan orang-orang dari masa lalunya.
+            </p>
+
+            <p>
+                Investigasi tersebut perlahan berkembang menjadi
+                konflik yang jauh lebih personal. Max harus menghadapi
+                berbagai ancaman sekaligus mencoba memahami siapa yang
+                sebenarnya dapat dipercaya.
+            </p>
+
+            <p>
+                Cerita Max Payne 2 memiliki nuansa noir yang kuat,
+                dengan tema kehilangan, kriminalitas, konflik pribadi,
+                dan kehidupan kota yang penuh kekerasan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SYSTEM -->
+
+    <section class="section">
+
+        <h2>Informasi Sistem</h2>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <strong>Platform</strong>
+
+                <br>
+
+                PC
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>Operating System</strong>
+
+                <br>
+
+                Windows XP ke atas
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>Minimum Processor</strong>
+
+                <br>
+
+                Intel Core i5
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>Game Size</strong>
+
+                <br>
+
+                Sesuaikan dengan ukuran file yang tersedia
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INSTALL -->
+
+    <section class="section">
+
+        <h2>Tutorial Install</h2>
+
+        <div class="install">
+
+            1. Ekstrak Max Payne 2 Miyu Repacks.<br>
+
+            2. Jalankan setup.exe.<br>
+
+            3. Pilih lokasi instalasi game.<br>
+
+            4. Tunggu proses instalasi sampai selesai.<br>
+
+            5. Setelah instalasi selesai, buka folder game.<br>
+
+            6. Jalankan game.<br>
+
+            7. Selamat bermain!
+
+        </div>
+
+    </section>
+
+
+    <!-- DOWNLOAD -->
+
+    <section class="download-section">
+
+        <div class="download-title">
+            DOWNLOAD MAX PAYNE 2
+        </div>
+
+        <a
+            class="download-btn"
+            href="https://drive.google.com/file/d/130pwhmiDhw8dmMty6_uFDi9RJXvBrmuY/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            DOWNLOAD VIA GOOGLE DRIVE
+        </a>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <div class="back">
+
+        <a href="index.html">
+            ← Kembali ke Miyu Repacks
+        </a>
 
     </div>
 
 
-    <a
-        href="index.html"
-        class="back-btn"
-    >
-        ← KEMBALI KE GAME
-    </a>
+</main>
 
 
-    <div class="footer">
-        Miyu Repacks © 2026
-    </div>
+<footer class="footer">
 
-</div>
+    Miyu Repacks © 2026
+
+</footer>
+
 
 </body>
 
