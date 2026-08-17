@@ -9,14 +9,13 @@
 <title>GRID Autosport</title>
 
 <meta
-    name="description"
-    content="GRID Autosport - game racing dari Codemasters dengan berbagai disiplin motorsport, kendaraan, dan lintasan."
+name="description"
+content="GRID Autosport - game racing dari Codemasters dengan berbagai disiplin motorsport, kendaraan, dan lintasan."
 >
 
 <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
->
+href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+rel="stylesheet">
 
 <style>
 
@@ -35,39 +34,9 @@ html{
 }
 
 body{
-    background:#030303;
+    background:#050505;
     color:#ddd;
     font-family:'Oswald',sans-serif;
-    overflow-x:hidden;
-}
-
-
-/* =====================================================
-   BACKGROUND
-===================================================== */
-
-body::before{
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    background:
-        radial-gradient(
-            circle at 15% 15%,
-            rgba(30,144,255,.08),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(0,255,204,.04),
-            transparent 35%
-        );
-
-    z-index:-1;
 }
 
 
@@ -76,100 +45,83 @@ body::before{
 ===================================================== */
 
 header{
-
-    height:75px;
+    height:80px;
 
     display:flex;
-
     align-items:center;
-
-    justify-content:space-between;
 
     padding:0 6%;
 
-    border-bottom:1px solid #151515;
+    border-bottom:1px solid #1e90ff;
 
-    background:rgba(3,3,3,.96);
-
-    position:sticky;
-
-    top:0;
-
-    z-index:100;
+    background:#050505;
 
     box-shadow:
-        0 0 20px rgba(30,144,255,.12);
-
+        0 0 15px rgba(30,144,255,.25);
 }
 
 .logo{
+    font-size:28px;
+    font-weight:600;
 
     color:#1e90ff;
 
-    font-size:26px;
-
-    font-weight:600;
-
-    letter-spacing:3px;
+    letter-spacing:2px;
 
     text-shadow:
         0 0 5px #1e90ff,
         0 0 15px #1e90ff,
-        0 0 30px rgba(30,144,255,.6);
-
+        0 0 30px rgba(30,144,255,.7);
 }
 
 
 /* =====================================================
-   MAIN
+   LAYOUT
 ===================================================== */
 
-main{
-
+.page{
     width:90%;
-
-    max-width:1250px;
+    max-width:1550px;
 
     margin:auto;
 
-    padding-bottom:100px;
+    display:grid;
 
+    grid-template-columns:minmax(0,1fr) 300px;
+
+    gap:45px;
+
+    padding-bottom:100px;
+}
+
+main{
+    min-width:0;
 }
 
 
 /* =====================================================
-   BACK BUTTON
+   BACK
 ===================================================== */
 
 .back{
-
     display:inline-block;
 
-    margin-top:30px;
+    margin-top:35px;
 
-    padding:9px 18px;
-
-    border:1px solid #222;
-
-    color:#777;
+    color:#888;
 
     text-decoration:none;
 
     font-family:Arial,sans-serif;
 
-    transition:.25s;
-
+    transition:.2s;
 }
 
 .back:hover{
-
     color:#1e90ff;
 
-    border-color:#1e90ff;
-
-    box-shadow:
-        0 0 12px rgba(30,144,255,.3);
-
+    text-shadow:
+        0 0 8px #1e90ff;
 }
 
 
@@ -178,44 +130,121 @@ main{
 ===================================================== */
 
 .title-area{
-
     margin-top:35px;
 
     padding-bottom:25px;
 
-    border-bottom:1px solid #181818;
-
+    border-bottom:1px solid #222;
 }
 
 .title-area h1{
-
-    font-size:72px;
-
-    line-height:1;
+    font-size:70px;
 
     color:white;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
 
     text-shadow:
         0 0 5px #1e90ff,
         0 0 15px #1e90ff,
-        0 0 35px rgba(30,144,255,.7);
-
+        0 0 35px rgba(30,144,255,.8);
 }
 
 .subtitle{
-
-    margin-top:12px;
-
-    color:#666;
+    margin-top:8px;
 
     font-family:Arial,sans-serif;
 
-    font-size:14px;
+    color:#777;
 
-    letter-spacing:3px;
+    font-size:15px;
 
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+    padding-top:155px;
+}
+
+.sidebar-title{
+    color:#1e90ff;
+
+    font-size:25px;
+
+    margin-bottom:20px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #1e90ff;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+.other-game{
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#080808;
+
+    border:1px solid #222;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    transition:.25s;
+}
+
+.other-game:hover{
+    border-color:#1e90ff;
+
+    transform:translateX(-5px);
+
+    box-shadow:
+        0 0 10px rgba(30,144,255,.4),
+        0 0 25px rgba(30,144,255,.15);
+}
+
+.other-game-title{
+    color:#1e90ff;
+
+    font-size:22px;
+
+    margin-bottom:7px;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+.other-game-info{
+    color:#777;
+
+    font-family:Arial,sans-serif;
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+.other-game-arrow{
+    display:block;
+
+    margin-top:12px;
+
+    color:#00ffcc;
+
+    font-family:Arial,sans-serif;
+
+    font-size:13px;
 }
 
 
@@ -224,79 +253,59 @@ main{
 ===================================================== */
 
 .hero{
-
     display:grid;
 
-    grid-template-columns:1.25fr .75fr;
+    grid-template-columns:58% 42%;
 
-    gap:45px;
+    min-height:470px;
 
-    margin-top:45px;
+    margin-top:40px;
 
     align-items:center;
-
 }
 
-
-/* =====================================================
-   HERO IMAGE
-===================================================== */
-
 .hero-image{
-
     width:100%;
 
-    height:470px;
+    height:450px;
 
     object-fit:cover;
 
     display:block;
 
-    border:1px solid #1e90ff;
+    border-radius:4px;
 
     box-shadow:
-        0 0 15px rgba(30,144,255,.3),
-        0 0 45px rgba(30,144,255,.08);
-
+        0 0 15px rgba(30,144,255,.35),
+        0 0 45px rgba(30,144,255,.12);
 }
 
-
-/* =====================================================
-   HERO TEXT
-===================================================== */
-
 .hero-text{
-
-    padding:10px 0;
-
+    padding:35px 0 35px 55px;
 }
 
 .hero-text h2{
-
-    font-size:45px;
-
     color:#1e90ff;
+
+    font-size:42px;
 
     margin-bottom:20px;
 
     text-shadow:
         0 0 10px #1e90ff,
         0 0 25px rgba(30,144,255,.5);
-
 }
 
 .hero-text p{
-
-    color:#aaa;
-
     font-family:Arial,sans-serif;
 
-    font-size:15px;
+    font-size:16px;
 
     line-height:1.9;
 
-    margin-bottom:20px;
+    color:#bbb;
 
+    margin-bottom:18px;
 }
 
 
@@ -305,59 +314,46 @@ main{
 ===================================================== */
 
 .game-info{
-
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     margin-top:55px;
 
-    border-top:1px solid #1c1c1c;
+    border-top:1px solid #222;
 
-    border-bottom:1px solid #1c1c1c;
-
+    border-bottom:1px solid #222;
 }
 
 .info{
-
     padding:25px;
 
-    border-right:1px solid #1c1c1c;
-
+    border-right:1px solid #222;
 }
 
 .info:last-child{
-
     border-right:none;
-
 }
 
 .info-label{
-
-    color:#555;
-
     font-family:Arial,sans-serif;
 
-    font-size:11px;
+    font-size:12px;
+
+    color:#666;
 
     text-transform:uppercase;
 
-    letter-spacing:1px;
-
     margin-bottom:8px;
-
 }
 
 .info-value{
+    font-size:19px;
 
     color:#1e90ff;
 
-    font-size:19px;
-
     text-shadow:
-        0 0 7px rgba(30,144,255,.4);
-
+        0 0 5px rgba(30,144,255,.4);
 }
 
 
@@ -366,44 +362,36 @@ main{
 ===================================================== */
 
 .content{
-
-    width:82%;
+    width:100%;
 
     margin-top:80px;
-
 }
 
 .content h2{
+    font-size:35px;
 
     color:white;
 
-    font-size:34px;
+    margin-bottom:20px;
 
-    letter-spacing:1px;
-
-    padding-bottom:13px;
-
-    margin-bottom:25px;
+    padding-bottom:12px;
 
     border-bottom:1px solid #1e90ff;
 
     text-shadow:
-        0 0 10px rgba(30,144,255,.7);
-
+        0 0 10px #1e90ff;
 }
 
 .content p{
-
-    color:#aaa;
-
     font-family:Arial,sans-serif;
 
-    font-size:15px;
+    font-size:16px;
 
     line-height:2;
 
-    margin-bottom:20px;
+    color:#bbb;
 
+    margin-bottom:20px;
 }
 
 
@@ -412,49 +400,43 @@ main{
 ===================================================== */
 
 .features{
-
     display:grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:15px;
 
+    margin-top:25px;
 }
 
 .feature{
-
-    padding:22px;
-
-    background:#070707;
-
-    border:1px solid #151515;
+    padding:20px;
 
     border-left:2px solid #1e90ff;
 
-    color:#999;
+    background:#0a0a0a;
 
     font-family:Arial,sans-serif;
 
-    line-height:1.7;
+    color:#bbb;
 
-    transition:.25s;
+    line-height:1.6;
 
+    transition:.2s;
 }
 
 .feature:hover{
-
-    transform:translateX(5px);
+    background:#0d0d0d;
 
     border-left-color:#00ffcc;
 
-    box-shadow:
-        -5px 0 20px rgba(30,144,255,.12);
+    transform:translateX(5px);
 
+    box-shadow:
+        -5px 0 15px rgba(30,144,255,.15);
 }
 
 .feature-title{
-
     display:block;
 
     color:#1e90ff;
@@ -464,7 +446,6 @@ main{
     font-size:21px;
 
     margin-bottom:8px;
-
 }
 
 
@@ -473,59 +454,49 @@ main{
 ===================================================== */
 
 .requirements{
-
-    border-top:1px solid #151515;
-
+    margin-top:25px;
 }
 
 .requirement{
-
     display:flex;
 
     justify-content:space-between;
 
-    gap:30px;
+    padding:15px 0;
 
-    padding:17px 0;
-
-    border-bottom:1px solid #151515;
+    border-bottom:1px solid #222;
 
     font-family:Arial,sans-serif;
-
 }
 
 .requirement span:first-child{
-
-    color:#555;
-
+    color:#666;
 }
 
 .requirement span:last-child{
-
-    color:#bbb;
-
-    text-align:right;
-
+    color:#ccc;
 }
 
 
 /* =====================================================
-   EXTRA IMAGE
+   SCREENSHOT
 ===================================================== */
 
-.extra-image{
+.screenshot{
+    width:100%;
 
-    width:82%;
-
-    margin-top:70px;
+    height:auto;
 
     display:block;
 
-    border:1px solid #1e90ff;
+    margin-top:80px;
+
+    border-radius:4px;
+
+    border:1px solid #222;
 
     box-shadow:
-        0 0 15px rgba(30,144,255,.25);
-
+        0 0 15px rgba(30,144,255,.2);
 }
 
 
@@ -534,34 +505,24 @@ main{
 ===================================================== */
 
 .steps{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
+    margin-top:25px;
 }
 
 .step{
-
     display:flex;
 
-    align-items:flex-start;
+    align-items:center;
 
     gap:20px;
 
-    padding:4px 0;
-
+    margin-bottom:18px;
 }
 
 .step-number{
-
     width:42px;
-
     height:42px;
 
-    min-width:42px;
+    flex-shrink:0;
 
     display:flex;
 
@@ -575,23 +536,16 @@ main{
 
     color:#1e90ff;
 
-    font-size:17px;
-
     box-shadow:
-        0 0 10px rgba(30,144,255,.25);
-
+        0 0 10px rgba(30,144,255,.3);
 }
 
 .step-text{
-
-    padding-top:10px;
-
-    color:#aaa;
-
     font-family:Arial,sans-serif;
 
-    line-height:1.6;
+    color:#bbb;
 
+    line-height:1.6;
 }
 
 
@@ -600,77 +554,58 @@ main{
 ===================================================== */
 
 .download{
-
     margin-top:90px;
 
-    padding:45px;
+    padding:45px 0;
 
     border-top:1px solid #222;
 
     border-bottom:1px solid #222;
-
-    background:
-        linear-gradient(
-            90deg,
-            #050505,
-            #080808,
-            #050505
-        );
-
 }
 
 .download h2{
+    font-size:38px;
 
     color:#1e90ff;
-
-    font-size:38px;
 
     margin-bottom:10px;
 
     text-shadow:
-        0 0 10px #1e90ff,
-        0 0 25px rgba(30,144,255,.4);
-
+        0 0 10px #1e90ff;
 }
 
 .download p{
-
-    color:#666;
-
     font-family:Arial,sans-serif;
 
-    margin-bottom:25px;
+    color:#777;
 
+    margin-bottom:25px;
 }
 
 .download-button{
-
     display:inline-block;
 
-    padding:14px 32px;
-
-    border:2px solid #1e90ff;
+    padding:14px 35px;
 
     color:#1e90ff;
+
+    border:2px solid #1e90ff;
 
     text-decoration:none;
 
     font-size:17px;
 
     transition:.25s;
-
 }
 
 .download-button:hover{
-
     background:#1e90ff;
 
     color:#000;
 
     box-shadow:
         0 0 15px #1e90ff,
-        0 0 35px rgba(30,144,255,.5);
-
+        0 0 30px rgba(30,144,255,.6);
 }
 
 
@@ -679,62 +614,15 @@ main{
 ===================================================== */
 
 footer{
-
     padding:35px;
 
     text-align:center;
 
-    color:#333;
+    color:#444;
 
     font-family:Arial,sans-serif;
 
     border-top:1px solid #111;
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:900px){
-
-    main{
-
-        width:92%;
-
-    }
-
-    .hero{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .hero-image{
-
-        height:350px;
-
-    }
-
-    .hero-text{
-
-        padding:0;
-
-    }
-
-    .content{
-
-        width:100%;
-
-    }
-
-    .extra-image{
-
-        width:100%;
-
-    }
-
 }
 
 
@@ -742,158 +630,115 @@ footer{
    MOBILE
 ===================================================== */
 
-@media(max-width:600px){
+@media(max-width:1000px){
 
-    header{
-
-        height:65px;
-
-        padding:0 5%;
-
-    }
-
-    .logo{
-
-        font-size:19px;
-
-        letter-spacing:2px;
-
-    }
-
-    .title-area h1{
-
-        font-size:38px;
-
-        letter-spacing:2px;
-
-    }
-
-    .subtitle{
-
-        font-size:11px;
-
-        letter-spacing:2px;
-
-    }
-
-    .hero{
-
-        margin-top:30px;
-
-        gap:25px;
-
-    }
-
-    .hero-image{
-
-        height:230px;
-
-    }
-
-    .hero-text h2{
-
-        font-size:31px;
-
-    }
-
-    .hero-text p{
-
-        font-size:14px;
-
-    }
-
-    .game-info{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-    .info{
-
-        padding:18px;
-
-        border-bottom:1px solid #1c1c1c;
-
-    }
-
-    .info:nth-child(2){
-
-        border-right:none;
-
-    }
-
-    .features{
-
+    .page{
         grid-template-columns:1fr;
-
     }
 
-    .requirement{
+    .sidebar{
+        padding-top:0;
 
-        flex-direction:column;
+        margin-top:20px;
 
-        gap:7px;
+        display:grid;
 
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
     }
 
-    .requirement span:last-child{
-
-        text-align:left;
-
+    .sidebar-title{
+        grid-column:1/-1;
     }
 
-    .download{
-
-        padding:30px 20px;
-
-    }
-
-    .download h2{
-
-        font-size:29px;
-
-    }
-
-    .download-button{
-
-        width:100%;
-
-        text-align:center;
-
+    .other-game{
+        margin-bottom:0;
     }
 
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
+@media(max-width:800px){
 
-@media(max-width:400px){
+    .page{
+        width:92%;
+    }
 
     .title-area h1{
-
-        font-size:31px;
-
+        font-size:45px;
     }
 
-    .game-info{
-
+    .hero{
         grid-template-columns:1fr;
 
-    }
-
-    .info{
-
-        border-right:none;
-
+        margin-top:30px;
     }
 
     .hero-image{
+        height:300px;
+    }
 
-        height:200px;
+    .hero-text{
+        padding:30px 0 0 0;
+    }
 
+    .game-info{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .info{
+        border-bottom:1px solid #222;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .sidebar{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    header{
+        height:65px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .title-area h1{
+        font-size:34px;
+    }
+
+    .hero-image{
+        height:220px;
+    }
+
+    .hero-text h2{
+        font-size:30px;
+    }
+
+    .game-info{
+        grid-template-columns:1fr;
+    }
+
+    .info{
+        border-right:none;
+    }
+
+    .content h2{
+        font-size:28px;
     }
 
 }
@@ -906,10 +751,6 @@ footer{
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
     <div class="logo">
@@ -919,21 +760,18 @@ footer{
 </header>
 
 
+<div class="page">
+
+
 <main>
 
-
-<!-- =====================================================
-     BACK
-===================================================== -->
 
 <a href="index.html" class="back">
     ← KEMBALI
 </a>
 
 
-<!-- =====================================================
-     TITLE
-===================================================== -->
+<!-- TITLE -->
 
 <div class="title-area">
 
@@ -948,9 +786,7 @@ footer{
 </div>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -995,9 +831,7 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     INFO
-===================================================== -->
+<!-- INFO -->
 
 <section class="game-info">
 
@@ -1057,9 +891,7 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 
 <section class="content">
 
@@ -1092,9 +924,7 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     FEATURES
-===================================================== -->
+<!-- FEATURES -->
 
 <section class="content">
 
@@ -1183,9 +1013,7 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     REQUIREMENTS
-===================================================== -->
+<!-- REQUIREMENTS -->
 
 <section class="content">
 
@@ -1267,20 +1095,16 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     EXTRA IMAGE
-===================================================== -->
+<!-- SCREENSHOT -->
 
 <img
     src="Screenshot 2026-08-17 004338.png"
-    class="extra-image"
+    class="screenshot"
     alt="GRID Autosport"
 >
 
 
-<!-- =====================================================
-     TUTORIAL
-===================================================== -->
+<!-- TUTORIAL -->
 
 <section class="content">
 
@@ -1388,38 +1212,97 @@ footer{
 </section>
 
 
-<!-- =====================================================
-     DOWNLOAD
-===================================================== -->
+<!-- DOWNLOAD -->
 
-<a
-    href="https://drive.google.com/file/d/1lCsfcutKBjbyoksew9QdFWiwEQx1cC5O/view"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="download"
->
+<section class="download">
 
     <h2>
-        DOWNLOAD GRID AUTOSPORT
+        DOWNLOAD GRID AUTOSPORTs
     </h2>
 
     <p>
         GRID Autosport • Codemasters • 2014
     </p>
 
-    <span class="download-button">
-        DOWNLOAD SEKARANG
-    </span>
+    <a
+        href="https://drive.google.com/file/d/1lCsfcutKBjbyoksew9QdFWiwEQx1cC5O/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="download-button"
+    >
+        DOWNLOAD GRID AUTOSPORT
+    </a>
 
-</a>
+</section>
 
 
 </main>
 
 
 <!-- =====================================================
-     FOOTER
+     SIDEBAR
 ===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-title">
+        COBAIN GAME LAIN
+    </div>
+
+
+    <a
+        href="maxpayne2.html"
+        class="other-game"
+    >
+
+        <div class="other-game-title">
+            MAX PAYNE 2
+        </div>
+
+        <div class="other-game-info">
+            2003
+        </div>
+
+        <div class="other-game-info">
+            Developer: Remedy Entertainment
+        </div>
+
+        <span class="other-game-arrow">
+            LIHAT GAME →
+        </span>
+
+    </a>
+
+
+    <a
+        href="miyutoolkit.html"
+        class="other-game"
+    >
+
+        <div class="other-game-title">
+            MIYU WINDOWS TOOLKIT
+        </div>
+
+        <div class="other-game-info">
+            2026
+        </div>
+
+        <div class="other-game-info">
+            Developer: Miyu
+        </div>
+
+        <span class="other-game-arrow">
+            LIHAT TOOLKIT →
+        </span>
+
+    </a>
+
+
+</aside>
+
+
+</div>
+
 
 <footer>
 
