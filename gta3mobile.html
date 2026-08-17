@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GTA 3 Mobile</title>
+
+<meta
+name="description"
+content="GTA 3 Mobile - game klasik Rockstar Games yang dapat dimainkan pada perangkat Android."
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#ddd;
+    font-family:'Oswald',sans-serif;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    height:80px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 6%;
+
+    border-bottom:1px solid #1e90ff;
+
+    background:#050505;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.25);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:600;
+
+    color:#1e90ff;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 30px rgba(30,144,255,.7);
+}
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.page{
+    width:90%;
+    max-width:1550px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) 300px;
+
+    gap:45px;
+
+    padding-bottom:100px;
+}
+
+main{
+    min-width:0;
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+.back{
+    display:inline-block;
+
+    margin-top:35px;
+
+    color:#888;
+
+    text-decoration:none;
+
+    font-family:Arial,sans-serif;
+
+    transition:.2s;
+}
+
+.back:hover{
+    color:#1e90ff;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title-area{
+    margin-top:35px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid #222;
+}
+
+.title-area h1{
+    font-size:70px;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 35px rgba(30,144,255,.8);
+}
+
+.subtitle{
+    margin-top:8px;
+
+    font-family:Arial,sans-serif;
+
+    color:#777;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+    padding-top:155px;
+}
+
+.sidebar-title{
+    color:#1e90ff;
+
+    font-size:25px;
+
+    margin-bottom:20px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #1e90ff;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+.other-game{
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#080808;
+
+    border:1px solid #222;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    transition:.25s;
+}
+
+.other-game:hover{
+    border-color:#1e90ff;
+
+    transform:translateX(-5px);
+
+    box-shadow:
+        0 0 10px rgba(30,144,255,.4),
+        0 0 25px rgba(30,144,255,.15);
+}
+
+.other-game-title{
+    color:#1e90ff;
+
+    font-size:22px;
+
+    margin-bottom:7px;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+.other-game-info{
+    color:#777;
+
+    font-family:Arial,sans-serif;
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+.other-game-arrow{
+    display:block;
+
+    margin-top:12px;
+
+    color:#00ffcc;
+
+    font-family:Arial,sans-serif;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    display:grid;
+
+    grid-template-columns:58% 42%;
+
+    min-height:470px;
+
+    margin-top:40px;
+
+    align-items:center;
+}
+
+.hero-image{
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:4px;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.35),
+        0 0 45px rgba(30,144,255,.12);
+}
+
+.hero-text{
+    padding:35px 0 35px 55px;
+}
+
+.hero-text h2{
+    color:#1e90ff;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+        0 0 10px #1e90ff,
+        0 0 25px rgba(30,144,255,.5);
+}
+
+.hero-text p{
+    font-family:Arial,sans-serif;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#bbb;
+
+    margin-bottom:18px;
+}
+
+
+/* =====================================================
+   INFO
+===================================================== */
+
+.game-info{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    margin-top:55px;
+
+    border-top:1px solid #222;
+
+    border-bottom:1px solid #222;
+}
+
+.info{
+    padding:25px;
+
+    border-right:1px solid #222;
+}
+
+.info:last-child{
+    border-right:none;
+}
+
+.info-label{
+    font-family:Arial,sans-serif;
+
+    font-size:12px;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.info-value{
+    font-size:19px;
+
+    color:#1e90ff;
+
+    text-shadow:
+        0 0 5px rgba(30,144,255,.4);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content{
+    width:100%;
+
+    margin-top:80px;
+}
+
+.content h2{
+    font-size:35px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #1e90ff;
+
+    text-shadow:
+        0 0 10px #1e90ff;
+}
+
+.content p{
+    font-family:Arial,sans-serif;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:#bbb;
+
+    margin-bottom:20px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.feature{
+    padding:20px;
+
+    border-left:2px solid #1e90ff;
+
+    background:#0a0a0a;
+
+    font-family:Arial,sans-serif;
+
+    color:#bbb;
+
+    line-height:1.6;
+
+    transition:.2s;
+}
+
+.feature:hover{
+    background:#0d0d0d;
+
+    border-left-color:#00ffcc;
+
+    transform:translateX(5px);
+
+    box-shadow:
+        -5px 0 15px rgba(30,144,255,.15);
+}
+
+.feature-title{
+    display:block;
+
+    color:#1e90ff;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+
+/* =====================================================
+   REQUIREMENTS
+===================================================== */
+
+.requirements{
+    margin-top:25px;
+}
+
+.requirement{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #222;
+
+    font-family:Arial,sans-serif;
+}
+
+.requirement span:first-child{
+    color:#666;
+}
+
+.requirement span:last-child{
+    color:#ccc;
+}
+
+
+/* =====================================================
+   SCREENSHOT
+===================================================== */
+
+.screenshot{
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    margin-top:80px;
+
+    border-radius:4px;
+
+    border:1px solid #222;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.2);
+}
+
+
+/* =====================================================
+   TUTORIAL
+===================================================== */
+
+.steps{
+    margin-top:25px;
+}
+
+.step{
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:18px;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid #1e90ff;
+
+    border-radius:50%;
+
+    color:#1e90ff;
+
+    box-shadow:
+        0 0 10px rgba(30,144,255,.3);
+}
+
+.step-text{
+    font-family:Arial,sans-serif;
+
+    color:#bbb;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   DOWNLOAD
+===================================================== */
+
+.download{
+    margin-top:90px;
+
+    padding:45px 0;
+
+    border-top:1px solid #222;
+
+    border-bottom:1px solid #222;
+}
+
+.download h2{
+    font-size:38px;
+
+    color:#1e90ff;
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 10px #1e90ff;
+}
+
+.download p{
+    font-family:Arial,sans-serif;
+
+    color:#777;
+
+    margin-bottom:25px;
+}
+
+.download-button{
+    display:inline-block;
+
+    padding:14px 35px;
+
+    margin:5px 8px 5px 0;
+
+    color:#1e90ff;
+
+    border:2px solid #1e90ff;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.25s;
+}
+
+.download-button:hover{
+    background:#1e90ff;
+
+    color:#000;
+
+    box-shadow:
+        0 0 15px #1e90ff,
+        0 0 30px rgba(30,144,255,.6);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:35px;
+
+    text-align:center;
+
+    color:#444;
+
+    font-family:Arial,sans-serif;
+
+    border-top:1px solid #111;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:1000px){
+
+    .page{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        padding-top:0;
+
+        margin-top:20px;
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+    }
+
+    .sidebar-title{
+        grid-column:1/-1;
+    }
+
+    .other-game{
+        margin-bottom:0;
+    }
+
+}
+
+
+@media(max-width:800px){
+
+    .page{
+        width:92%;
+    }
+
+    .title-area h1{
+        font-size:45px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+
+        margin-top:30px;
+    }
+
+    .hero-image{
+        height:300px;
+    }
+
+    .hero-text{
+        padding:30px 0 0 0;
+    }
+
+    .game-info{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .info{
+        border-bottom:1px solid #222;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .sidebar{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    header{
+        height:65px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .title-area h1{
+        font-size:34px;
+    }
+
+    .hero-image{
+        height:220px;
+    }
+
+    .hero-text h2{
+        font-size:30px;
+    }
+
+    .game-info{
+        grid-template-columns:1fr;
+    }
+
+    .info{
+        border-right:none;
+    }
+
+    .content h2{
+        font-size:28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        GTA 3 MOBILE
+    </div>
+
+</header>
+
+
+<div class="page">
+
+
+<main>
+
+
+<a href="index.html" class="back">
+    ← KEMBALI
+</a>
+
+
+<!-- TITLE -->
+
+<div class="title-area">
+
+    <h1>
+        GTA 3 MOBILE
+    </h1>
+
+    <div class="subtitle">
+        ACTION • OPEN WORLD • ROCKSTAR
+    </div>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+    <img
+        src="gta3.jpg"
+        class="hero-image"
+        alt="GTA 3 Mobile"
+    >
+
+
+    <div class="hero-text">
+
+        <h2>
+            GTA 3 Mobile
+        </h2>
+
+
+        <p>
+            Grand Theft Auto III adalah game open world
+            yang dikembangkan oleh Rockstar Games dan
+            dirilis pada tahun 2001.
+        </p>
+
+
+        <p>
+            Game ini membawa pemain ke Liberty City,
+            sebuah kota besar yang dapat dijelajahi
+            dengan berbagai kendaraan dan misi.
+        </p>
+
+
+        <p>
+            Versi mobile membawa pengalaman GTA 3
+            ke perangkat Android dengan kontrol
+            yang disesuaikan untuk layar sentuh.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section class="game-info">
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Developer
+        </div>
+
+        <div class="info-value">
+            Rockstar Games
+        </div>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Release
+        </div>
+
+        <div class="info-value">
+            2001
+        </div>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Genre
+        </div>
+
+        <div class="info-value">
+            Action
+        </div>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Platform
+        </div>
+
+        <div class="info-value">
+            Android
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="content">
+
+    <h2>
+        TENTANG GAME
+    </h2>
+
+
+    <p>
+        Grand Theft Auto III merupakan salah satu game
+        open world yang sangat berpengaruh dan menjadi
+        salah satu judul penting dalam sejarah seri GTA.
+    </p>
+
+
+    <p>
+        Pemain dapat menjelajahi Liberty City,
+        menjalankan berbagai misi, menggunakan kendaraan,
+        serta berinteraksi dengan lingkungan kota.
+    </p>
+
+
+    <p>
+        Versi mobile menghadirkan pengalaman GTA 3
+        dengan kontrol yang disesuaikan untuk perangkat
+        Android.
+    </p>
+
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="content">
+
+    <h2>
+        FITUR UTAMA
+    </h2>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Open World
+            </span>
+
+            Jelajahi Liberty City secara bebas dan
+            temukan berbagai lokasi di dalam kota.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Story Mode
+            </span>
+
+            Ikuti berbagai misi dan perjalanan karakter
+            utama di Liberty City.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Vehicles
+            </span>
+
+            Gunakan berbagai kendaraan untuk menjelajahi
+            kota dan menyelesaikan misi.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Liberty City
+            </span>
+
+            Nikmati lingkungan kota yang luas dengan
+            berbagai area dan lokasi.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Touch Control
+            </span>
+
+            Kontrol game disesuaikan untuk perangkat
+            Android dengan layar sentuh.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Classic GTA
+            </span>
+
+            Rasakan kembali pengalaman GTA klasik
+            dalam versi mobile.
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- REQUIREMENTS -->
+
+<section class="content">
+
+    <h2>
+        MINIMUM SPECIFICATION
+    </h2>
+
+
+    <div class="requirements">
+
+
+        <div class="requirement">
+
+            <span>
+                Operating System
+            </span>
+
+            <span>
+                Android 12+
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                Chipset
+            </span>
+
+            <span>
+                Snapdragon / MediaTek setara
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                RAM
+            </span>
+
+            <span>
+                2 GB+
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                Storage
+            </span>
+
+            <span>
+                ±2 GB
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- SCREENSHOT -->
+
+<img
+    src="gta3-mobile.jpg"
+    class="screenshot"
+    alt="GTA 3 Mobile"
+>
+
+
+<!-- TUTORIAL -->
+
+<section class="content">
+
+    <h2>
+        TUTORIAL INSTALL
+    </h2>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div class="step-text">
+                Download file APK GTA 3 dan OBB.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div class="step-text">
+                Instal APK GTA 3 terlebih dahulu.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div class="step-text">
+                Ekstrak file OBB GTA 3.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <div class="step-text">
+                Salin folder OBB ke 0/Android/OBB.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                5
+            </div>
+
+            <div class="step-text">
+                Pastikan file OBB berada di folder yang sesuai.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                6
+            </div>
+
+            <div class="step-text">
+                Jalankan GTA 3 Mobile dan berikan permission
+                jika diminta.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                7
+            </div>
+
+            <div class="step-text">
+                Untuk penggunaan mod CLEO, instal dan
+                gunakan file CLEO yang sesuai dengan versi game.
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="download">
+
+    <h2>
+        DOWNLOAD GTA 3 MOBILE
+    </h2>
+
+    <p>
+        GTA 3 • Rockstar Games • Mobile
+    </p>
+
+
+    <a
+        href="https://www.mediafire.com/file/462gusv17yduqj7/APK+GTA+3+Unprotected.zip/file"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="download-button"
+    >
+        DOWNLOAD APK
+    </a>
+
+
+    <a
+        href="https://www.mediafire.com/file/3w5782ijsvc26re/OBB_gta3.7z/file"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="download-button"
+    >
+        DOWNLOAD OBB
+    </a>
+
+
+    <a
+        href="https://sfile.co/wGf3yfsQeYZ"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="download-button"
+    >
+        DOWNLOAD MOD CLEO
+    </a>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-title">
+        COBAIN GAME LAIN
+    </div>
+
+
+    <!-- GRID AUTOSPORT -->
+
+    <a
+        href="gridauto.html"
+        class="other-game"
+    >
+
+        <div class="other-game-title">
+            GRID AUTOSPORT
+        </div>
+
+        <div class="other-game-info">
+            2014
+        </div>
+
+        <div class="other-game-info">
+            Developer: Codemasters
+        </div>
+
+        <span class="other-game-arrow">
+            LIHAT GAME →
+        </span>
+
+    </a>
+
+
+    <!-- MIYU WINDOWS TOOLKIT -->
+
+    <a
+        href="miyutoolkit.html"
+        class="other-game"
+    >
+
+        <div class="other-game-title">
+            MIYU WINDOWS TOOLKIT
+        </div>
+
+        <div class="other-game-info">
+            2026
+        </div>
+
+        <div class="other-game-info">
+            Developer: Miyu
+        </div>
+
+        <span class="other-game-arrow">
+            LIHAT TOOLKIT →
+        </span>
+
+    </a>
+
+
+    <!-- MAX PAYNE 2 -->
+
+    <a
+        href="maxpayne2.html"
+        class="other-game"
+    >
+
+        <div class="other-game-title">
+            MAX PAYNE 2
+        </div>
+
+        <div class="other-game-info">
+            2003
+        </div>
+
+        <div class="other-game-info">
+            Developer: Remedy Entertainment
+        </div>
+
+        <span class="other-game-arrow">
+            LIHAT GAME →
+        </span>
+
+    </a>
+
+
+</aside>
+
+
+</div>
+
+
+<footer>
+
+    GTA 3 MOBILE © 2001
+
+</footer>
+
+
+</body>
+
+</html>
