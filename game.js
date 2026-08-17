@@ -26,13 +26,30 @@ const games = [
         year: "2011",
         page: "gta3mobile.html",
         category: "mobile"
+    },
+
+    {
+        title: "Game Baru Miyu",
+        developer: "Miyu Repacks",
+        year: "2026",
+        page: "gamebaru.html",
+        category: "pc"
     }
 
 ];
 
 
 // =====================================================
-// RENDER GAME DARI GAME.JS
+// PENGATURAN PAGINATION
+// =====================================================
+
+const gamesPerPage = 3;
+
+let currentPage = 1;
+
+
+// =====================================================
+// RENDER GAME
 // =====================================================
 
 function renderGames() {
@@ -44,7 +61,7 @@ function renderGames() {
         return;
     }
 
-    // Hapus hasil render sebelumnya
+    // Hapus game hasil render sebelumnya
     document.querySelectorAll(".js-game").forEach(function (item) {
         item.remove();
     });
@@ -52,20 +69,33 @@ function renderGames() {
     // Cari footer
     const footer = document.querySelector(".footer");
 
-    games.forEach(function (game, index) {
+    // Hitung posisi game
+    const start =
+        (currentPage - 1) * gamesPerPage;
 
-        const link = document.createElement("a");
+    const end =
+        start + gamesPerPage;
+
+    const visibleGames =
+        games.slice(start, end);
+
+
+    visibleGames.forEach(function (game, index) {
+
+        const link =
+            document.createElement("a");
 
         link.className = "js-game";
 
-        // ID unik untuk setiap game
-        link.id = "js-game-" + index;
+        link.id =
+            "js-game-" + (start + index);
 
-        // Data untuk search dan category
-        link.dataset.category = game.category || "all";
+        link.dataset.category =
+            game.category || "all";
 
-        // Link halaman game
-        link.href = game.page;
+        link.href =
+            game.page;
+
 
         link.innerHTML = `
 
@@ -83,10 +113,13 @@ function renderGames() {
 
         `;
 
-        // Masukkan sebelum footer
+
         if (footer) {
 
-            container.insertBefore(link, footer);
+            container.insertBefore(
+                link,
+                footer
+            );
 
         } else {
 
@@ -96,11 +129,14 @@ function renderGames() {
 
     });
 
+
+    renderPagination();
+
 }
 
 
 // =====================================================
-// STYLE GAME.JS
+// STYLE GAME
 // =====================================================
 
 function loadGameStyle() {
@@ -109,9 +145,12 @@ function loadGameStyle() {
         return;
     }
 
-    const style = document.createElement("style");
+    const style =
+        document.createElement("style");
 
-    style.id = "js-game-style";
+    style.id =
+        "js-game-style";
+
 
     style.textContent = `
 
@@ -133,8 +172,6 @@ function loadGameStyle() {
             border-bottom:1px solid #222;
 
             transition:.2s;
-
-            scroll-margin-top:20px;
 
         }
 
@@ -158,7 +195,8 @@ function loadGameStyle() {
 
             font-size:24px;
 
-            text-shadow:0 0 8px #1e90ff;
+            text-shadow:
+                0 0 8px #1e90ff;
 
             transition:.2s;
 
@@ -184,18 +222,93 @@ function loadGameStyle() {
 
             color:#00ffcc;
 
-            text-shadow:0 0 8px #00ffcc;
+            text-shadow:
+                0 0 8px #00ffcc;
 
         }
 
 
-        .js-game.hidden {
+        .pagination {
 
-            display:none !important;
+            width:700px;
+
+            max-width:100%;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            gap:10px;
+
+            margin-top:20px;
+
+            margin-bottom:10px;
+
+        }
+
+
+        .pagination button {
+
+            padding:10px 22px;
+
+            background:transparent;
+
+            color:#1e90ff;
+
+            border:2px solid #1e90ff;
+
+            border-radius:8px;
+
+            font-family:'Oswald',sans-serif;
+
+            cursor:pointer;
+
+            box-shadow:
+                0 0 8px #1e90ff;
+
+            transition:.2s;
+
+        }
+
+
+        .pagination button:hover {
+
+            background:#1e90ff;
+
+            color:#000;
+
+            box-shadow:
+                0 0 10px #1e90ff,
+                0 0 20px #1e90ff;
+
+        }
+
+
+        .pagination button:disabled {
+
+            opacity:.3;
+
+            cursor:not-allowed;
+
+            box-shadow:none;
+
+        }
+
+
+        .page-number {
+
+            color:#00ffcc;
+
+            font-family:Consolas,monospace;
+
+            font-size:14px;
 
         }
 
     `;
+
 
     document.head.appendChild(style);
 
@@ -203,48 +316,206 @@ function loadGameStyle() {
 
 
 // =====================================================
-// SEARCH SEMUA GAME
-// HTML .CMD + GAME.JS
+// PAGINATION
+// =====================================================
+
+function renderPagination() {
+
+    const container =
+        document.querySelector(".container");
+
+    const footer =
+        document.querySelector(".footer");
+
+
+    if (!container) {
+        return;
+    }
+
+
+    // Hapus pagination lama
+
+    const oldPagination =
+        document.querySelector(".pagination");
+
+    if (oldPagination) {
+        oldPagination.remove();
+    }
+
+
+    // Hitung total halaman
+
+    const totalPages =
+        Math.ceil(
+            games.length / gamesPerPage
+        );
+
+
+    // Kalau cuma satu halaman
+    // tidak perlu tombol
+
+    if (totalPages <= 1) {
+        return;
+    }
+
+
+    const pagination =
+        document.createElement("div");
+
+    pagination.className =
+        "pagination";
+
+
+    // Tombol PREVIOUS
+
+    const previous =
+        document.createElement("button");
+
+    previous.innerText =
+        "PREVIOUS";
+
+    previous.disabled =
+        currentPage === 1;
+
+
+    previous.onclick =
+        function () {
+
+            if (currentPage > 1) {
+
+                currentPage--;
+
+                renderGames();
+
+                window.scrollTo({
+                    top:0,
+                    behavior:"smooth"
+                });
+
+            }
+
+        };
+
+
+    // Nomor halaman
+
+    const pageNumber =
+        document.createElement("span");
+
+    pageNumber.className =
+        "page-number";
+
+    pageNumber.innerText =
+        "PAGE " +
+        currentPage +
+        " / " +
+        totalPages;
+
+
+    // Tombol NEXT
+
+    const next =
+        document.createElement("button");
+
+    next.innerText =
+        "NEXT";
+
+    next.disabled =
+        currentPage === totalPages;
+
+
+    next.onclick =
+        function () {
+
+            if (currentPage < totalPages) {
+
+                currentPage++;
+
+                renderGames();
+
+                window.scrollTo({
+                    top:0,
+                    behavior:"smooth"
+                });
+
+            }
+
+        };
+
+
+    pagination.appendChild(previous);
+
+    pagination.appendChild(pageNumber);
+
+    pagination.appendChild(next);
+
+
+    // Masukkan sebelum footer
+
+    if (footer) {
+
+        container.insertBefore(
+            pagination,
+            footer
+        );
+
+    } else {
+
+        container.appendChild(
+            pagination
+        );
+
+    }
+
+}
+
+
+// =====================================================
+// SEARCH
 // =====================================================
 
 function searchGame() {
 
-    const searchInput = document.getElementById("search");
+    const searchInput =
+        document.getElementById("search");
+
 
     if (!searchInput) {
         return;
     }
 
 
-    const input = searchInput.value
+    const input =
+        searchInput.value
         .toLowerCase()
         .trim();
 
 
-    // Ambil game HTML
-    const htmlGames = document.querySelectorAll(".cmd");
-
-    // Ambil game dari game.js
-    const jsGames = document.querySelectorAll(".js-game");
+    const htmlGames =
+        document.querySelectorAll(".cmd");
 
 
-    // Gabungkan semuanya
+    const jsGames =
+        document.querySelectorAll(".js-game");
+
+
     const allGames = [
+
         ...htmlGames,
         ...jsGames
+
     ];
 
 
-    const noResult = document.getElementById("no-result");
+    const noResult =
+        document.getElementById("no-result");
 
-    let firstMatch = null;
 
     let found = false;
 
 
     allGames.forEach(function (game) {
 
-        // Cari judul HTML
         const titleElement =
             game.querySelector(".cmd-title") ||
             game.querySelector(".js-game-title");
@@ -255,12 +526,12 @@ function searchGame() {
         }
 
 
-        const title = titleElement.innerText
+        const title =
+            titleElement.innerText
             .toLowerCase()
             .trim();
 
 
-        // Kalau search kosong
         if (input === "") {
 
             game.style.display = "";
@@ -270,23 +541,14 @@ function searchGame() {
         }
 
 
-        // Cocok
         if (title.includes(input)) {
 
             game.style.display = "";
 
             found = true;
 
-
-            if (!firstMatch) {
-
-                firstMatch = game;
-
-            }
-
         }
 
-        // Tidak cocok
         else {
 
             game.style.display = "none";
@@ -296,39 +558,22 @@ function searchGame() {
     });
 
 
-    // =================================================
-    // HASIL SEARCH
-    // =================================================
-
     if (noResult) {
 
-        if (input !== "" && !found) {
+        if (
+            input !== "" &&
+            !found
+        ) {
 
             noResult.classList.add("show");
 
-        } else {
+        }
+
+        else {
 
             noResult.classList.remove("show");
 
         }
-
-    }
-
-
-    // =================================================
-    // SCROLL KE HASIL PERTAMA
-    // =================================================
-
-    if (firstMatch && input !== "") {
-
-        setTimeout(function () {
-
-            firstMatch.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        }, 100);
 
     }
 
@@ -344,13 +589,10 @@ function filterCategory(category) {
     const htmlGames =
         document.querySelectorAll(".cmd");
 
+
     const jsGames =
         document.querySelectorAll(".js-game");
 
-
-    // ============================
-    // GAME HTML
-    // ============================
 
     htmlGames.forEach(function (game) {
 
@@ -358,13 +600,10 @@ function filterCategory(category) {
             game.dataset.category;
 
 
-        if (category === "all") {
-
-            game.style.display = "";
-
-        }
-
-        else if (gameCategory === category) {
+        if (
+            category === "all" ||
+            gameCategory === category
+        ) {
 
             game.style.display = "";
 
@@ -378,10 +617,6 @@ function filterCategory(category) {
 
     });
 
-
-    // ============================
-    // GAME DARI GAME.JS
-    // ============================
 
     jsGames.forEach(function (game) {
 
@@ -389,13 +624,10 @@ function filterCategory(category) {
             game.dataset.category;
 
 
-        if (category === "all") {
-
-            game.style.display = "";
-
-        }
-
-        else if (gameCategory === category) {
+        if (
+            category === "all" ||
+            gameCategory === category
+        ) {
 
             game.style.display = "";
 
@@ -409,9 +641,6 @@ function filterCategory(category) {
 
     });
 
-
-    // Jalankan search lagi
-    // supaya category + search tidak bentrok
 
     searchGame();
 
@@ -429,8 +658,13 @@ function setupSearch() {
 
 
     if (!searchInput) {
-        console.error("Input search tidak ditemukan!");
+
+        console.error(
+            "Input search tidak ditemukan!"
+        );
+
         return;
+
     }
 
 
