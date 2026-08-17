@@ -65,10 +65,12 @@ gtag('config', 'G-WL1CSEV20E');
 <style>
 
 /* =====================================================
-   BODY
+   RESET
 ===================================================== */
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
@@ -77,8 +79,6 @@ html{
 }
 
 body{
-
-    margin:0;
 
     min-height:100vh;
 
@@ -96,19 +96,19 @@ body{
             #000 60%
         );
 
-    font-family:'Oswald',sans-serif;
-
     color:white;
+
+    font-family:'Oswald',sans-serif;
 
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
 
 }
 
 
 /* =====================================================
-   CONTAINER
+   MAIN WRAPPER
 ===================================================== */
 
 .container{
@@ -117,6 +117,10 @@ body{
 
     max-width:900px;
 
+    margin:0 auto;
+
+    padding:30px 15px 60px;
+
     display:flex;
 
     flex-direction:column;
@@ -124,8 +128,6 @@ body{
     align-items:center;
 
     gap:20px;
-
-    padding:30px 15px;
 
 }
 
@@ -136,6 +138,8 @@ body{
 
 .title{
 
+    width:100%;
+
     color:#1e90ff;
 
     font-size:55px;
@@ -145,13 +149,9 @@ body{
     text-align:center;
 
     text-shadow:
-
         0 0 5px #1e90ff,
-
         0 0 10px #1e90ff,
-
         0 0 20px #1e90ff,
-
         0 0 40px #1e90ff;
 
 }
@@ -167,7 +167,7 @@ body{
 
     max-width:100%;
 
-    padding:12px;
+    padding:12px 15px;
 
     border:2px solid #1e90ff;
 
@@ -180,6 +180,8 @@ body{
     border-radius:10px;
 
     box-shadow:0 0 10px #1e90ff;
+
+    font-family:Consolas,monospace;
 
 }
 
@@ -198,6 +200,8 @@ body{
 
     justify-content:center;
 
+    align-items:center;
+
     gap:10px;
 
     flex-wrap:wrap;
@@ -208,7 +212,7 @@ body{
 
 
 /* =====================================================
-   CMD GAME BOX
+   GAME BOX
 ===================================================== */
 
 .cmd{
@@ -230,15 +234,17 @@ body{
     color:#00ffcc;
 
     box-shadow:
-
         0 0 10px #1e90ff,
-
         0 0 20px #1e90ff;
 
     scroll-margin-top:20px;
 
 }
 
+
+/* =====================================================
+   GAME TITLE
+===================================================== */
 
 .cmd-title{
 
@@ -292,6 +298,8 @@ body{
 
 .btn{
 
+    display:inline-block;
+
     margin-top:10px;
 
     padding:10px 25px;
@@ -313,6 +321,8 @@ body{
     box-shadow:0 0 8px #1e90ff;
 
     transition:.2s;
+
+    text-decoration:none;
 
 }
 
@@ -497,6 +507,8 @@ body{
 
     align-items:center;
 
+    justify-content:center;
+
     flex-wrap:wrap;
 
     margin-bottom:15px;
@@ -547,7 +559,7 @@ body{
 
 
 /* =====================================================
-   MAX PAYNE LINK
+   GAME LINK BOX
 ===================================================== */
 
 .game-link-box{
@@ -562,8 +574,6 @@ body{
 
     padding:20px;
 
-    box-sizing:border-box;
-
     text-align:left;
 
     font-family:Consolas,monospace;
@@ -571,9 +581,7 @@ body{
     color:#00ffcc;
 
     box-shadow:
-
         0 0 10px #1e90ff,
-
         0 0 20px #1e90ff;
 
     transition:.2s;
@@ -586,9 +594,7 @@ body{
     border-color:#00ffcc;
 
     box-shadow:
-
         0 0 10px #00ffcc,
-
         0 0 25px #00ffcc;
 
     transform:scale(1.01);
@@ -634,8 +640,11 @@ body{
 ===================================================== */
 
 .footer{
+
     width:100%;
-    margin-top:30px;
+
+    margin-top:auto;
+
     padding:25px 15px;
 
     text-align:center;
@@ -647,7 +656,9 @@ body{
     opacity:.7;
 
     text-shadow:0 0 10px #1e90ff;
-    
+
+    border-top:1px solid #111;
+
 }
 
 
@@ -657,16 +668,16 @@ body{
 
 @media(max-width:600px){
 
-    .title{
+    .container{
 
-        font-size:36px;
+        padding:20px 10px 50px;
 
     }
 
 
-    .container{
+    .title{
 
-        padding:20px 10px;
+        font-size:36px;
 
     }
 
@@ -710,11 +721,7 @@ body{
 <body>
 
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<div class="container">
+<main class="container">
 
 
     <div class="title">
@@ -737,10 +744,7 @@ body{
         <div class="ads-content">
 
 
-            <div
-                class="ads-meta"
-                style="justify-content:center;"
-            >
+            <div class="ads-meta">
 
                 <span class="ads-version">
                     V3.2.0
@@ -1850,7 +1854,6 @@ body{
             CPU tergantung emulator
         </div>
 
-
     </div>
 
 
@@ -2160,24 +2163,17 @@ body{
     </div>
 
 
-    <!-- =================================================
-         FOOTER
-    ================================================== -->
+</main>
 
-
-
-</div>
-
-
-<!-- =====================================================
-     GAME.JS
-===================================================== -->
 
 <script src="./game.js"></script>
-    
-<div class="footer">
-        Miyu Repacks © 2026
-    </div>
+
+
+<footer class="footer">
+
+    Miyu Repacks © 2026
+
+</footer>
 
 
 </body>
