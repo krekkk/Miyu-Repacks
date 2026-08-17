@@ -4,25 +4,25 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>GRID Autosport</title>
 
 <meta
-name="description"
-content="GRID Autosport - game racing dari Codemasters dengan berbagai disiplin motorsport, kendaraan, dan lintasan."
+    name="description"
+    content="GRID Autosport - game racing dari Codemasters dengan berbagai disiplin motorsport, kendaraan, dan lintasan."
 >
 
 <link
-href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
-rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
-/* =========================
-   GLOBAL
-========================= */
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -35,202 +35,277 @@ html{
 }
 
 body{
-    background:#050505;
+    background:#030303;
     color:#ddd;
     font-family:'Oswald',sans-serif;
+    overflow-x:hidden;
 }
 
 
-/* =========================
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(30,144,255,.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(0,255,204,.04),
+            transparent 35%
+        );
+
+    z-index:-1;
+}
+
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header{
-    height:80px;
+
+    height:75px;
 
     display:flex;
+
     align-items:center;
+
+    justify-content:space-between;
 
     padding:0 6%;
 
-    border-bottom:1px solid #1e90ff;
+    border-bottom:1px solid #151515;
 
-    background:#050505;
+    background:rgba(3,3,3,.96);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
 
     box-shadow:
-        0 0 15px rgba(30,144,255,.25);
+        0 0 20px rgba(30,144,255,.12);
+
 }
 
 .logo{
-    font-size:28px;
+
+    color:#1e90ff;
+
+    font-size:26px;
+
     font-weight:600;
-
-    color:#1e90ff;
-
-    letter-spacing:2px;
-
-    text-shadow:
-        0 0 5px #1e90ff,
-        0 0 15px #1e90ff,
-        0 0 30px rgba(30,144,255,.7);
-}
-
-
-/* =========================
-   BACK
-========================= */
-
-.back{
-    display:inline-block;
-
-    margin-top:35px;
-
-    color:#888;
-
-    text-decoration:none;
-
-    font-family:Arial,sans-serif;
-
-    transition:.2s;
-}
-
-.back:hover{
-    color:#1e90ff;
-
-    text-shadow:
-        0 0 8px #1e90ff;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-main{
-    width:88%;
-
-    max-width:1500px;
-
-    margin:auto;
-
-    padding-bottom:100px;
-}
-
-
-/* =========================
-   TITLE
-========================= */
-
-.title-area{
-    margin-top:35px;
-
-    padding-bottom:25px;
-
-    border-bottom:1px solid #222;
-}
-
-.title-area h1{
-    font-size:70px;
-
-    color:white;
 
     letter-spacing:3px;
 
     text-shadow:
         0 0 5px #1e90ff,
         0 0 15px #1e90ff,
-        0 0 35px rgba(30,144,255,.8);
+        0 0 30px rgba(30,144,255,.6);
+
 }
 
-.subtitle{
-    margin-top:8px;
 
-    font-family:Arial,sans-serif;
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+
+    width:90%;
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding-bottom:100px;
+
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:9px 18px;
+
+    border:1px solid #222;
 
     color:#777;
 
-    font-size:15px;
+    text-decoration:none;
 
-    letter-spacing:1px;
+    font-family:Arial,sans-serif;
+
+    transition:.25s;
+
+}
+
+.back:hover{
+
+    color:#1e90ff;
+
+    border-color:#1e90ff;
+
+    box-shadow:
+        0 0 12px rgba(30,144,255,.3);
+
 }
 
 
-/* =========================
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title-area{
+
+    margin-top:35px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid #181818;
+
+}
+
+.title-area h1{
+
+    font-size:72px;
+
+    line-height:1;
+
+    color:white;
+
+    letter-spacing:4px;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 35px rgba(30,144,255,.7);
+
+}
+
+.subtitle{
+
+    margin-top:12px;
+
+    color:#666;
+
+    font-family:Arial,sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
+
     display:grid;
 
-    grid-template-columns:58% 42%;
+    grid-template-columns:1.25fr .75fr;
 
-    min-height:470px;
+    gap:45px;
 
-    margin-top:40px;
+    margin-top:45px;
 
     align-items:center;
+
 }
 
 
-/* =========================
-   IMAGE
-========================= */
+/* =====================================================
+   HERO IMAGE
+===================================================== */
 
 .hero-image{
+
     width:100%;
 
-    height:450px;
+    height:470px;
 
     object-fit:cover;
 
     display:block;
 
-    border-radius:4px;
+    border:1px solid #1e90ff;
 
     box-shadow:
-        0 0 15px rgba(30,144,255,.35),
-        0 0 45px rgba(30,144,255,.12);
+        0 0 15px rgba(30,144,255,.3),
+        0 0 45px rgba(30,144,255,.08);
+
 }
 
 
-/* =========================
+/* =====================================================
    HERO TEXT
-========================= */
+===================================================== */
 
 .hero-text{
-    padding:35px 0 35px 55px;
+
+    padding:10px 0;
+
 }
 
 .hero-text h2{
-    color:#1e90ff;
 
-    font-size:42px;
+    font-size:45px;
+
+    color:#1e90ff;
 
     margin-bottom:20px;
 
     text-shadow:
         0 0 10px #1e90ff,
         0 0 25px rgba(30,144,255,.5);
+
 }
 
 .hero-text p{
+
+    color:#aaa;
+
     font-family:Arial,sans-serif;
 
-    font-size:16px;
+    font-size:15px;
 
     line-height:1.9;
 
-    color:#bbb;
+    margin-bottom:20px;
 
-    margin-bottom:18px;
 }
 
 
-/* =========================
+/* =====================================================
    INFO
-========================= */
+===================================================== */
 
 .game-info{
+
     display:grid;
 
     grid-template-columns:
@@ -238,86 +313,106 @@ main{
 
     margin-top:55px;
 
-    border-top:1px solid #222;
+    border-top:1px solid #1c1c1c;
 
-    border-bottom:1px solid #222;
+    border-bottom:1px solid #1c1c1c;
+
 }
 
 .info{
+
     padding:25px;
 
-    border-right:1px solid #222;
+    border-right:1px solid #1c1c1c;
+
 }
 
 .info:last-child{
+
     border-right:none;
+
 }
 
 .info-label{
+
+    color:#555;
+
     font-family:Arial,sans-serif;
 
-    font-size:12px;
-
-    color:#666;
+    font-size:11px;
 
     text-transform:uppercase;
 
+    letter-spacing:1px;
+
     margin-bottom:8px;
+
 }
 
 .info-value{
-    font-size:19px;
 
     color:#1e90ff;
 
+    font-size:19px;
+
     text-shadow:
-        0 0 5px rgba(30,144,255,.4);
+        0 0 7px rgba(30,144,255,.4);
+
 }
 
 
-/* =========================
+/* =====================================================
    CONTENT
-========================= */
+===================================================== */
 
 .content{
-    width:80%;
+
+    width:82%;
 
     margin-top:80px;
+
 }
 
 .content h2{
-    font-size:35px;
 
     color:white;
 
-    margin-bottom:20px;
+    font-size:34px;
 
-    padding-bottom:12px;
+    letter-spacing:1px;
+
+    padding-bottom:13px;
+
+    margin-bottom:25px;
 
     border-bottom:1px solid #1e90ff;
 
     text-shadow:
-        0 0 10px #1e90ff;
+        0 0 10px rgba(30,144,255,.7);
+
 }
 
 .content p{
+
+    color:#aaa;
+
     font-family:Arial,sans-serif;
 
-    font-size:16px;
+    font-size:15px;
 
     line-height:2;
 
-    color:#bbb;
-
     margin-bottom:20px;
+
 }
 
 
-/* =========================
+/* =====================================================
    FEATURES
-========================= */
+===================================================== */
 
 .features{
+
     display:grid;
 
     grid-template-columns:
@@ -325,37 +420,41 @@ main{
 
     gap:15px;
 
-    margin-top:25px;
 }
 
 .feature{
-    padding:20px;
+
+    padding:22px;
+
+    background:#070707;
+
+    border:1px solid #151515;
 
     border-left:2px solid #1e90ff;
 
-    background:#0a0a0a;
+    color:#999;
 
     font-family:Arial,sans-serif;
 
-    color:#bbb;
+    line-height:1.7;
 
-    line-height:1.6;
+    transition:.25s;
 
-    transition:.2s;
 }
 
 .feature:hover{
-    background:#0d0d0d;
-
-    border-left-color:#00ffcc;
 
     transform:translateX(5px);
 
+    border-left-color:#00ffcc;
+
     box-shadow:
-        -5px 0 15px rgba(30,144,255,.15);
+        -5px 0 20px rgba(30,144,255,.12);
+
 }
 
 .feature-title{
+
     display:block;
 
     color:#1e90ff;
@@ -365,61 +464,104 @@ main{
     font-size:21px;
 
     margin-bottom:8px;
+
 }
 
 
-/* =========================
+/* =====================================================
    REQUIREMENTS
-========================= */
+===================================================== */
 
 .requirements{
-    margin-top:25px;
+
+    border-top:1px solid #151515;
+
 }
 
 .requirement{
+
     display:flex;
 
     justify-content:space-between;
 
-    padding:15px 0;
+    gap:30px;
 
-    border-bottom:1px solid #222;
+    padding:17px 0;
+
+    border-bottom:1px solid #151515;
 
     font-family:Arial,sans-serif;
+
 }
 
 .requirement span:first-child{
-    color:#666;
+
+    color:#555;
+
 }
 
 .requirement span:last-child{
-    color:#ccc;
+
+    color:#bbb;
+
+    text-align:right;
+
 }
 
 
-/* =========================
+/* =====================================================
+   EXTRA IMAGE
+===================================================== */
+
+.extra-image{
+
+    width:82%;
+
+    margin-top:70px;
+
+    display:block;
+
+    border:1px solid #1e90ff;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.25);
+
+}
+
+
+/* =====================================================
    TUTORIAL
-========================= */
+===================================================== */
 
 .steps{
-    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
 }
 
 .step{
+
     display:flex;
 
-    align-items:center;
+    align-items:flex-start;
 
     gap:20px;
 
-    margin-bottom:18px;
+    padding:4px 0;
+
 }
 
 .step-number{
+
     width:42px;
+
     height:42px;
 
-    flex-shrink:0;
+    min-width:42px;
 
     display:flex;
 
@@ -433,172 +575,325 @@ main{
 
     color:#1e90ff;
 
+    font-size:17px;
+
     box-shadow:
-        0 0 10px rgba(30,144,255,.3);
+        0 0 10px rgba(30,144,255,.25);
+
 }
 
 .step-text{
+
+    padding-top:10px;
+
+    color:#aaa;
+
     font-family:Arial,sans-serif;
 
-    color:#bbb;
+    line-height:1.6;
+
 }
 
 
-/* =========================
+/* =====================================================
    DOWNLOAD
-========================= */
+===================================================== */
 
 .download{
+
     margin-top:90px;
 
-    padding:45px 0;
+    padding:45px;
 
     border-top:1px solid #222;
 
     border-bottom:1px solid #222;
+
+    background:
+        linear-gradient(
+            90deg,
+            #050505,
+            #080808,
+            #050505
+        );
+
 }
 
 .download h2{
-    font-size:38px;
 
     color:#1e90ff;
+
+    font-size:38px;
 
     margin-bottom:10px;
 
     text-shadow:
-        0 0 10px #1e90ff;
+        0 0 10px #1e90ff,
+        0 0 25px rgba(30,144,255,.4);
+
 }
 
 .download p{
+
+    color:#666;
+
     font-family:Arial,sans-serif;
 
-    color:#777;
-
     margin-bottom:25px;
+
 }
 
 .download-button{
+
     display:inline-block;
 
-    padding:14px 35px;
-
-    color:#1e90ff;
+    padding:14px 32px;
 
     border:2px solid #1e90ff;
+
+    color:#1e90ff;
 
     text-decoration:none;
 
     font-size:17px;
 
     transition:.25s;
+
 }
 
 .download-button:hover{
+
     background:#1e90ff;
 
     color:#000;
 
     box-shadow:
         0 0 15px #1e90ff,
-        0 0 30px rgba(30,144,255,.6);
+        0 0 35px rgba(30,144,255,.5);
+
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
+
     padding:35px;
 
     text-align:center;
 
-    color:#444;
+    color:#333;
 
     font-family:Arial,sans-serif;
 
     border-top:1px solid #111;
+
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
-@media(max-width:800px){
+@media(max-width:900px){
 
     main{
-        width:92%;
-    }
 
-    .title-area h1{
-        font-size:45px;
+        width:92%;
+
     }
 
     .hero{
+
         grid-template-columns:1fr;
 
-        margin-top:30px;
     }
 
     .hero-image{
-        height:300px;
+
+        height:350px;
+
     }
 
     .hero-text{
-        padding:30px 0 0 0;
-    }
 
-    .game-info{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
+        padding:0;
 
-    .info{
-        border-bottom:1px solid #222;
     }
 
     .content{
+
         width:100%;
 
-        margin-top:60px;
     }
 
-    .features{
-        grid-template-columns:1fr;
+    .extra-image{
+
+        width:100%;
+
     }
 
 }
 
 
-@media(max-width:500px){
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
 
     header{
+
         height:65px;
+
+        padding:0 5%;
+
     }
 
     .logo{
-        font-size:21px;
+
+        font-size:19px;
+
+        letter-spacing:2px;
+
     }
 
     .title-area h1{
-        font-size:34px;
+
+        font-size:38px;
+
+        letter-spacing:2px;
+
+    }
+
+    .subtitle{
+
+        font-size:11px;
+
+        letter-spacing:2px;
+
+    }
+
+    .hero{
+
+        margin-top:30px;
+
+        gap:25px;
+
     }
 
     .hero-image{
-        height:220px;
+
+        height:230px;
+
     }
 
     .hero-text h2{
-        font-size:30px;
+
+        font-size:31px;
+
+    }
+
+    .hero-text p{
+
+        font-size:14px;
+
     }
 
     .game-info{
-        grid-template-columns:1fr;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
     }
 
     .info{
+
+        padding:18px;
+
+        border-bottom:1px solid #1c1c1c;
+
+    }
+
+    .info:nth-child(2){
+
         border-right:none;
+
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .requirement{
+
+        flex-direction:column;
+
+        gap:7px;
+
+    }
+
+    .requirement span:last-child{
+
+        text-align:left;
+
+    }
+
+    .download{
+
+        padding:30px 20px;
+
+    }
+
+    .download h2{
+
+        font-size:29px;
+
+    }
+
+    .download-button{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:400px){
+
+    .title-area h1{
+
+        font-size:31px;
+
+    }
+
+    .game-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .info{
+
+        border-right:none;
+
+    }
+
+    .hero-image{
+
+        height:200px;
+
     }
 
 }
@@ -610,6 +905,10 @@ footer{
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -623,12 +922,18 @@ footer{
 <main>
 
 
+<!-- =====================================================
+     BACK
+===================================================== -->
+
 <a href="index.html" class="back">
     ← KEMBALI
 </a>
 
 
-<!-- TITLE -->
+<!-- =====================================================
+     TITLE
+===================================================== -->
 
 <div class="title-area">
 
@@ -643,7 +948,9 @@ footer{
 </div>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
@@ -688,7 +995,9 @@ footer{
 </section>
 
 
-<!-- INFO -->
+<!-- =====================================================
+     INFO
+===================================================== -->
 
 <section class="game-info">
 
@@ -748,7 +1057,9 @@ footer{
 </section>
 
 
-<!-- ABOUT -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="content">
 
@@ -781,7 +1092,9 @@ footer{
 </section>
 
 
-<!-- FEATURES -->
+<!-- =====================================================
+     FEATURES
+===================================================== -->
 
 <section class="content">
 
@@ -870,7 +1183,9 @@ footer{
 </section>
 
 
-<!-- REQUIREMENTS -->
+<!-- =====================================================
+     REQUIREMENTS
+===================================================== -->
 
 <section class="content">
 
@@ -951,13 +1266,21 @@ footer{
 
 </section>
 
-       <img
-        src="Screenshot 2026-08-17 004338.png"
-        class="hero-image"
-        alt="GRID Autosport"
-    >
 
-<!-- TUTORIAL -->
+<!-- =====================================================
+     EXTRA IMAGE
+===================================================== -->
+
+<img
+    src="Screenshot 2026-08-17 004338.png"
+    class="extra-image"
+    alt="GRID Autosport"
+>
+
+
+<!-- =====================================================
+     TUTORIAL
+===================================================== -->
 
 <section class="content">
 
@@ -1045,7 +1368,8 @@ footer{
             </div>
 
         </div>
-       
+
+
         <div class="step">
 
             <div class="step-number">
@@ -1053,17 +1377,20 @@ footer{
             </div>
 
             <div class="step-text">
-            Ikuti Seperti ini 1 pilih do not send 2 Pilih Continue Anyway 3 Pilih Continue 4 Pilih Download 5 Klik Retry saat ad no internet acses dan cancel
+                Ikuti Seperti ini 1 pilih do not send 2 Pilih Continue Anyway 3 Pilih Continue 4 Pilih Download 5 Klik Retry saat ad no internet acses dan cancel
             </div>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- DOWNLOAD -->
+<!-- =====================================================
+     DOWNLOAD
+===================================================== -->
 
 <a
     href="https://drive.google.com/file/d/1lCsfcutKBjbyoksew9QdFWiwEQx1cC5O/view"
@@ -1071,21 +1398,28 @@ footer{
     rel="noopener noreferrer"
     class="download"
 >
-    <section>
-        <h2>
-            DOWNLOAD GRID AUTOSPORT
-        </h2>
-    </section>
-</a>
-   
+
+    <h2>
+        DOWNLOAD GRID AUTOSPORT
+    </h2>
 
     <p>
         GRID Autosport • Codemasters • 2014
     </p>
 
+    <span class="download-button">
+        DOWNLOAD SEKARANG
+    </span>
+
+</a>
+
 
 </main>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
