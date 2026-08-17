@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GRID Autosport</title>
+
+<meta
+name="description"
+content="GRID Autosport - game racing dari Codemasters dengan berbagai disiplin motorsport, kendaraan, dan lintasan."
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#ddd;
+    font-family:'Oswald',sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    height:80px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 6%;
+
+    border-bottom:1px solid #1e90ff;
+
+    background:#050505;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.25);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:600;
+
+    color:#1e90ff;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 30px rgba(30,144,255,.7);
+}
+
+
+/* =========================
+   BACK
+========================= */
+
+.back{
+    display:inline-block;
+
+    margin-top:35px;
+
+    color:#888;
+
+    text-decoration:none;
+
+    font-family:Arial,sans-serif;
+
+    transition:.2s;
+}
+
+.back:hover{
+    color:#1e90ff;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    width:88%;
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding-bottom:100px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title-area{
+    margin-top:35px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid #222;
+}
+
+.title-area h1{
+    font-size:70px;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 35px rgba(30,144,255,.8);
+}
+
+.subtitle{
+    margin-top:8px;
+
+    font-family:Arial,sans-serif;
+
+    color:#777;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    display:grid;
+
+    grid-template-columns:58% 42%;
+
+    min-height:470px;
+
+    margin-top:40px;
+
+    align-items:center;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero-image{
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:4px;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.35),
+        0 0 45px rgba(30,144,255,.12);
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-text{
+    padding:35px 0 35px 55px;
+}
+
+.hero-text h2{
+    color:#1e90ff;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+        0 0 10px #1e90ff,
+        0 0 25px rgba(30,144,255,.5);
+}
+
+.hero-text p{
+    font-family:Arial,sans-serif;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#bbb;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.game-info{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:55px;
+
+    border-top:1px solid #222;
+
+    border-bottom:1px solid #222;
+}
+
+.info{
+    padding:25px;
+
+    border-right:1px solid #222;
+}
+
+.info:last-child{
+    border-right:none;
+}
+
+.info-label{
+    font-family:Arial,sans-serif;
+
+    font-size:12px;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.info-value{
+    font-size:19px;
+
+    color:#1e90ff;
+
+    text-shadow:
+        0 0 5px rgba(30,144,255,.4);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    width:80%;
+
+    margin-top:80px;
+}
+
+.content h2{
+    font-size:35px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #1e90ff;
+
+    text-shadow:
+        0 0 10px #1e90ff;
+}
+
+.content p{
+    font-family:Arial,sans-serif;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:#bbb;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.feature{
+    padding:20px;
+
+    border-left:2px solid #1e90ff;
+
+    background:#0a0a0a;
+
+    font-family:Arial,sans-serif;
+
+    color:#bbb;
+
+    line-height:1.6;
+
+    transition:.2s;
+}
+
+.feature:hover{
+    background:#0d0d0d;
+
+    border-left-color:#00ffcc;
+
+    transform:translateX(5px);
+
+    box-shadow:
+        -5px 0 15px rgba(30,144,255,.15);
+}
+
+.feature-title{
+    display:block;
+
+    color:#1e90ff;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   REQUIREMENTS
+========================= */
+
+.requirements{
+    margin-top:25px;
+}
+
+.requirement{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #222;
+
+    font-family:Arial,sans-serif;
+}
+
+.requirement span:first-child{
+    color:#666;
+}
+
+.requirement span:last-child{
+    color:#ccc;
+}
+
+
+/* =========================
+   TUTORIAL
+========================= */
+
+.steps{
+    margin-top:25px;
+}
+
+.step{
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:18px;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid #1e90ff;
+
+    border-radius:50%;
+
+    color:#1e90ff;
+
+    box-shadow:
+        0 0 10px rgba(30,144,255,.3);
+}
+
+.step-text{
+    font-family:Arial,sans-serif;
+
+    color:#bbb;
+}
+
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+.download{
+    margin-top:90px;
+
+    padding:45px 0;
+
+    border-top:1px solid #222;
+
+    border-bottom:1px solid #222;
+}
+
+.download h2{
+    font-size:38px;
+
+    color:#1e90ff;
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 10px #1e90ff;
+}
+
+.download p{
+    font-family:Arial,sans-serif;
+
+    color:#777;
+
+    margin-bottom:25px;
+}
+
+.download-button{
+    display:inline-block;
+
+    padding:14px 35px;
+
+    color:#1e90ff;
+
+    border:2px solid #1e90ff;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.25s;
+}
+
+.download-button:hover{
+    background:#1e90ff;
+
+    color:#000;
+
+    box-shadow:
+        0 0 15px #1e90ff,
+        0 0 30px rgba(30,144,255,.6);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:35px;
+
+    text-align:center;
+
+    color:#444;
+
+    font-family:Arial,sans-serif;
+
+    border-top:1px solid #111;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    main{
+        width:92%;
+    }
+
+    .title-area h1{
+        font-size:45px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+
+        margin-top:30px;
+    }
+
+    .hero-image{
+        height:300px;
+    }
+
+    .hero-text{
+        padding:30px 0 0 0;
+    }
+
+    .game-info{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .info{
+        border-bottom:1px solid #222;
+    }
+
+    .content{
+        width:100%;
+
+        margin-top:60px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    header{
+        height:65px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .title-area h1{
+        font-size:34px;
+    }
+
+    .hero-image{
+        height:220px;
+    }
+
+    .hero-text h2{
+        font-size:30px;
+    }
+
+    .game-info{
+        grid-template-columns:1fr;
+    }
+
+    .info{
+        border-right:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        GRID AUTOSPORT
+    </div>
+
+</header>
+
+
+<main>
+
+
+<a href="index.html" class="back">
+    ← KEMBALI
+</a>
+
+
+<!-- TITLE -->
+
+<div class="title-area">
+
+    <h1>
+        GRID AUTOSPORT
+    </h1>
+
+    <div class="subtitle">
+        RACING • MOTORSPORT • DRIVING
+    </div>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+    <img
+        src="hq720.jpg"
+        class="hero-image"
+        alt="GRID Autosport"
+    >
+
+
+    <div class="hero-text">
+
+        <h2>
+            GRID Autosport
+        </h2>
+
+
+        <p>
+            GRID Autosport adalah game racing yang
+            dikembangkan oleh Codemasters dan dirilis
+            pada tahun 2014.
+        </p>
+
+
+        <p>
+            Game ini membawa pemain ke dunia motorsport
+            dengan berbagai kategori balapan, kendaraan,
+            lintasan, dan gaya mengemudi.
+        </p>
+
+
+        <p>
+            Dengan kombinasi antara arcade dan simulasi,
+            GRID Autosport memberikan pengalaman balap
+            yang cukup realistis tanpa menjadi terlalu
+            sulit untuk dimainkan.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section class="game-info">
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Developer
+        </div>
+
+        <div class="info-value">
+            Codemasters
+        </div>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Release
+        </div>
+
+        <div class="info-value">
+            2014
+        </div>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Genre
+        </div>
+
+        <div class="info-value">
+            Racing
+        </div>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-label">
+            Platform
+        </div>
+
+        <div class="info-value">
+            PC / Android
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="content">
+
+    <h2>
+        TENTANG GAME
+    </h2>
+
+
+    <p>
+        GRID Autosport merupakan game racing yang
+        dikembangkan oleh Codemasters dengan fokus
+        pada pengalaman motorsport.
+    </p>
+
+
+    <p>
+        Pemain dapat mengikuti berbagai jenis kompetisi
+        dan mengendarai berbagai macam kendaraan dalam
+        lingkungan balap yang berbeda.
+    </p>
+
+
+    <p>
+        Sistem driving dalam GRID Autosport dirancang
+        untuk memberikan keseimbangan antara kontrol
+        arcade dan elemen simulasi.
+    </p>
+
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="content">
+
+    <h2>
+        FITUR UTAMA
+    </h2>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Career Mode
+            </span>
+
+            Bangun karier sebagai pembalap dan ikuti
+            berbagai kompetisi untuk menjadi juara.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Touring Cars
+            </span>
+
+            Balapan menggunakan berbagai kendaraan
+            touring dengan karakteristik berbeda.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Open-Wheel
+            </span>
+
+            Rasakan kecepatan tinggi menggunakan
+            kendaraan open-wheel.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Endurance
+            </span>
+
+            Balapan jarak panjang yang membutuhkan
+            konsentrasi dan strategi.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Street Racing
+            </span>
+
+            Balapan di lingkungan jalanan dengan
+            lintasan yang lebih sempit dan cepat.
+
+        </div>
+
+
+        <div class="feature">
+
+            <span class="feature-title">
+                Vehicle Tuning
+            </span>
+
+            Sesuaikan kendaraan dan pengaturannya
+            untuk menghadapi berbagai kondisi balapan.
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- REQUIREMENTS -->
+
+<section class="content">
+
+    <h2>
+        MINIMUM SPECIFICATION
+    </h2>
+
+
+    <div class="requirements">
+
+
+        <div class="requirement">
+
+            <span>
+                Operating System
+            </span>
+
+            <span>
+                Windows Vista / 7 / 8
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                Processor
+            </span>
+
+            <span>
+                Intel Core 2 Duo 2.4 GHz
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                RAM
+            </span>
+
+            <span>
+                2 GB
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                GPU
+            </span>
+
+            <span>
+                NVIDIA GeForce 8600 / AMD Radeon HD 2600
+            </span>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <span>
+                Storage
+            </span>
+
+            <span>
+                ±15 GB
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- TUTORIAL -->
+
+<section class="content">
+
+    <h2>
+        TUTORIAL INSTALL
+    </h2>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div class="step-text">
+                Download file GRID Autosport.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div class="step-text">
+                Ekstrak file jika berbentuk ZIP atau RAR.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div class="step-text">
+                Buka folder hasil ekstraksi.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <div class="step-text">
+                Jalankan installer GRID Autosport.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                5
+            </div>
+
+            <div class="step-text">
+                Ikuti proses instalasi hingga selesai.
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                6
+            </div>
+
+            <div class="step-text">
+                Jalankan game dan mulai balapan.
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="download">
+
+    <h2>
+        DOWNLOAD GRID AUTOSPORT
+    </h2>
+
+
+    <p>
+        GRID Autosport • Codemasters • 2014
+    </p>
+
+
+    <a
+        href="#"
+        class="download-button"
+    >
+        DOWNLOAD
+    </a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    GRID AUTOSPORT © 2014
+
+</footer>
+
+
+</body>
+
+</html>
